@@ -1,4 +1,4 @@
-import { pos_service_data, terminal_service_data } from "@/data/service";
+import { pos_service_data, terminal_service_data, misc_service_data } from "@/data/service";
 import Link from "next/link";
 import React from "react";
 
@@ -72,9 +72,9 @@ const Service = () => {
               </div>
             ))}
           </div>
-          <h3 className="tp-section__title mb-30">Miscellaneous<br/>Solutions</h3>
+          <h3 className="tp-section__title mb-30">Misc<br/>Solutions</h3>
           <div className="row">
-            {terminal_service_data.map((item) => (
+            {misc_service_data.map((item) => (
               <div key={item.id} className="col-xl-3 col-lg-4 col-md-6">
                 <div
                   className={`services-item tp-services-item mb-50 ml-${item.ml} wow fadeInUp`}
