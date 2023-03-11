@@ -1,11 +1,10 @@
+import Sidebar from "@/common/sidebar";
+import useSticky from "hooks/use-sticky";
 import Link from "next/link";
 import React, { useState } from "react";
 import NavMenu from "./nav-menu";
-import useSticky from "hooks/use-sticky";
-import Sidebar from "@/common/sidebar";
 
-
-const Header = () => {
+const HeaderTwo = () => {
   const { sticky } = useSticky();
   const [isActive, setIsActive] = useState(false);
 
@@ -65,30 +64,19 @@ const Header = () => {
 
       <header className="d-none d-xl-block">
         <div
-          className={`header__area tp-home-one ${
-            sticky ? "header-sticky" : ""
-          }`}
+          className={`header-custom ${sticky ? "header-sticky" : ""}`}
           id="header-sticky"
         >
-          <div className="container-fluid">
-            <div className="row align-items-center">
-              <div className="col-xxl-2 col-lg-3">
-                <div className="logo">
-                  <Link href="/">
-                    <img src="/assets/img/logo/logo.png" alt="logo" />
-                  </Link>
-                </div>
-              </div>
-              <div className="col-xxl-7 col-lg-6">
-                <div className="main-menu">
-                  <nav id="mobile-menu">
-                    <NavMenu />
-                  </nav>
-                </div>
-              </div>
-              <div className="col-xxl-3 col-lg-3 d-flex align-items-center justify-content-end">
-                <div className="tp-bt-btn-banner">
-                  <a className="tp-bt-btn" href="tel:123456">
+          <div className="header-logo-box">
+            <Link href="/">
+              <img src="/assets/img/logo/logo.png" alt="logo" />
+            </Link>
+          </div>
+          <div className="header-menu-box">
+            <div className="header-menu-top">
+              <div className="row align-items-center">
+                <div className="col-lg-4">
+                  <div className="header-top-mob">
                     <svg
                       width="14"
                       height="19"
@@ -107,8 +95,35 @@ const Header = () => {
                       <circle cx="2" cy="7" r="2" fill="#0E63FF" />
                       <circle cx="2" cy="12" r="2" fill="#0E63FF" />
                     </svg>
-                    <span>Help Desk :</span>+91 590 088 55
-                  </a>
+                    <span>Call Us :</span>
+                    <a href="tel:+18442003277"> +1 (844) 200-3277 </a>
+                  </div>
+                </div>
+                <div className="col-lg-8">
+                  <div className="header-time">
+                    <span>
+                      <i className="fa-light fa-clock-ten"></i> Monday - Friday
+                      09:00 am - 06:30 pm
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="header-menu-bottom">
+              <div className="row">
+                <div className="col-lg-7">
+                  <div className="main-menu main-menu-second">
+                    <nav id="mobile-menu">
+                      <NavMenu />
+                    </nav>
+                  </div>
+                </div>
+                <div className="col-lg-5">
+                  <div className="header-cart-order d-flex align-items-center justify-content-end">
+                    <Link className="header-bottom-btn" href="/about">
+                      Book Appointment
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -123,4 +138,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderTwo;
