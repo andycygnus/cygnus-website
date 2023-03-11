@@ -26,7 +26,6 @@ const HomeTwo = () => {
       <Team />
       <Testimonial bg_img={true} />
       <Blog />
-      <NewsLetter />
     </>
   );
 };
