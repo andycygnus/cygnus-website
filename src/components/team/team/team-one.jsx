@@ -1,6 +1,6 @@
 import DirectContactUs from "@/components/forms/direct-contact-us";
-import FooterFour from "@/layout/footer/footer-4";
-import HeaderTwo from "@/layout/header/header-two";
+import Footer from "@/layout/footer/footer";
+import Header from "@/layout/header/header";
 import React from "react";
 import BannerTeamOne from "./banner-team-one";
 import TeamArea from "./team-area";
@@ -8,11 +8,11 @@ import TeamArea from "./team-area";
 const TeamOne = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <BannerTeamOne />
       <TeamArea />
       <DirectContactUs />
-      <FooterFour />
+      <Footer />
     </>
   );
 };

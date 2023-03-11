@@ -1,6 +1,6 @@
 import PricingArea from "@/common/pricing-area";
-import FooterFour from "@/layout/footer/footer-4";
-import HeaderTwo from "@/layout/header/header-two";
+import Footer from "@/layout/footer/footer";
+import Header from "@/layout/header/header";
 import React from "react";
 import DirectContactUs from "../forms/direct-contact-us";
 import BannerPricing from "./banner-pricing";
@@ -8,12 +8,12 @@ import BannerPricing from "./banner-pricing";
 const PricingPlan = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <BannerPricing />
       <PricingArea dark={false} />
       <PricingArea dark={true} />
       <DirectContactUs />
-      <FooterFour />
+      <Footer />
     </>
   );
 };
