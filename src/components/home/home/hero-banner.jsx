@@ -1,125 +1,143 @@
-// external
 import Link from "next/link";
-import { useState } from "react";
-// internal
-import VideoPopup from "@/modals/video-popup";
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 
-// content
-const content = {
-  sub_title: "Welcoome to Bioxlab",
-  title: (
-    <>
-      passion for better <br />
-      Medicine
-    </>
-  ),
-  des: (
-    <>
-      Your full service lab for clinical trials. Our mission is to ensure the{" "}
-      <br />
-      generation of accurate and precise findings
-    </>
-  ),
-  btn_text1: "Appointment",
-  btn_text2: "About us",
-};
-const { sub_title, title, des, btn_text1, btn_text2 } = content;
-
-// hero_box
-const hero_box = [
+const hero_slider = [
   {
     id: 1,
-    icon: "flaticon-rating",
-    des: "100% Customer Satisfaction",
-    color: "",
+    title: (
+      <>
+        Honesty, Transparency & Convenience
+        
+      </>
+    ),
+    des: (
+      <>
+        Viris lucilius ad quo. In pro nihil aliquam inimicus, munere ique mel in. Posse facer{" "}
+        <br /> pertinacia sed, eum phaedrum contentiones et
+      </>
+    ),
+    appointment: "Appointment",
+    about: "About us",
+    img_1: "/assets/img/slider/slider-bg-1.png",
+    img_2: "/assets/img/slider/slider-bg-2.png",
   },
   {
     id: 2,
-    icon: "flaticon-target",
-    des: "Help and Acess is Our Mission",
-    color: "pink-icon",
-    border: "pink-border",
-  },
-  {
-    id: 3,
-    icon: "flaticon-premium-badge",
-    des: "100% Quality Laboratory service",
-    color: "green-icon",
-    border: "green-border",
+    title: (
+      <>
+        Cygnus Payments is easy to work with!
+      </>
+    ),
+    des: (
+      <>
+        Viris lucilius ad quo. In pro nihil aliquam inimicus, munere ique mel in. Posse facer{" "}
+        <br /> pertinacia sed, eum phaedrum contentiones et
+      </>
+    ),
+    appointment: "Appointment",
+    about: "About us",
+    img_1: "/assets/img/slider/slider-bg-3.png",
+    img_2: "/assets/img/slider/slider-bg-2.png",
   },
 ];
 
-const HeroBanner = () => {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+// slider setting
+const setting = {
+  // Optional parameters
+  slidesPerView: 1,
+  effect: "fade",
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: true,
+  },
+  navigation: {
+    nextEl: ".slider-n",
+    prevEl: ".slider-p",
+  },
+};
 
+// social_links
+const social_links = [
+];
+const HeroBanner = () => {
+  const [isLoop, setIsLoop] = useState(false);
+  useEffect(() => {
+    setIsLoop(true);
+  }, []);
   return (
     <>
-      <section className="banner-area p-relative pt-90">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-8">
-              <div className="banner__content pt-145 mb-135">
-                <span className="banner__sub-title mb-20">{sub_title}</span>
-                <h2 className="banner__title mb-30">{title}</h2>
-                <p>{des}</p>
-                <div className="banner__btn">
-                  <Link className="tp-btn" href="/contact">
-                    {btn_text1}
-                  </Link>
-                  <Link className="tp-btn-second ml-25" href="/about">
-                    {btn_text2}
-                  </Link>
+      <section className="slider-area slider-tp-top pt-100 p-relative">
+        <div className="slider-social">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6 col-md-10 d-none d-md-block">
+                <div className="slider-content__social">
+                  {social_links.map((link, i) => (
+                    <Link
+                      key={i}
+                      target={link.target}
+                      className={link.color}
+                      href={link.link}
+                    >
+                      <i className={link.icon}></i> {link.name}
+                    </Link>
+                  ))}
                 </div>
               </div>
-              <div className="banner__box-item">
-                <div className="row">
-                  {hero_box.map((item) => (
-                    <div key={item.id} className="col-xl-4 col-lg-4 col-md-6">
-                      <div
-                        className={`banner__item d-flex ${item.border} align-items-center mb-30 wow fadeInUp`}
-                        data-wow-delay=".2s"
-                      >
-                        <div className={`banner__item-icon ${item.color}`}>
-                          <i className={item.icon}></i>
-                        </div>
-                        <div className="banner__item-content">
-                          <span>{item.des}</span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
+              <div className="col-lg-6 col-md-2 col-12 d-none d-md-block">
+                <div className="slider-content__arrow d-flex align-items-center">
+                  <div className="slider-p">
+                    <i className="fa-regular fa-arrow-left"></i>
+                  </div>
+                  <div className="slider-n">
+                    <i className="fa-regular fa-arrow-right"></i>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="bannerscroll d-none d-xl-block">
-          <div className="banner-scroll-btn">
-            <a className="bannerscroll-icon" href="#tp-about-scroll">
-              <i className="fa-light fa-computer-mouse"></i>
-              <span>Scrool Down</span>
-            </a>
-          </div>
-        </div>
-        <div className="banner__shape d-none d-lg-block">
-          <img src="/assets/img/banner/banner-01.png" alt="banner-img" />
-          <div className="banner__video-btn">
-            <button
-              onClick={() => setIsVideoOpen(true)}
-              className="banner__video-icon popup-video"
-            >
-              <i className="fa-solid fa-play"></i>
-            </button>
-          </div>
-        </div>
+        <Swiper
+          modules={[Navigation]}
+          loop={isLoop}
+          {...setting}
+          className="swiper-container tp-slider slider-active"
+        >
+          {hero_slider.map((item) => (
+            <SwiperSlide key={item.id}>
+              <div className="swiper-slide bg-white">
+                <div className="container">
+                  <div className="row align-items-center">
+                    <div className="col-lg-6 col-md-12 col-12 order-2 order-lg-1">
+                      <div className="slider-content pt-60">
+                        <h2 className="slider-content__title mb-45">
+                          {item.title}
+                        </h2>
+                        <p>{item.des}</p>
+                        <div className="slider-content__btn mb-165">
+                          <Link className="tp-btn" href="/contact">
+                            {item.appointment}
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 col-md-6 col-12 order-1 order-lg-2">
+                      <div className="slider-content__bg">
+                        <img src={item.img_1} alt="slider-img" />
+                      </div>
+                      <div className="slider-content__shape d-none d-md-block">
+                        <img src={item.img_2} alt="slider-shape" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
-      {/* video modal start */}
-      <VideoPopup
-        isVideoOpen={isVideoOpen}
-        setIsVideoOpen={setIsVideoOpen}
-        videoId={"d8w5SICzzxc"}
-      />
-      {/* video modal end */}
     </>
   );
 };

@@ -1,17 +1,46 @@
-import blog_data from "@/data/blog-data";
+// This page needs to be deleted
+
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 
-// slider setting 
+// blog_content
+const blog_content = [
+  {
+    id: 1,
+    img: "/assets/img/blog/blog-thumb-04.jpg",
+    title: "Coronavirus global health emergency",
+    des: "Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla ...",
+    date: "Dec 28, 2022",
+    views: "1,526 views",
+  },
+  {
+    id: 2,
+    img: "/assets/img/blog/blog-thumb-05.jpg",
+    title: "The Healthy Ageing 50 organ (Secound Part)",
+    des: "Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla ...",
+    date: "Dec 28, 2022",
+    views: "1,526 views",
+  },
+  {
+    id: 3,
+    img: "/assets/img/blog/blog-thumb-06.jpg",
+    title: "The Healthy Ageing 50 organ (First Part)",
+    des: "Nam eget dui vel quam sodales semper quis porttitor tortor. Vivamus quis ex nulla ...",
+    date: "Dec 28, 2022",
+    views: "1,526 views",
+  },
+];
+
+// blog setting
 const setting = {
-  // Optional parameters
+  // loop: true,
   slidesPerView: 3,
   spaceBetween: 30,
   autoplay: {
-    delay: 5000,
+    delay: 4000,
     disableOnInteraction: true,
   },
   breakpoints: {
@@ -33,78 +62,18 @@ const setting = {
   },
   // Navigation arrows
   navigation: {
-    nextEl: ".tp-blog-n",
-    prevEl: ".tp-blog-p",
+    nextEl: ".blog-nxt",
+    prevEl: ".blog-prv",
   },
 };
 const Blog = () => {
+
   const [isLoop, setIsLoop] = useState(false);
   useEffect(() => {
     setIsLoop(true);
   }, []);
-
   return (
     <>
-      <section className="blog-area pt-125 pb-100">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-8 col-12">
-              <div className="tp-section">
-                <span className="tp-section__sub-title left-line mb-25">
-                  Waht’s New
-                </span>
-                <h3 className="tp-section__title mb-65">Blog & Article</h3>
-              </div>
-            </div>
-            <div className="col-md-4 col-12">
-              <div className="tp-blog-arrow d-flex align-items-center">
-                <div className="tp-blog-p">
-                  <i className="fa-regular fa-arrow-left"></i>
-                </div>
-                <div className="tp-blog-n">
-                  <i className="fa-regular fa-arrow-right"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <Swiper
-            {...setting}
-            loop={isLoop}
-            modules={[Navigation]}
-            className="swiper-container tp-blog-active wow fadeInUp"
-            data-wow-delay=".3s"
-          >
-            {blog_data.map((item) => (
-              <SwiperSlide key={item.id}>
-                <div className="swiper-slide">
-                  <div className="tp-blog mb-30">
-                    <div className="tp-blog__thumb p-relative fix">
-                      <a href="#">
-                        <img src={item.img} alt="blog-item" />
-                      </a>
-                      <div className="tp-blog__date text-center">
-                        <h4>{item.blog_date}</h4>
-                      </div>
-                    </div>
-                    <div className="tp-blog__content">
-                      <span className="tp-blog__category mb-30">
-                        <Link href="/blog-details">{item.blog_category}</Link>
-                      </span>
-                      <h5 className="tp-blog__title mb-20">
-                        <Link href="/blog-details">{item.blog_title}</Link>
-                      </h5>
-                      <p>{item.blog_des}</p>
-                      <div className="tp-blog__btn">
-                        <Link href="/blog">Read moRe</Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </section>
     </>
   );
 };
