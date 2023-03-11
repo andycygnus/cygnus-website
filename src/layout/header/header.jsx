@@ -77,26 +77,6 @@ const Header = () => {
               <div className="row align-items-center">
                 <div className="col-lg-4">
                   <div className="header-top-mob">
-                    <svg
-                      width="14"
-                      height="19"
-                      viewBox="0 0 14 19"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="2" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="17" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="12" r="2" fill="#0E63FF" />
-                    </svg>
-                    <span>Call Us :</span>
-                    <a href="tel:+18442003277"> +1 (844) 200-3277 </a>
                   </div>
                 </div>
                 <div className="col-lg-8">
@@ -118,7 +98,29 @@ const Header = () => {
                     </nav>
                   </div>
                 </div>
-                <div className="col-lg-5">
+                <div className="col-lg-4">
+                <div className="header-top-mob">
+                    <svg
+                      width="14"
+                      height="19"
+                      viewBox="0 0 14 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle cx="2" cy="2" r="2" fill="#0E63FF" />
+                      <circle cx="7" cy="2" r="2" fill="#0E63FF" />
+                      <circle cx="12" cy="2" r="2" fill="#0E63FF" />
+                      <circle cx="12" cy="7" r="2" fill="#0E63FF" />
+                      <circle cx="12" cy="12" r="2" fill="#0E63FF" />
+                      <circle cx="7" cy="7" r="2" fill="#0E63FF" />
+                      <circle cx="7" cy="12" r="2" fill="#0E63FF" />
+                      <circle cx="7" cy="17" r="2" fill="#0E63FF" />
+                      <circle cx="2" cy="7" r="2" fill="#0E63FF" />
+                      <circle cx="2" cy="12" r="2" fill="#0E63FF" />
+                    </svg>
+                    <span>Call Us :</span>
+                    <a href="tel:+18442003277"> +1 (844) 200-3277 </a>
+                  </div>
                 </div>
               </div>
             </div>
