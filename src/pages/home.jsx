@@ -1,16 +1,16 @@
-import HomeTwo from "@/components/home/home-2/hometwo";
+import Home from "@/components/home/home/home";
 import SEO from "@/components/seo";
-import LayoutTwo from "@/layout/layout-2";
+import Layout from "@/layout/layout";
 import Wrapper from "@/layout/wrapper";
 import React from "react";
 
 const index = () => {
   return (
     <Wrapper>
-      <LayoutTwo>
-      <SEO pageTitle="Home Two" />
-        <HomeTwo />
-      </LayoutTwo>
+      <Layout>
+      <SEO pageTitle="Home" />
+        <Home />
+      </Layout>
     </Wrapper>
   );
 };

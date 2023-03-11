@@ -4,7 +4,7 @@ const menu_data = [
     mega_menu: false,
     has_dropdown: true,
     title: "Home",
-    link: "/home-2",
+    link: "/home",
     active: "active",
     sub_menus: [/*
       { link: "/", title: "Home Style 1" },

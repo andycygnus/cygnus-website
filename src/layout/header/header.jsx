@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import NavMenu from "./nav-menu";
 
-const HeaderTwo = () => {
+const Header = () => {
   const { sticky } = useSticky();
   const [isActive, setIsActive] = useState(false);
 
@@ -138,4 +138,4 @@ const HeaderTwo = () => {
   );
 };
 
-export default HeaderTwo;
+export default Header;
