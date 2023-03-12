@@ -120,8 +120,8 @@ const Header = () => {
                 </div>
                 <div className="col-lg-5">
                   <div className="header-cart-order d-flex align-items-center justify-content-end">
-                    <Link className="header-bottom-btn" href="/about">
-                      Book Appointment
+                    <Link className="header-bottom-btn" href="/contact">
+                      Get a Quote
                     </Link>
                   </div>
                 </div>
