@@ -1,5 +1,5 @@
-import FooterFour from "@/layout/footer/footer-4";
-import HeaderTwo from "@/layout/header/header-two";
+import Footer from "@/layout/footer/footer";
+import Header from "@/layout/header/header";
 import React from "react";
 import Banner from "./banner";
 import PostBox from "./post-box";
@@ -7,10 +7,10 @@ import PostBox from "./post-box";
 const Blog = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <Banner />
       <PostBox />
-      <FooterFour />
+      <Footer />
     </>
   );
 };
