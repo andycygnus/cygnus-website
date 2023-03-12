@@ -7,20 +7,19 @@ import ContactUs from "../forms/contact-us";
 const contact_info = {
   address: (
     <>
-      Bowery St, New York, NY <br /> 10013,USA
+      2100 Reston Pkwy Suite 415 <br /> Reson, VA 20191
     </>
   ),
-  phone_1: "+1255 - 568 - 6523",
-  phone_2: "+1255 - 568 - 6523",
+  phone_1: "(844) 200-3277",
   open: (
     <>
       Monday - Friday <br />
-      09:00 AM - 05:00 PM
+      09:00 AM - 06:30 PM
     </>
   ),
 };
 
-const { address, phone_1, phone_2, open } = contact_info;
+const { address, phone_1, open } = contact_info;
 const ContactForm = () => {
   return (
     <>
@@ -42,7 +41,7 @@ const ContactForm = () => {
                   <div className="tpcontact__address">
                     <h4 className="tpcontact__title mb-15">Address line</h4>
                     <span>
-                      <Link href="/contact">{address}</Link>
+                      <Link href="https://www.google.com/maps/place/2100+Reston+Pkwy+%23415,+Reston,+VA+20191">{address}</Link>
                     </span>
                   </div>
                 </div>
@@ -60,9 +59,6 @@ const ContactForm = () => {
                     <span>
                       <a href={`tel:${phone_1}`}>{phone_1}</a>
                     </span>
-                    <span>
-                      <a href={`tel:${phone_2}`}>{phone_2}</a>
-                    </span>
                   </div>
                 </div>
               </div>
@@ -75,7 +71,7 @@ const ContactForm = () => {
                     <img src="/assets/img/icon/contact-03.svg" alt="" />
                   </div>
                   <div className="tpcontact__address">
-                    <h4 className="tpcontact__title mb-15">Opening Hours</h4>
+                    <h4 className="tpcontact__title mb-15">Office Hours</h4>
                     <span>{open}</span>
                   </div>
                 </div>
@@ -92,7 +88,7 @@ const ContactForm = () => {
                   <div className="col-lg-12">
                     <div className="tpcontactmap">
                       <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d56215.718841453985!2d-0.19959027821222705!3d51.48739183082915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1slondon%20eye!5e0!3m2!1sen!2sbd!4v1656749326947!5m2!1sen!2sbd"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.1243231258954!2d-77.3615062!3d38.9439881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b6481365a8382f%3A0xda596cc0ea2ba7b!2s2100%20Reston%20Pkwy%20%23415%2C%20Reston%2C%20VA%2020191!5e0!3m2!1sen!2sus!4v1678649302283!5m2!1sen!2sus"
                         width="600"
                         height="450"
                         // style="border:0;"
