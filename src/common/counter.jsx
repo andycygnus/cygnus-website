@@ -6,26 +6,26 @@ const counter_text = [
   {
     id: 1,
     color: "sky-hard",
-    counter: 1492,
-    text: "Laboratories in 100+ states",
+    counter: 75,
+    text: "MILLION IN PROCESSING VOLUME PER MONTH",
   },
   {
     id: 2,
     color: "pink-hard",
-    counter: 152,
-    text: "Laboratory specialists",
+    counter: 3,
+    text: "MILLION MONTHLY TRANSACTIONS",
   },
   {
     id: 3,
     color: "sky-hard",
-    counter: 1022,
-    text: "Material collection points",
+    counter: 42,
+    text: "TEAM MEMBERS",
   },
   {
     id: 4,
     color: "pink-hard",
-    counter: 24332,
-    text: "Patients diagnosed in 2022",
+    counter: 1800,
+    text: "ACTIVE MERCHANTS",
   },
 ];
 

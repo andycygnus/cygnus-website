@@ -32,15 +32,17 @@ const Choose = () => {
                     
                     <Progress
                       type="circle"
-                      percent={99}
+                      percent={100}
                       width={165}
                       height={165}
                       strokeWidth={3.2}
-                      style={{ fontSize: 33 }}
+                      strokeColor="#1890ff" // Replace with your desired color
+                      trailColor="#f5f5f5" // Replace with your desired color
+                      format={() => '100%'}
                     />
                    
                   </div>
-                  
+
                 </div>
                 <span className="skill-item-title">HONESTY</span>
               </div>
@@ -51,15 +53,16 @@ const Choose = () => {
                 data-wow-delay=".4s"
               >
                 <div className="progress-circular tl-progress">
-                  <Progress
-                    type="circle"
-                    percent={99}
-                    width={165}
-                    height={165}
-                    strokeWidth={3.2}
-                    strokeColor={"#F72A75"}
-                    style={{ fontSize: 33 }}
-                  />
+                    <Progress
+                      type="circle"
+                      percent={100}
+                      width={165}
+                      height={165}
+                      strokeWidth={3.2}
+                      strokeColor="f72a75" // Replace with your desired color
+                      trailColor="#f5f5f5" // Replace with your desired color
+                      format={() => '100%'}
+                    />
                   
                 </div>
                 <span className="skill-item-title">TRANSPARENCY</span>
@@ -71,15 +74,16 @@ const Choose = () => {
                 data-wow-delay=".6s"
               >
                 <div className="progress-circular tl-progress">
-                  <Progress
-                    type="circle"
-                    percent={99}
-                    width={165}
-                    height={165}
-                    strokeWidth={3.2}
-                    strokeColor={"#42BFFF"}
-                    style={{ fontSize: 33 }}
-                  />
+                    <Progress
+                      type="circle"
+                      percent={100}
+                      width={165}
+                      height={165}
+                      strokeWidth={3.2}
+                      strokeColor="#42bfff" // Replace with your desired color
+                      trailColor="#f5f5f5" // Replace with your desired color
+                      format={() => '100%'}
+                    />
                   
                 </div>
                 <span className="skill-item-title">CONVENIENCE</span>
@@ -91,15 +95,16 @@ const Choose = () => {
                 data-wow-delay=".8s"
               >
                 <div className="progress-circular tl-progress">
-                  <Progress
-                    type="circle"
-                    percent={99}
-                    width={165}
-                    height={165}
-                    strokeWidth={3.2}
-                    strokeColor={"#10D0A1"}
-                    fontSize={133}
-                  />
+                    <Progress
+                      type="circle"
+                      percent={100}
+                      width={165}
+                      height={165}
+                      strokeWidth={3.2}
+                      strokeColor="#10d0a1" // Replace with your desired color
+                      trailColor="#f5f5f5" // Replace with your desired color
+                      format={() => '100%'}
+                    />
                  
                 </div>
                 <span className="skill-item-title">EASY TO WORK WITH</span>
