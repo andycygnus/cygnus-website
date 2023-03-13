@@ -116,7 +116,7 @@ const About = () => {
       <VideoPopup
         isVideoOpen={isVideoOpen}
         setIsVideoOpen={setIsVideoOpen}
-        videoId={"d8w5SICzzxc"}
+        videoId={"-s4lQxg2GXo"}
       />
       {/* video modal end */}
     </>
