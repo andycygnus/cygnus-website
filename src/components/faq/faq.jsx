@@ -1,5 +1,5 @@
-import FooterFour from "@/layout/footer/footer-4";
-import HeaderTwo from "@/layout/header/header-two";
+import Footer from "@/layout/footer/footer";
+import Header from "@/layout/header/header";
 import React from "react";
 import DirectContactUs from "../forms/direct-contact-us";
 import FaqArea from "./faq-area";
@@ -8,11 +8,11 @@ import FaqBanner from "./faq-banner";
 const FAQ = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <FaqBanner />
       <FaqArea />
       <DirectContactUs />
-      <FooterFour />
+      <Footer />
     </>
   );
 };

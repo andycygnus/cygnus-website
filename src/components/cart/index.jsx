@@ -1,5 +1,5 @@
-import FooterFour from '@/layout/footer/footer-4';
-import HeaderTwo from '@/layout/header/header-two';
+import Footer from '@/layout/footer/footer';
+import Header from '@/layout/header/header';
 import React from 'react';
 import CartArea from './cart-area';
 import CartBanner from './cart-banner';
@@ -7,10 +7,10 @@ import CartBanner from './cart-banner';
 const Cart = () => {
     return (
         <>
-            <HeaderTwo />
+            <Header />
             <CartBanner />
             <CartArea />
-            <FooterFour />
+            <Footer />
         </>
     );
 };

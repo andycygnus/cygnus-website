@@ -1,5 +1,5 @@
-import FooterFour from '@/layout/footer/footer-4';
-import HeaderTwo from '@/layout/header/header-two';
+import Footer from '@/layout/footer/footer';
+import Header from '@/layout/header/header';
 import React from 'react';
 import ProjectDetailsArea from './project-details-area';
 import ProjectDetailsBanner from './project-details-banner';
@@ -7,10 +7,10 @@ import ProjectDetailsBanner from './project-details-banner';
 const ProjectDetails = () => {
     return (
         <>
-            <HeaderTwo />
+            <Header />
             <ProjectDetailsBanner />
             <ProjectDetailsArea />
-            <FooterFour />
+            <Footer />
         </>
     );
 };

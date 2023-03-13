@@ -1,8 +1,8 @@
 import PricingArea from "@/common/pricing-area";
 import Specialists from "@/common/specialists";
 import DirectContactUs from "@/components/forms/direct-contact-us";
-import FooterFour from "@/layout/footer/footer-4";
-import HeaderTwo from "@/layout/header/header-two";
+import Footer from "@/layout/footer/footer";
+import Header from "@/layout/header/header";
 import React from "react";
 import Banner from "./banner";
 import ServiceArea from "./service-area";
@@ -10,13 +10,13 @@ import ServiceArea from "./service-area";
 const ServiceOne = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <Banner />
       <ServiceArea />
       <Specialists />
       <PricingArea />
       <DirectContactUs />
-      <FooterFour />
+      <Footer />
     </>
   );
 };

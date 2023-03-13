@@ -1,5 +1,5 @@
-import FooterFour from '@/layout/footer/footer-4';
-import HeaderTwo from '@/layout/header/header-two';
+import Footer from '@/layout/footer/footer';
+import Header from '@/layout/header/header';
 import React from 'react';
 import CheckoutArea from './checkout-area';
 import CheckoutBanner from './checkout-banner';
@@ -7,10 +7,10 @@ import CheckoutBanner from './checkout-banner';
 const Checkout = () => {
     return (
         <>
-            <HeaderTwo />
+            <Header />
             <CheckoutBanner />
             <CheckoutArea />
-            <FooterFour />
+            <Footer />
             
         </>
     );

@@ -122,6 +122,32 @@ const Header = () => {
                     <a href="tel:+18442003277"> +1 (844) 200-3277 </a>
                   </div>
                 </div>
+                <div className="col-lg-8">
+                  <div className="header-time">
+                    <span>
+                      <i className="fa-light fa-clock-ten"></i> Monday - Friday
+                      09:00 am - 06:30 pm
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="header-menu-bottom">
+              <div className="row">
+                <div className="col-lg-7">
+                  <div className="main-menu main-menu-second">
+                    <nav id="mobile-menu">
+                      <NavMenu />
+                    </nav>
+                  </div>
+                </div>
+                <div className="col-lg-5">
+                  <div className="header-cart-order d-flex align-items-center justify-content-end">
+                    <Link className="header-bottom-btn" href="/contact">
+                      Get a Quote
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
