@@ -59,7 +59,7 @@ const Choose = () => {
                       width={165}
                       height={165}
                       strokeWidth={3.2}
-                      strokeColor="f72a75" // Replace with your desired color
+                      strokeColor="#f72a75" // Replace with your desired color
                       trailColor="#f5f5f5" // Replace with your desired color
                       format={() => '100%'}
                     />
