@@ -8,7 +8,7 @@ const hero_slider = [
     id: 1,
     title: (
       <>
-        Honesty, Transparency & Convenience
+        Honesty,<br/> Transparency<br/> & Convenience
         
       </>
     ),
@@ -27,7 +27,7 @@ const hero_slider = [
     id: 2,
     title: (
       <>
-        Cygnus Payments is easy to work with!
+        Cygnus Payments<br/> is easy to work with!
       </>
     ),
     des: (
@@ -39,7 +39,7 @@ const hero_slider = [
     appointment: "Appointment",
     about: "About us",
     img_1: "/assets/img/slider/slider-bg-3.png",
-    img_2: "/assets/img/slider/slider-bg-2.png",
+    img_2: "/assets/img/slider/slider-bg-4.png",
   },
 ];
 

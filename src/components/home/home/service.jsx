@@ -72,7 +72,7 @@ const Service = () => {
               </div>
             ))}
           </div>
-          <h3 className="tp-section__title mb-30">Misc<br/>Solutions</h3>
+          <h3 className="tp-section__title mb-30">Misc Solutions</h3>
           <div className="row">
             {misc_service_data.map((item) => (
               <div key={item.id} className="col-xl-3 col-lg-4 col-md-6">

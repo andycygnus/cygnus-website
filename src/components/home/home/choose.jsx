@@ -32,7 +32,7 @@ const Choose = () => {
                     
                     <Progress
                       type="circle"
-                      percent={80}
+                      percent={99}
                       width={165}
                       height={165}
                       strokeWidth={3.2}
@@ -42,7 +42,7 @@ const Choose = () => {
                   </div>
                   
                 </div>
-                <span className="skill-item-title">REASON 1</span>
+                <span className="skill-item-title">HONESTY</span>
               </div>
             </div>
             <div className="col-xl-3 col-lg-6 col-md-6">
@@ -53,7 +53,7 @@ const Choose = () => {
                 <div className="progress-circular tl-progress">
                   <Progress
                     type="circle"
-                    percent={75}
+                    percent={99}
                     width={165}
                     height={165}
                     strokeWidth={3.2}
@@ -62,7 +62,7 @@ const Choose = () => {
                   />
                   
                 </div>
-                <span className="skill-item-title">REASON 2</span>
+                <span className="skill-item-title">TRANSPARENCY</span>
               </div>
             </div>
             <div className="col-xl-3 col-lg-6 col-md-6">
@@ -73,7 +73,7 @@ const Choose = () => {
                 <div className="progress-circular tl-progress">
                   <Progress
                     type="circle"
-                    percent={90}
+                    percent={99}
                     width={165}
                     height={165}
                     strokeWidth={3.2}
@@ -82,7 +82,7 @@ const Choose = () => {
                   />
                   
                 </div>
-                <span className="skill-item-title">REASON 3</span>
+                <span className="skill-item-title">CONVENIENCE</span>
               </div>
             </div>
             <div className="col-xl-3 col-lg-6 col-md-6">
@@ -93,7 +93,7 @@ const Choose = () => {
                 <div className="progress-circular tl-progress">
                   <Progress
                     type="circle"
-                    percent={55}
+                    percent={99}
                     width={165}
                     height={165}
                     strokeWidth={3.2}
@@ -102,7 +102,7 @@ const Choose = () => {
                   />
                  
                 </div>
-                <span className="skill-item-title">REASON 4</span>
+                <span className="skill-item-title">EASY TO WORK WITH</span>
               </div>
             </div>
           </div>

@@ -70,11 +70,6 @@ const Footer = () => {
                       <img src="/assets/img/logo/logo.png" alt="logo" />
                     </a>
                   </h4>
-                  <p>
-                    Exerci tation ullamcorper suscipit lobortis nisl aliquip ex
-                    ea commodo claritatem itamconse quat.Exerci tation
-                    ullamcorper.
-                  </p>
                   <div className="footer-widget__social">
                     <SocialLinks />
                   </div>
