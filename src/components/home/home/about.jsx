@@ -7,7 +7,7 @@ const About = () => {
   const about_content = {
     about_bg: "/assets/img/shape/shape-bg-05.png",
     about_img: "/assets/img/about/about-bg-02.png",
-    popup_video: "https://www.youtube.com/watch?v=-BpXNPHiB2U",
+    popup_video: "https://www.youtube.com/watch?v=-s4lQxg2GXo",
     about_thumb: "/assets/img/about/about-bg-03.png",
     title: "Eleifend Delicata Voluptatum Vocent Tacimates",
     sub_title: "About",
