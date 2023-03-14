@@ -75,8 +75,12 @@ const Header = () => {
           <div className="header-menu-box">
             <div className="header-menu-top">
               <div className="row align-items-center">
-              <div className="col-lg-4">
-                <div className="header-top-mob">
+                <div className="col-lg-4">
+                  <div className="header-top-mob">
+                  </div>
+                </div>
+                <div className="col-lg-4">
+                  <div className="header-top-mob">
                     <svg
                       width="14"
                       height="19"
@@ -84,23 +88,19 @@ const Header = () => {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="2" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="17" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="12" r="2" fill="#0E63FF" />
+                    <circle cx="2" cy="2" r="2" fill="#0E63FF" />
+                    <circle cx="7" cy="2" r="2" fill="#0E63FF" />
+                    <circle cx="12" cy="2" r="2" fill="#0E63FF" />
+                    <circle cx="12" cy="7" r="2" fill="#0E63FF" />
+                    <circle cx="12" cy="12" r="2" fill="#0E63FF" />
+                    <circle cx="7" cy="7" r="2" fill="#0E63FF" />
+                    <circle cx="7" cy="12" r="2" fill="#0E63FF" />
+                    <circle cx="7" cy="17" r="2" fill="#0E63FF" />
+                    <circle cx="2" cy="7" r="2" fill="#0E63FF" />
+                    <circle cx="2" cy="12" r="2" fill="#0E63FF" />
                     </svg>
                     <span>Call Us :</span>
                     <a href="tel:+18442003277"> +1 (844) 200-3277 </a>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="header-top-mob">
                   </div>
                 </div>
                 <div className="col-lg-4">
@@ -111,10 +111,6 @@ const Header = () => {
                     </span>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="header-menu-bottom">
-              <div className="row">
               </div>
             </div>
             <div className="header-menu-bottom">
