@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "@/layout/layout";
-import Home from "@/components/home/home/home";
+import Home from "@/components/home/home";
 import SEO from "@/components/seo";
 import Wrapper from "@/layout/wrapper";
 
