@@ -1,5 +1,4 @@
 import team_home_two from "@/data/team-home-2";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -52,9 +51,9 @@ const Team = () => {
               <div className="col-lg-12">
                 <div className="tp-section text-center">
                   <span className="tp-section__sub-title left-line right-line mb-25">
-                    OUr Team
+                    Our Services
                   </span>
-                  <h3 className="tp-section__title mb-70">Our Partners</h3>
+                  <h3 className="tp-section__title" style={{textAlign: 'left', paddingLeft: '30px'}}>POS Solutions</h3>
                 </div>
               </div>
             </div>
@@ -71,19 +70,6 @@ const Team = () => {
                     <div className="team-item mb-30">
                       <div className="team-item__thumb mb-40">
                         <img src={item.img} alt="team-thumb" />
-                      </div>
-                      <div className="team-item__content">
-                        <h5 className="team-item__title mb-15">
-                          <Link href="/team-details">{item.name}</Link>
-                        </h5>
-                        <span>{item.title}</span>
-                        <div className="team-item__social-info">
-                          {item.social_links.map((l, i) => (
-                            <a key={i} href={l.link} target={l.target}>
-                              <i className={l.icon}></i>
-                            </a>
-                          ))}
-                        </div>
                       </div>
                     </div>
                   </div>

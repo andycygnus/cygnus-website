@@ -1,7 +1,7 @@
 const team_home_two = [
   {
     id: 1,
-    img: "/assets/img/team/team-thumb-05.png",
+    img: "/assets/img/services/pos/pos-thumb-01.png",
     name: "Documentor POS",
     title:  "Genetic Subtext",
     social_links: [
@@ -35,7 +35,7 @@ const team_home_two = [
   },
   {
     id: 2,
-    img: "/assets/img/team/team-thumb-06.png",
+    img: "/assets/img/services/pos/pos-thumb-02.png",
     name: "SuperMenu POS",
     title: "Genetic Subtext",
     social_links: [
@@ -69,7 +69,7 @@ const team_home_two = [
   },
   {
     id: 3,
-    img: "/assets/img/team/team-thumb-07.png",
+    img: "/assets/img/services/pos/pos-thumb-03.png",
     name: "JMSC POS",
     title: "Genetic Subtext",
     social_links: [
@@ -103,7 +103,7 @@ const team_home_two = [
   },
   {
     id: 4,
-    img: "/assets/img/team/team-thumb-08.png",
+    img: "/assets/img/services/pos/pos-thumb-04.png",
     name: "Galaxy POS",
     title: "Genetic Subtext",
     social_links: [
