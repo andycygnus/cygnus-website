@@ -18,7 +18,7 @@ const hero_slider = [
         <br /> pertinacia sed, eum phaedrum contentiones et
       </>
     ),
-    appointment: "Appointment",
+    appointment: "Get a Quote",
     about: "About us",
     img_1: "/assets/img/slider/slider-bg-1.png",
     img_2: "/assets/img/slider/slider-bg-2.png",
@@ -36,7 +36,7 @@ const hero_slider = [
         <br /> pertinacia sed, eum phaedrum contentiones et
       </>
     ),
-    appointment: "Appointment",
+    appointment: "Get a Quote",
     about: "About us",
     img_1: "/assets/img/slider/slider-bg-3.png",
     img_2: "/assets/img/slider/slider-bg-4.png",

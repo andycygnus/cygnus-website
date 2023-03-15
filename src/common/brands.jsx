@@ -62,7 +62,7 @@ const Brands = ({ style_2 = false, border_style = false }) => {
           style_2
             ? "tp-common-area grey-bg pb-120"
             : border_style
-            ? "pt-170 pb-120"
+            ? "pt-60 pb-60"
             : "pt-130 pb-130"
         } `}
       >

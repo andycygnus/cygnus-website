@@ -45,7 +45,7 @@ const Team = () => {
   }, []);
   return (
     <>
-      <section className="team-area pb-55">
+      <section className="team-area pt-55 pb-55">
         <div className="container">
           <div className="p-relative">
             <div className="row">
