@@ -1,4 +1,5 @@
 import team_home_two from "@/data/team-home-2";
+import { bottom } from "@popperjs/core";
 import React, { useEffect, useState } from "react";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -45,14 +46,14 @@ const Team = () => {
   return (
     <>
       <section className="team-area pt-55 pb-55">
-        <div className="container">
+        <div className="container" style={{textAlign: 'center'}}>
+          <span className="tp-section__sub-title left-line right-line mb-25">Our Services</span>
+        </div>
+        <div className="container" style={{marginBottom: '60px'}}>
           <div className="p-relative">
             <div className="row">
               <div className="col-lg-12">
                 <div className="tp-section text-center">
-                  <span className="tp-section__sub-title left-line right-line mb-25">
-                    Our Services
-                  </span>
                   <h3 className="tp-section__title" style={{textAlign: 'left', paddingLeft: '30px'}}>POS Solutions</h3>
                 </div>
               </div>
