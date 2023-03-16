@@ -76,7 +76,7 @@ body {
   font-family: var(--tp-ff-body);
   font-size: 15px;
   font-weight: 400;
-  color: var(--tp-text-body);
+  color: #6d6e71;
   line-height: 26px;
   overflow-x: hidden !important;
 }
@@ -93,7 +93,7 @@ h4,
 h5,
 h6 {
   font-family: var(--tp-ff-heading);
-  color: var(--tp-header-1);
+  color: #424143;
   margin-top: 0px;
   font-weight: var(--tp-fw-sbold);
   line-height: 1.2;
@@ -137,7 +137,7 @@ p {
   font-family: var(--tp-ff-p);
   font-size: 15px;
   font-weight: 400;
-  color: var(--tp-text-body);
+  color: #6d6d6d;
   margin-bottom: 15px;
   line-height: 26px;
 }

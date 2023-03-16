@@ -119,12 +119,12 @@
     width: 100px;
     line-height: 100px;
     text-align: center;
-    background: var(--tp-icon-green);
+    background: #4692ff;
     border-radius: 50px;
     color: var(--tp-common-white);
     animation: tp-pulse 2s infinite;
     &:hover {
-      background-color: var(--tp-theme-blue);
+      background-color: #1c79ff;
     }
   }
 }

@@ -1233,7 +1233,7 @@ input[type=color] {
   color: var(--tp-text-body);
 }
 .header-top-mob a:hover {
-  color: var(--tp-icon-green);
+  color: var(--tp-icon-blue);
 }
 
 .main-menu-second {

@@ -24,13 +24,13 @@
         padding: 15px 0;
         margin: 0 30px;
         font-size: 14px;
-        color: var(--tp-text-2);
+        color: #838588;
         font-weight: 700;
         display: block;
         text-transform: uppercase;
         &:hover,
         &.active {
-          color: var(--tp-text-body);
+          color: #3966ff;
         }
         @media #{$xxl} {
           font-size: 12px;
@@ -57,7 +57,7 @@
         left: 0;
         width: 240px;
         padding: 20px 30px;
-        background: var(--tp-theme-primary);
+        background: #3270b9;
         opacity: 0;
         visibility: hidden;
         @include transition(0.3s);
@@ -158,9 +158,9 @@
     margin-left: 5px;
   }
   & a {
-    color: var(--tp-text-body);
+    color: #424143;
     &:hover {
-      color: var(--tp-icon-green);
+      color: var(--tp-icon-blue);
     }
   }
 }
