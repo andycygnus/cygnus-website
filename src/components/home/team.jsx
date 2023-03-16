@@ -1,11 +1,12 @@
-import team_home_two from "@/data/team-home-2";
+import pos_home from "@/data/team-home-2";
+import term_home from "@/data/team-home-2";
 import React, { useEffect, useState } from "react";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 
 // slider setting
-const setting = {
+const setting = (nextEl, prevEl) => ({
   slidesPerView: 4,
   autoplay: {
     delay: 6000,
@@ -32,10 +33,10 @@ const setting = {
   },
   // Navigation arrows
   navigation: {
-    nextEl: ".team-nxt",
-    prevEl: ".team-prv",
+    nextEl: nextEl,
+    prevEl: prevEl,
   },
-};
+})
 
 const Team = () => {
   const [isLoop, setIsLoop] = useState(false);
@@ -58,13 +59,13 @@ const Team = () => {
               </div>
             </div>
             <Swiper
-              {...setting}
+              {...setting(".pos-nxt-1", ".pos-prv-1")}
               modules={[Navigation]}
               loop={isLoop}
               className="swiper-container tp-team-active wow fadeInUp"
               data-wow-delay=".3s"
             >
-              {team_home_two.map((item) => (
+              {pos_home.map((item) => (
                 <SwiperSlide key={item.id}>
                   <div className="swiper-slide">
                     <div className="team-item mb-30">
@@ -76,11 +77,11 @@ const Team = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="team-arrow">
-              <div className="team-prv">
+            <div className="pos-arrow">
+              <div className="pos-prv-1 arrow">
                 <i className="fa-regular fa-arrow-left"></i>
               </div>
-              <div className="team-nxt">
+              <div className="pos-nxt-1 arrow">
                 <i className="fa-regular fa-arrow-right"></i>
               </div>
             </div>
@@ -96,13 +97,13 @@ const Team = () => {
               </div>
             </div>
             <Swiper
-              {...setting}
+              {...setting(".term-nxt-2", ".term-prv-2")}
               modules={[Navigation]}
               loop={isLoop}
               className="swiper-container tp-team-active wow fadeInUp"
               data-wow-delay=".3s"
             >
-              {team_home_two.map((item) => (
+              {term_home.map((item) => (
                 <SwiperSlide key={item.id}>
                   <div className="swiper-slide">
                     <div className="team-item mb-30">
@@ -114,11 +115,11 @@ const Team = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="team-arrow">
-              <div className="team-prv">
+            <div className="term-arrow">
+              <div className="term-prv-2 arrow">
                 <i className="fa-regular fa-arrow-left"></i>
               </div>
-              <div className="team-nxt">
+              <div className="term-nxt-2 arrow">
                 <i className="fa-regular fa-arrow-right"></i>
               </div>
             </div>
