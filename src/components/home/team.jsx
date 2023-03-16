@@ -1,5 +1,4 @@
-import pos_home from "@/data/team-home-2";
-import term_home from "@/data/team-home-2";
+import { pos_home, term_home } from "@/data/team-home-2";
 import React, { useEffect, useState } from "react";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,6 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // slider setting
 const setting = (nextEl, prevEl) => ({
+  // Add the following line:
+  spaceBetween: -50, // This will add a 10px margin between images.
   slidesPerView: 4,
   autoplay: {
     delay: 6000,
@@ -14,21 +15,27 @@ const setting = (nextEl, prevEl) => ({
   breakpoints: {
     1400: {
       slidesPerView: 4,
+      spaceBetween: 0, // Add this line
     },
     1200: {
       slidesPerView: 4,
+      spaceBetween: 10, // Add this line
     },
     992: {
       slidesPerView: 3,
+      spaceBetween: 10, // Add this line
     },
     768: {
       slidesPerView: 2,
+      spaceBetween: 10, // Add this line
     },
     576: {
       slidesPerView: 1,
+      spaceBetween: 10, // Add this line
     },
     0: {
       slidesPerView: 1,
+      spaceBetween: 10, // Add this line
     },
   },
   // Navigation arrows
