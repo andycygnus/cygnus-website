@@ -40,10 +40,24 @@ const menu_data = [
     link: "/shop",
     active: "",
     sub_menus: [
-      { link: "/service", title: "Service 1" },
-      { link: "/service-2", title: "Service 2" },
-      { link: "/service-3", title: "Service 3" },
-      { link: "/service-details", title: "Service Details" },
+      {
+        link: "/service",
+        title: "Terminal Solutions",
+        sub_menus: [
+          { link: "/terminal-1", title: "Terminal Solution 1" },
+          { link: "/terminal-2", title: "Terminal Solution 2" },
+        ],
+      },
+      {
+        link: "/service-2",
+        title: "POS Solutions",
+        sub_menus: [
+          { link: "/pos-1", title: "POS Solution 1" },
+          { link: "/pos-2", title: "POS Solution 2" },
+        ],
+      },
+      { link: "/service-3", title: "Online Ordering" },
+      { link: "/service-details", title: "Mobile App" },
     ],
   },
   {
