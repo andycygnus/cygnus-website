@@ -54,8 +54,8 @@ const AboutArea = () => {
                   <h3 className="tp-section__title ab-title mb-25">
                     We’ll Ensure You Alwasy Get Best Results.
                   </h3>
-                  <a className="tp-section__link" href="#">
-                    Read our MIssion & Vission{" "}
+                  <a className="tp-section__link" href="#nav-area">
+                    Read our Mission & Values{" "}
                     <i className="fa-solid fa-arrow-right"></i>
                   </a>
                   <p className=" mr-20 mb-40">

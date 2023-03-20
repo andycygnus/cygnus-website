@@ -107,7 +107,7 @@ const tab_content = [
 const NavTab = () => {
   return (
     <>
-      <section className="nav-area tp-common-area pt-130 pb-80">
+      <section id="nav-area" className="nav-area tp-common-area pt-130 pb-80">
         <div className="container">
           <ul className="nav tp-nav-tavs mb-70" id="myTab" role="tablist">
             <li className="nav-item" role="presentation">
