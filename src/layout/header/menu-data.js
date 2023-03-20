@@ -16,20 +16,11 @@ const menu_data = [
     id: 2,
     mega_menu: false,
     has_dropdown: false,
-    title: "Partners",
-    link: "/team-1",
+    title: "About Us",
+    link: "/about",
     active: "",
     sub_menus: [
-      /*
-      { link: "/team-details", title: "Team Details" },
-      { link: "/pricing-plan", title: "Pricing Plan" },
-      { link: "/shop", title: "Shop" },
-      { link: "/product-details", title: "Product Details" },
-      { link: "/cart", title: "cart" },
-      { link: "/checkout", title: "Checkout" },
-      { link: "/project-details", title: "Project Details" },
-      { link: "/faq", title: "FAQ's" },
-      */
+
     ],
   },
   {
@@ -50,23 +41,12 @@ const menu_data = [
     id: 4,
     mega_menu: false,
     has_dropdown: false,
-    title: "Pricing",
-    link: "/pricing-plan",
+    title: "Partners",
+    link: "/team-1",
     active: "",
   },
   {
     id: 5,
-    mega_menu: false,
-    has_dropdown: false,
-    title: "About Us",
-    link: "/about",
-    active: "",
-    sub_menus: [
-
-    ],
-  },
-  {
-    id: 6,
     mega_menu: false,
     has_dropdown: false,
     title: "Contact Us",

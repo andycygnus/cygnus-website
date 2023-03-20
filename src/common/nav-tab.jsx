@@ -7,10 +7,10 @@ const progress_data = [
     id: 1,
     icon: "flaticon-approval",
     img: "/assets/img/shape/navtabs-01.png",
-    title: "Generate Proposal",
+    title: "Application Approved",
     des: (
       <>
-        Testing Begins many varios <br /> suffered alten in some
+        Submit your statement alongside your application <br /> and our in-house underwriting team will approve and board the account.
       </>
     ),
   },
@@ -18,11 +18,11 @@ const progress_data = [
     id: 2,
     icon: "flaticon-flask",
     img: "/assets/img/shape/navtabs-01.png",
-    title: "Testing Begins",
+    title: "Terminal Deployment",
     des: (
       <>
-        There are many varios passages <br />
-        suffered alten in some
+        We will configure, test, and deploy the equipments <br />
+        for you to use to accept payments.
       </>
     ),
   },
@@ -30,11 +30,10 @@ const progress_data = [
     id: 3,
     icon: "flaticon-report",
     img: "",
-    title: "Reports Delivered",
+    title: "Accept Payments",
     des: (
       <>
-        There are many varios passages <br />
-        suffered alten in some
+        Start accepting payments!
       </>
     ),
   },
@@ -48,23 +47,25 @@ const tab_content = [
     aria_labelledby: "profile-tab",
     header: (
       <>
-        Your full service lab for clinical trials. Our process is to ensure the
-        generation of <br /> accurate and precise findings
+        To minimize cost and maximize value through a consultative, merchant-focused approach<br />
+        to modern point-of-sale solutions and transparent payment processing. 
       </>
     ),
-    title: "Our Mission is Give You Always Best Results.",
+    title: "Our Mission To Provide Best Solutions",
     des_1: (
       <>
-        Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo
-        claritatem insitamconse quat.Exerci tation ullamcorper suscipit loborti
-        excommodo habent claritatem insitamconse quat.Exerci tationlobortis nisl
-        aliquip ex ea commodo habent claritatem insitamconse quat.
+        Cygnus Payments tailors robust, cloud-based solutions, leveraging their value to keep 
+        costs low. Currently, Cygnus offers five different product-types to help our partners:
       </>
     ),
     des_2: (
       <>
-        Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo
-        claritatem insitamconse quat.Exerci tation ullamcorper suscip
+        1. Verticalized POS Equipment<br />
+        2. Same-Day Onboarding<br />
+        3. Small Business Lending<br />
+        4. Gift and Loyalty Programs<br />
+        5. Leasing
+
       </>
     ),
     images: [
@@ -78,8 +79,8 @@ const tab_content = [
     aria_labelledby: "contact-tab",
     header: (
       <>
-        Your full service lab for clinical trials. Our process is to ensure the
-        generation of <br /> accurate and precise findings
+        To minimize cost and maximize value through <br />
+        consultative, merchant-focused approach to modern point-of-sale solutions and transparent payment processing. 
       </>
     ),
     title: "We are Trusted by over 25000+ of customers",
@@ -118,10 +119,10 @@ const NavTab = () => {
                 type="button"
                 role="tab"
                 aria-controls="home-tab-pane"
-                aria-selected="true"
+                aria-selected="false"
                 tabIndex="-1"
               >
-                Our Process
+                OUR PROCESS
               </button>
             </li>
             <li className="nav-item" role="presentation">
@@ -133,10 +134,10 @@ const NavTab = () => {
                 type="button"
                 role="tab"
                 aria-controls="profile-tab-pane"
-                aria-selected="false"
+                aria-selected="true"
                 tabIndex="-1"
               >
-                OUr Mission
+                OUR MISSION
               </button>
             </li>
             <li className="nav-item" role="presentation">
@@ -151,7 +152,7 @@ const NavTab = () => {
                 aria-selected="false"
                 tabIndex="-1"
               >
-                OUr Value
+                OUR VALUES
               </button>
             </li>
           </ul>
@@ -163,8 +164,7 @@ const NavTab = () => {
               aria-labelledby="home-tab"
             >
               <span className="nav-info d-flex justify-content-center text-center mb-75">
-                Your full service lab for clinical trials. Our process is to
-                ensure the generation of <br /> accurate and precise findings
+                Our process to ensure your payment needs are met
               </span>
               <div className="row">
                 {progress_data.map((item) => (

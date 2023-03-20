@@ -17,7 +17,6 @@ const About = () => {
       <Counter />
       <Specialists />
       <NavTab />
-      <Team />
       <Footer />
     </>
   );
