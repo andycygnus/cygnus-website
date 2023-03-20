@@ -47,7 +47,7 @@ const tab_content = [
     aria_labelledby: "profile-tab",
     header: (
       <>
-        To minimize cost and maximize value through a consultative, merchant-focused approach<br />
+        To maximize value and minimize cost through a consultative, merchant-focused approach<br />
         to modern point-of-sale solutions and transparent payment processing. 
       </>
     ),
@@ -83,7 +83,7 @@ const tab_content = [
         consultative, merchant-focused approach to modern point-of-sale solutions and transparent payment processing. 
       </>
     ),
-    title: "We are Trusted by over 25000+ of customers",
+    title: "We are Trusted by over 25000+ customers",
     des_1: (
       <>
         Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo

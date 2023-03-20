@@ -38,6 +38,24 @@ const ContactUs = () => {
                 />
               </div>
             </div>
+            <div className="col-lg-6">
+              <div className="contactform__input mb-30">
+                <input
+                  name="lastVolume"
+                  type="number"
+                  placeholder="Enter your last month's processing volume"
+                />
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="contactform__input mb-30">
+                <input
+                  name="totalFeePaid"
+                  type="number"
+                  placeholder="Enter your last month's total fee"
+                />
+              </div>
+            </div>
             <div className="col-lg-12">
               <div className="contactform__input mb-30">
                 <textarea
