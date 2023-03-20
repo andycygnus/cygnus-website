@@ -7,14 +7,16 @@ import ContactUs from "../forms/contact-us";
 const contact_info = {
   address: (
     <>
-      2100 Reston Pkwy Suite 415 <br /> Reson, VA 20191
+      2100 Reston Pkwy Suite 415 <br />
+      Reston, VA 20191
     </>
   ),
   phone_1: "(844) 200-3277",
   open: (
     <>
       Monday - Friday <br />
-      09:00 AM - 06:30 PM
+      09:00 AM EST - <br />
+      06:30 PM EST
     </>
   ),
 };
@@ -80,7 +82,7 @@ const ContactForm = () => {
             <div className="col-lg-8 col-md-7 col-12">
               <div className="contactform wow fadeInRight" data-wow-delay=".4s">
                 <h4 className="contactform__title mb-35">
-                  Send us a Massage :
+                  Send us a Message :
                 </h4>
                 <ContactUs />
 
