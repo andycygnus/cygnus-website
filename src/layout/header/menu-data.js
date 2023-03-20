@@ -32,7 +32,7 @@ const menu_data = [
     active: "",
     sub_menus: [
       {
-        link: "/service",
+        link: "/shop",
         title: "Terminal Solutions",
         sub_menus: [
           { link: "/terminal-1", title: "Terminal Solution 1" },

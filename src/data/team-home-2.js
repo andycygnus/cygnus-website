@@ -1,7 +1,7 @@
 const pos_home = [
   {
     id: 1,
-    img: "/assets/img/services/pos/pos-thumb-02.png",
+    img: "/assets/img/services/pos/pos-thumb-01.png",
     name: "Documentor POS",
     title:  "Genetic Subtext",
     social_links: [

@@ -9,7 +9,7 @@ const About = () => {
     about_img: "/assets/img/about/about-bg-02.png",
     popup_video: "https://www.youtube.com/watch?v=-s4lQxg2GXo",
     about_thumb: "/assets/img/about/about-bg-03.png",
-    title: "Learn more about us",
+    title: "Hear what our partners say about us",
     sub_title: "About",
     des_1: (
       <>

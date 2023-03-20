@@ -2,7 +2,7 @@
 
 .breadcrumb {
   &__area {
-    padding: 200px 0;
+    padding: 150px 0;
   }
   &__overlay {
     position: relative;
@@ -15,7 +15,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: rgb(23, 17, 81, 0.7);
+      background-color: rgb(1 42 71 / 70%);
       z-index: -1;
     }
   }
