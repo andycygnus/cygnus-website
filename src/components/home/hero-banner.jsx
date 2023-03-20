@@ -32,8 +32,7 @@ const hero_slider = [
     ),
     des: (
       <>
-        Viris lucilius ad quo. In pro nihil aliquam inimicus, munere ique mel in. Posse facer{" "}
-        <br /> pertinacia sed, eum phaedrum contentiones et
+        We make it easy for you to accept payments, with flexible options and competitive rates. Whether you need a simple checkout page or a fully integrated payment platform, we have the solution for you.
       </>
     ),
     appointment: "Get a Quote",
