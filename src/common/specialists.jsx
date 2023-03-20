@@ -6,35 +6,34 @@ import React from "react";
 const choose = [
   {
     id: 1,
-    color: "",
-    icon: "flaticon-microscope",
+    color: "pink-icon",
+    icon: "flaticon-thinking",
     title: (
       <>
-        High Quality <br />
-        Services
+        Quick <br /> Deployment
       </>
     ),
     des: (
       <>
-        Nam eget dui vel quam sodales <br />
-        semper quis porttitor tortor.
+        Receive and process<br /> 
+        within days once account<br />
+        is approved.
       </>
     ),
   },
   {
     id: 2,
     color: "pink-icon",
-    icon: "flaticon-thinking",
+    icon: "flaticon-microscope",
     title: (
       <>
-        Fast Working <br />
-        Process
+        Modern <br /> Equipments
       </>
     ),
     des: (
       <>
-        Nam eget dui vel quam sodales <br />
-        semper quis porttitor tortor.
+        Latest equipments <br />
+        with latest technologies.
       </>
     ),
   },
@@ -49,8 +48,8 @@ const choose = [
     ),
     des: (
       <>
-        Nam eget dui vel quam sodales <br />
-        semper quis porttitor tortor.
+        24/7 customer support <br />
+        to help you in your needs.
       </>
     ),
   },
@@ -65,8 +64,8 @@ const choose = [
     ),
     des: (
       <>
-        Nam eget dui vel quam sodales <br />
-        semper quis porttitor tortor.
+        Experienced support team <br />
+        at your service.
       </>
     ),
   },
@@ -76,14 +75,11 @@ const choose = [
 const Specialists = () => {
   return (
     <>
-      <section className="choose-area theme-bg pt-120 pb-130">
+      <section className="choose-area theme-bg pt-80 pb-29">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="tp-section text-center">
-                <span className="tp-section__sub-title left-line right-line mb-25">
-                  Our Specialists
-                </span>
                 <h3 className="tp-section__title title-white mb-85">
                   Why Choose Us
                 </h3>
@@ -107,18 +103,6 @@ const Specialists = () => {
                 </div>
               </div>
             ))}
-          </div>
-          <div className="row text-center">
-            <div className="col-lg-12">
-              <div className="tp-choose-option">
-                <span>
-                  Laboratories Used For Scientific Research :
-                  <Link href="/">
-                    Take Many Forms<i className="fa-solid fa-arrow-right"></i>
-                  </Link>
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
