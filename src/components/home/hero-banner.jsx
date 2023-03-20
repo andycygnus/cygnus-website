@@ -27,7 +27,7 @@ const hero_slider = [
     id: 2,
     title: (
       <>
-        Cygnus Payments<br/> is easy to work with!
+        Cygnus Payments<br/> Is Easy to Work With!
       </>
     ),
     des: (
@@ -68,7 +68,7 @@ const HeroBanner = () => {
   }, []);
   return (
     <>
-      <section className="slider-area slider-tp-top pt-100 p-relative">
+      <section className="slider-area slider-tp-top p-relative">
         <div className="slider-social">
           <div className="container">
             <div className="row">

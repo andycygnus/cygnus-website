@@ -16,23 +16,6 @@ const ShopArea = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="tpfilter d-flex align-items-center">
-                <span>Short by</span>
-                <NiceSelect
-                  options={[
-                    // { value: "Short by", text: "Short by" },
-                    { value: "New", text: "New" },
-                    { value: "Popularity", text: "Popularity" },
-                    { value: "Average rating", text: "Average rating" },
-                    { value: "Latest", text: "Latest" },
-                    { value: "Price: low to high", text: "Price: low to high" },
-                    { value: "Price: high to low", text: "Price: high to low" },
-                  ]}
-                  defaultCurrent={0}
-                  onChange={selectHandler}
-                />
-               
-              </div>
             </div>
           </div>
           <div className="row">
