@@ -2,7 +2,7 @@ const shop_data = [
   {
     id: 1,
     img: "/assets/img/shop/shop-01.jpg",
-    title: "Glucose Monitoring",
+    title: "PAX A35",
     price: 46.0,
     product_news: "",
     ratting: [
@@ -16,7 +16,7 @@ const shop_data = [
   {
     id: 2,
     img: "/assets/img/shop/shop-02.jpg",
-    title: "Single Hand Gloves",
+    title: "PAX S300",
     price: 58.1,
     product_news: "",
     ratting: [
@@ -30,7 +30,7 @@ const shop_data = [
   {
     id: 3,
     img: "/assets/img/shop/shop-03.jpg",
-    title: "Pharmaceuticals Plant",
+    title: "PAX A80",
     price: 88.0,
     product_news: "HOT",
     ratting: [
@@ -44,7 +44,7 @@ const shop_data = [
   {
     id: 4,
     img: "/assets/img/shop/shop-04.jpg",
-    title: "Digital Thermometer",
+    title: "PAX S80",
     price: 70.0,
     product_news: "NEW",
     ratting: [
@@ -58,7 +58,7 @@ const shop_data = [
   {
     id: 5,
     img: "/assets/img/shop/shop-05.jpg",
-    title: "Stethoscope Superb",
+    title: "PAX A920",
     price: 96.0,
     product_news: "",
     ratting: [
@@ -72,7 +72,7 @@ const shop_data = [
   {
     id: 6,
     img: "/assets/img/shop/shop-06.jpg",
-    title: "Sphygmomanometer ECO",
+    title: "PAX SP30",
     price: 69.0,
     product_news: "",
     ratting: [
@@ -86,7 +86,7 @@ const shop_data = [
   {
     id: 7,
     img: "/assets/img/shop/shop-07.jpg",
-    title: "Sphygmomanometer ECO",
+    title: "PAX SP20 (Pin Pad)",
     price: 70.0,
     product_news: "",
     ratting: [
@@ -100,7 +100,7 @@ const shop_data = [
   {
     id: 8,
     img: "/assets/img/shop/shop-08.jpg",
-    title: "Hand Gloves",
+    title: "PAX SP30 Mono (Pin Pad)",
     price: 52.0,
     product_news: "",
     ratting: [
@@ -111,6 +111,7 @@ const shop_data = [
       "fa-regular fa-star",
     ],
   },
+  /*
   {
     id: 9,
     img: "/assets/img/shop/shop-09.jpg",
@@ -167,5 +168,6 @@ const shop_data = [
       "fa-regular fa-star",
     ],
   },
+  */
 ];
 export default shop_data;

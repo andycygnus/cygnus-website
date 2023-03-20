@@ -46,11 +46,32 @@ const ShopArea = () => {
                     <Link href="/product-details">
                       <img src={item.img} alt="shop-thumb" />
                     </Link>
+                    {item.product_news && (
+                      <span className="tpshopitem__product-base">
+                        {item.product_news}
+                      </span>
+                    )}
+                    <div className="tpshopitem__thumb-icon">
+                      <a href="#">
+                        <i className="fal fa-eye"></i>
+                      </a>
+                      <a href="#">
+                        <i className="fal fa-shopping-cart"></i>
+                      </a>
+                      <a href="#">
+                        <i className="fal fa-heart"></i>
+                      </a>
+                    </div>
                   </div>
                   <div className="tpshopitem__content text-center">
                     <span className="tpshopitem__title mb-5">
                       <Link href="/product-details">{item.title}</Link>
                     </span>
+                    <div className="tpshopitem__review">
+                      {item.ratting.map((start, i) => (
+                        <i key={i} className={start}></i>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
