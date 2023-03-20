@@ -112,7 +112,7 @@ const NavTab = () => {
           <ul className="nav tp-nav-tavs mb-70" id="myTab" role="tablist">
             <li className="nav-item" role="presentation">
               <button
-                className="nav-link active"
+                className="nav-link"
                 id="home-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#home-tab-pane"
@@ -157,38 +157,6 @@ const NavTab = () => {
             </li>
           </ul>
           <div className="tab-content" id="myTabContent">
-            <div
-              className="tab-pane fade show active"
-              id="home-tab-pane"
-              role="tabpanel"
-              aria-labelledby="home-tab"
-            >
-              <span className="nav-info d-flex justify-content-center text-center mb-75">
-                Our process to ensure your payment needs are met
-              </span>
-              <div className="row">
-                {progress_data.map((item) => (
-                  <div key={item.id} className="col-xl-4 col-lg-4 col-md-6">
-                    <div className="navtabs nav-primary p-relative text-center mb-40">
-                      <div className="navtabs__icon mb-35">
-                        <i className={item.icon}></i>
-                      </div>
-                      <div className="navtabs__content">
-                        <h5 className="navtabs__title mb-25 mb-10">
-                          {item.title}
-                        </h5>
-                        <p>{item.des}</p>
-                      </div>
-                      {item.img && (
-                        <div className="navtabs__shape d-none d-lg-block">
-                          <img src={item?.img} alt="shape" />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
             {tab_content.map((item) => (
               <div
                 key={item.id}
@@ -226,6 +194,38 @@ const NavTab = () => {
                 </div>
               </div>
             ))}
+            <div
+              className="tab-pane fade"
+              id="home-tab-pane"
+              role="tabpanel"
+              aria-labelledby="home-tab"
+            >
+              <span className="nav-info d-flex justify-content-center text-center mb-75">
+                Our process to ensure your payment needs are met
+              </span>
+              <div className="row">
+                {progress_data.map((item) => (
+                  <div key={item.id} className="col-xl-4 col-lg-4 col-md-6">
+                    <div className="navtabs nav-primary p-relative text-center mb-40">
+                      <div className="navtabs__icon mb-35">
+                        <i className={item.icon}></i>
+                      </div>
+                      <div className="navtabs__content">
+                        <h5 className="navtabs__title mb-25 mb-10">
+                          {item.title}
+                        </h5>
+                        <p>{item.des}</p>
+                      </div>
+                      {item.img && (
+                        <div className="navtabs__shape d-none d-lg-block">
+                          <img src={item?.img} alt="shape" />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
