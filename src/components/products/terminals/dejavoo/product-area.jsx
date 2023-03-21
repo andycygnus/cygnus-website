@@ -3,11 +3,11 @@ import NiceSelect from "@/ui/nice-select";
 import Link from "next/link";
 import React from "react";
 
-const ShopArea = () => {
+const ProductArea = () => {
   const selectHandler = (e) => {};
   return (
     <>
-      <div className="shop-area pt-120 pb-130">
+      <div className="shop-area pt-50 pb-130">
         <div className="container">
           <div className="row mb-5">
             <div className="col-md-6">
@@ -16,23 +16,6 @@ const ShopArea = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="tpfilter d-flex align-items-center">
-                <span>Short by</span>
-                <NiceSelect
-                  options={[
-                    // { value: "Short by", text: "Short by" },
-                    { value: "New", text: "New" },
-                    { value: "Popularity", text: "Popularity" },
-                    { value: "Average rating", text: "Average rating" },
-                    { value: "Latest", text: "Latest" },
-                    { value: "Price: low to high", text: "Price: low to high" },
-                    { value: "Price: high to low", text: "Price: high to low" },
-                  ]}
-                  defaultCurrent={0}
-                  onChange={selectHandler}
-                />
-               
-              </div>
             </div>
           </div>
           <div className="row">
@@ -46,32 +29,11 @@ const ShopArea = () => {
                     <Link href="/product-details">
                       <img src={item.img} alt="shop-thumb" />
                     </Link>
-                    {item.product_news && (
-                      <span className="tpshopitem__product-base">
-                        {item.product_news}
-                      </span>
-                    )}
-                    <div className="tpshopitem__thumb-icon">
-                      <a href="#">
-                        <i className="fal fa-eye"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fal fa-shopping-cart"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fal fa-heart"></i>
-                      </a>
-                    </div>
                   </div>
                   <div className="tpshopitem__content text-center">
                     <span className="tpshopitem__title mb-5">
                       <Link href="/product-details">{item.title}</Link>
                     </span>
-                    <div className="tpshopitem__review">
-                      {item.ratting.map((start, i) => (
-                        <i key={i} className={start}></i>
-                      ))}
-                    </div>
                   </div>
                 </div>
               </div>
@@ -115,4 +77,4 @@ const ShopArea = () => {
   );
 };
 
-export default ShopArea;
+export default ProductArea;

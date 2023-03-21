@@ -2,7 +2,20 @@ import Link from "next/link.js";
 import React from "react";
 import menu_data from "./menu-data.js";
 
-const NavMenu = ({num=false}) => {
+const NavMenu = ({ num = false }) => {
+  const renderSubMenu = (subMenus) => {
+    return (
+      <ul className="sub-menu" style={{marginTop: '-15px'}}>
+        {subMenus.map((sub_m, i) => (
+          <li key={i} className={sub_m.has_dropdown ? "has-dropdown" : ""}>
+            <Link href={sub_m.link}>{sub_m.title}</Link>
+            {sub_m.has_dropdown && renderSubMenu(sub_m.sub_menus)}
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
   return (
     <>
       <ul>
@@ -15,15 +28,7 @@ const NavMenu = ({num=false}) => {
                   : num && index + 1 + "."}
                 {menu.title}
               </Link>
-              {menu.has_dropdown && (
-                <ul className="sub-menu">
-                  {menu.sub_menus.map((sub_m, i) => (
-                    <li key={i}>
-                      <Link href={sub_m.link}>{sub_m.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              {menu.has_dropdown && renderSubMenu(menu.sub_menus)}
             </li>
           ) : (
             <li key={menu.id}>

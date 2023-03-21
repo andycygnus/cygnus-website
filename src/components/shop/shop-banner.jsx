@@ -14,7 +14,7 @@ const ShopBanner = () => {
           <div className="row align-items-center">
             <div className="col-xl-7 col-lg-12 col-md-12 col-12">
               <div className="tp-breadcrumb">
-                <h2 className="tp-breadcrumb__title">PAX Technology</h2>
+                <h2 className="tp-breadcrumb__title">PAXdfdf s</h2>
               </div>
             </div>
             <div className="col-xl-5 col-lg-12 col-md-12 col-12">

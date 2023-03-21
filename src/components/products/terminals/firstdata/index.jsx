@@ -1,18 +1,18 @@
 import Footer from "@/layout/footer/footer";
 import Header from "@/layout/header/header";
 import React from "react";
-import ShopArea from "./shop-area";
-import ShopBanner from "./shop-banner";
+import ProductArea from "./product-area";
+import ProductBanner from "./product-banner";
 
-const Shop = () => {
+const Product = () => {
   return (
     <>
       <Header />
-      <ShopBanner />
-      <ShopArea />
+      <ProductBanner />
+      <ProductArea />
       <Footer />
     </>
   );
 };
 
-export default Shop;
+export default Product;
