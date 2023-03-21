@@ -9,10 +9,7 @@ const footer_content = {
       title: "Useful links",
       cls: "footer-col-2",
       links: [
-        { name: "Funkey Change", link: "/contact-us" },
-        { name: "CHANGE About us", link: "/about" },
-        { name: "Shipping & Returns", link: "/shop-details" },
-        { name: "Refund Policy", link: "/shop-details" },
+        { name: "Contact Us", link: "/contact-us" },
         { name: "About us", link: "/about" },
         { name: "Services", link: "/service" },
       ],
@@ -26,7 +23,7 @@ const footer_content = {
         { name: "Reston, VA 20191" },
         { name: "1 (+844) 200-3277" },
         { name: "sale@cygnuspay.com" },
-        { name: "Office Hours: 9AM - 6:30PM" },
+        { name: "Office Hours: 9AM EST - 6:30PM EST" },
         { name: "Monday - Friday" },
       ],
     },
@@ -40,7 +37,7 @@ const footer_content = {
         "(+844)200-3277",
         " sale@cygnuspay.com",
       ],
-      office_time: "Office Hours: 9AM - 6:30PM",
+      office_time: "Office Hours: 9AM EST - 6:30PM EST",
       off_day: " Friday - Wekend Day",
     },
   ],
@@ -75,7 +72,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              {
+              {/*
                 footer_info.map(item =>  <div key={item.id} className="col-xl-3 col-lg-4 col-md-6">
                 <div
                   className={`footer-widget ${item.cls} mb-50 wow fadeInUp`}
@@ -94,9 +91,9 @@ const Footer = () => {
                     </ul>
                   </div>
                 </div>
-              </div>)
+              </div>)*/
               }
-              {/* <div className="col-xl-3 col-lg-4 col-md-6">
+              <div className="col-xl-3 col-lg-4 col-md-6">
                 <div
                   className="footer-widget footer-col-2 mb-50 wow fadeInUp"
                   data-wow-delay=".4s"
@@ -106,15 +103,6 @@ const Footer = () => {
                     <ul>
                       <li>
                         <Link href="/contact">Contact us</Link>
-                      </li>
-                      <li>
-                        <Link href="/about">Help & About us</Link>
-                      </li>
-                      <li>
-                        <Link href="/shop-details">Shipping & Returns</Link>
-                      </li>
-                      <li>
-                        <Link href="/shop-details">Refund Policy</Link>
                       </li>
                       <li>
                         <Link href="/about">About us</Link>
@@ -135,41 +123,32 @@ const Footer = () => {
                   <div className="footer-widget__info">
                     <ul>
                       <li>
-                        <a href="#">Ta-134/A, Gulshan Badda Link </a>
-                      </li>
-                      <li>
-                        <a href="tel:+9159008855">(+880)155 69569 365</a>
-                      </li>
-                      <li>
-                        <a href="mailto:support@rstheme.com">
-                          support@rstheme.com
+                        <a href="https://www.google.com/maps/place/2100+Reston+Pkwy+%23415,+Reston,+VA+20191" target="_blank">
+                          2100 Reston Pkwy Suite 415, <br />Reston, VA 20191
                         </a>
                       </li>
-                      <li>Office Hours: 8AM - 11PM</li>
-                      <li>Sunday - Wekend Day</li>
+                      <li>
+                        <a href="tel:+8442003277">(844)200 3277</a>
+                      </li>
+                      <li>
+                        <a href="mailto:sales@cygnuspay.com">
+                          sales@cygnuspay.com
+                        </a>
+                      </li>
+                      <li>
+                        Office Hours:<br />
+                        9AM EST - <br />
+                        6:30PM EST
+                      </li>
+                      <li>Monday - Friday</li>
                     </ul>
-                  </div>
-                </div>
-              </div> */}
-              <div className="col-xl-3 col-lg-6 col-md-6">
-                <div
-                  className="footer-widget footer-col-4 mb-50 wow fadeInUp"
-                  data-wow-delay=".8s"
-                >
-                  <div className="footer-widget__newsletter p-relative">
-                    <form action="#">
-                      <input type="email" placeholder="Enter Mail" />
-                      <button className="footer-widget__fw-news-btn">
-                        <i className="fa-solid fa-paper-plane"></i>
-                      </button>
-                    </form>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="footer-area-bottom theme-bg">
+        {/* <div className="footer-area-bottom theme-bg">
           <div className="container">
             <div className="row">
               <div className="col-xl-6 col-lg-6 col-md-12 col-12">
@@ -186,15 +165,12 @@ const Footer = () => {
                     <li>
                       <a href="#">Privacy policy</a>
                     </li>
-                    <li>
-                      <a href="shop">Pricing</a>
-                    </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </footer>
     </>
   );

@@ -52,18 +52,17 @@ const AboutArea = () => {
               >
                 <div className="tp-section">
                   <h3 className="tp-section__title ab-title mb-25">
-                    We’ll Ensure You Alwasy Get Best Results.
+                    We’ll Ensure You Always Get Best Solutions.
                   </h3>
                   <a className="tp-section__link" href="#nav-area">
                     Read our Mission & Values{" "}
                     <i className="fa-solid fa-arrow-right"></i>
                   </a>
                   <p className=" mr-20 mb-40">
-                    Exerci tation ullamcorper suscipit lobortis nisl aliquip ex
-                    ea commodo claritatem insitamconse quat.Exerci tation
-                    ullamcorper suscipit loborti excommodo habent claritatem
-                    insitamconse quat.Exerci tationlobortis nisl aliquip ex ea
-                    commodo habent claritatem insitamconse quat.
+                  In today's complex and competitive business market, 
+                  Cygnus Payments found its passion; helping Small Business Owners (SBOs) 
+                  grow their footprint and maximize their earnings through the latest, 
+                  state-of-the-art FinTech solutions.
                   </p>
                 </div>
                 <div className="tp-about__info-list ab-check-list mb-55">
@@ -83,11 +82,6 @@ const AboutArea = () => {
                       lectus
                     </li>
                   </ul>
-                </div>
-                <div className="about-content__btn">
-                  <Link href="/about" className="tp-btn">
-                    About us
-                  </Link>
                 </div>
               </div>
             </div>

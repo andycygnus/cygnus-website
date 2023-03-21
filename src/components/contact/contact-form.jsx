@@ -43,7 +43,7 @@ const ContactForm = () => {
                   <div className="tpcontact__address">
                     <h4 className="tpcontact__title mb-15">Address line</h4>
                     <span>
-                      <Link href="https://www.google.com/maps/place/2100+Reston+Pkwy+%23415,+Reston,+VA+20191">{address}</Link>
+                      <Link href="https://www.google.com/maps/place/2100+Reston+Pkwy+%23415,+Reston,+VA+20191" target="_blank">{address}</Link>
                     </span>
                   </div>
                 </div>
