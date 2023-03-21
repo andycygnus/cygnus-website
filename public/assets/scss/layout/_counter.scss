@@ -7,17 +7,17 @@
 .counter {
   &__item {
     border: 1px solid var(--tp-border-primary);
-    padding: 75px 40px 70px 55px;
+    padding: 25px 40px 70px 55px;
     border-radius: 10px;
     @include transition(0.4s);
     @media #{$bxxxl} {
-      padding: 75px 30px 70px 30px;
+      padding: 25px 25px 70px 30px;
     }
     @media #{$xxl} {
-      padding: 75px 20px 70px 25px;
+      padding: 25px 25px 70px 25px;
     }
     @media #{$xl} {
-      padding: 75px 20px 70px 25px;
+      padding: 25px 25px 70px 25px;
     }
     &:hover {
       &.counter__item {
@@ -71,6 +71,7 @@
       color: #f2f5fa;
       font-size: 15px;
       margin-bottom: 0;
+      height: 20px;
     }
   }
   &__title {

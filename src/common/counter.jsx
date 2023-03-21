@@ -1,19 +1,18 @@
 import React from "react";
 import Count from "./count";
 
-//  counter_text;
 const counter_text = [
   {
     id: 1,
     color: "sky-hard",
     counter: 75,
-    text: "MILLION IN PROCESSING VOLUME PER MONTH",
+    text: "MONTHLY PROCESSING VOLUME",
   },
   {
     id: 2,
     color: "pink-hard",
     counter: 3,
-    text: "MILLION MONTHLY TRANSACTIONS",
+    text: "MONTHLY TRANSACTIONS",
   },
   {
     id: 3,
@@ -29,12 +28,14 @@ const counter_text = [
   },
 ];
 
-const Counter = ({ cls = "pt-40 pb-100"  }) => {
+const Counter = ({ cls = "pt-40 pb-100" }) => {
   return (
     <>
-      <section className={`counter-area ${cls} theme-light-bg`} style={{ backgroundImage: "url(/assets/img/shape/shape-bg-06.png)" }}>
-        <div className="container"
-        >
+      <section
+        className={`counter-area ${cls} theme-light-bg`}
+        style={{ backgroundImage: "url(/assets/img/shape/shape-bg-06.png)" }}
+      >
+        <div className="container">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
@@ -62,7 +63,10 @@ const Counter = ({ cls = "pt-40 pb-100"  }) => {
                   <div className="counter__content">
                     <h4 className="counter__title">
                       <span className="counter">
-                        <Count  number={item.counter} />
+                        <Count
+                          number={item.counter}
+                          suffix={(item.id === 1 || item.id === 2) ? 'M' : ''}
+                        />
                       </span>
                     </h4>
                     <p>{item.text}</p>
