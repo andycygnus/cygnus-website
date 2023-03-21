@@ -28,26 +28,27 @@ const Header = () => {
             <div className="col-md-8 col-2">
               <div className="tp-mobile-bar d-flex align-items-center justify-content-end">
                 <div className="tp-bt-btn-banner d-none d-md-block d-xl-none mr-30">
-                  <a className="tp-bt-btn" href="tel:123456">
-                    <svg
-                      width="14"
-                      height="19"
-                      viewBox="0 0 14 19"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="2" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="17" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="12" r="2" fill="#0E63FF" />
-                    </svg>
-                    <span>Help Desk :</span>+91 590 088 55
+                  <svg
+                    width="14"
+                    height="19"
+                    viewBox="0 0 14 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="2" cy="2" r="2" fill="#0E63FF" />
+                    <circle cx="7" cy="2" r="2" fill="#0E63FF" />
+                    <circle cx="12" cy="2" r="2" fill="#0E63FF" />
+                    <circle cx="12" cy="7" r="2" fill="#0E63FF" />
+                    <circle cx="12" cy="12" r="2" fill="#0E63FF" />
+                    <circle cx="7" cy="7" r="2" fill="#0E63FF" />
+                    <circle cx="7" cy="12" r="2" fill="#0E63FF" />
+                    <circle cx="7" cy="17" r="2" fill="#0E63FF" />
+                    <circle cx="2" cy="7" r="2" fill="#0E63FF" />
+                    <circle cx="2" cy="12" r="2" fill="#0E63FF" />
+                  </svg>
+                  <span>Help Desk :</span>
+                  <a className="tp-bt-btn" href="tel:+18442003277">
+                    (844)200-3277
                   </a>
                 </div>
                 <button
