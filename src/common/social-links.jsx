@@ -5,24 +5,24 @@ const social_links = [
     icon: "fab fa-linkedin",
     color: "tp-f-linkedin",
   },
-  // {
-  //   link: "http://twitter.com",
-  //   target: "_blank",
-  //   icon: "fab fa-twitter",
-  //   color: "tp-f-twitter",
-  // },
-  // {
-  //   link: "http://facebook.com",
-  //   target: "_blank",
-  //   icon: "fab fa-facebook-f",
-  //   color: "tp-f-fb",
-  // },
-  // {
-  //   link: "https://www.skype.com/en/",
-  //   target: "_blank",
-  //   icon: "fab fa-skype",
-  //   color: "tp-f-skype",
-  // },
+  {
+    link: "http://twitter.com",
+    target: "_blank",
+    icon: "fab fa-twitter",
+    color: "tp-f-twitter",
+  },
+  {
+    link: "http://facebook.com",
+    target: "_blank",
+    icon: "fab fa-facebook-f",
+    color: "tp-f-fb",
+  },
+  {
+    link: "https://www.skype.com/en/",
+    target: "_blank",
+    icon: "fab fa-skype",
+    color: "tp-f-skype",
+  },
 ];
 
 const SocialLinks = () => {

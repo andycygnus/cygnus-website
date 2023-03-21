@@ -91,6 +91,7 @@
 }
 .tp-youtube,
 .tp-twitter,
+.tp-linkedin,
 .tp-fb,
 .tp-skype {
   & i {
@@ -125,6 +126,17 @@
     &.tp-twitter i {
       border: 1px solid var(--tp-icon-tweet);
       background-color: var(--tp-icon-tweet);
+    }
+  }
+}
+.tp-linkedin {
+  & i {
+    color: var(--tp-icon-linkedin);
+  }
+  &:hover {
+    &.tp-linkedin i {
+      border: 1px solid var(--tp-icon-linkedin);
+      background-color: var(--tp-icon-linkedin);
     }
   }
 }

@@ -181,6 +181,7 @@
 }
 .tp-f-youtube,
 .tp-f-twitter,
+.tp-f-linkedin,
 .tp-f-fb,
 .tp-f-skype {
   margin-right: 12px;
@@ -196,6 +197,15 @@
       color: var(--tp-common-white);
       border: 1px solid var(--tp-icon-red);
       background-color: var(--tp-icon-red);
+    }
+  }
+}
+.tp-f-linkedin {
+  &:hover {
+    &.tp-f-linkedin i {
+      color: var(--tp-common-white);
+      border: 1px solid var(--tp-icon-linkedin);
+      background-color: var(--tp-icon-linkedin);
     }
   }
 }

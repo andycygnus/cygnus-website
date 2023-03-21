@@ -78,6 +78,11 @@
         color: var(--tp-icon-tweet);
       }
     }
+    & .linkedin-2 {
+      &:hover {
+        color: var(--tp-icon-linkedin);
+      }
+    }
   }
   &__shape {
     position: absolute;
