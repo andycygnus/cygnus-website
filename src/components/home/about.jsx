@@ -13,15 +13,14 @@ const About = () => {
     sub_title: "About",
     des_1: (
       <>
-        At sea vero iriure, labitur expetenda patrioque ne nec,
-        Et nec oratio invenire consequuntur, blandit philosophia sed.
+          Discover the Impact of Our Seamless Payment Solutions: Trusted by Businesses Everywhere
       </>
     ),
     dex_2: (
       <>
-         In habemus pertinax eam, eam an cetero percipit, an eum legere dicunt forensibus.
-         Sed in alterum appetere convenire, te eum accusata scriptorem, ad pri atomorum argumentum.
-         Mundi ponderum assentior et sea, in mel apeirian gloriatur.
+        Explore firsthand experiences from our valued partners who have transformed their businesses with our innovative 
+        and secure credit card processing services. Learn how our commitment to exceptional customer support and cutting-edge 
+        technology has empowered them to thrive in a competitive marketplace.
       </>
     ),
     btn: "Talk with Expert",

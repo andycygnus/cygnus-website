@@ -1,4 +1,4 @@
-import shop_data from "@/data/shop-data";
+import dejavoo_data from "@/data/products/terminals/dejavoo-data";
 import NiceSelect from "@/ui/nice-select";
 import Link from "next/link";
 import React from "react";
@@ -19,7 +19,7 @@ const ProductArea = () => {
             </div>
           </div>
           <div className="row">
-            {shop_data.map((item) => (
+            {dejavoo_data.map((item) => (
               <div key={item.id} className="col-xl-3 col-lg-4 col-md-4">
                 <div
                   className="tpshopitem mb-50 wow fadeInUp"

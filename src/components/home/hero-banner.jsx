@@ -32,7 +32,7 @@ const hero_slider = [
     ),
     des: (
       <>
-        Whether you need a simple solution or a fully integrated platform,<br/>we'll make it easy for you to accept payments with flexible options<br/> and competitive rates. We have the solution for you.
+        We make it easy for you to accept payments with flexible options<br/> and competitive rates. We have the solution for you.
       </>
     ),
     appointment: "Get a Quote",

@@ -5,19 +5,19 @@ const counter_text = [
   {
     id: 1,
     color: "sky-hard",
-    counter: 75,
+    counter: 110,
     text: "MONTHLY PROCESSING VOLUME",
   },
   {
     id: 2,
     color: "pink-hard",
     counter: 3,
-    text: "MONTHLY TRANSACTIONS",
+    text: "MONTHLY TRANSACTION COUNT",
   },
   {
     id: 3,
     color: "sky-hard",
-    counter: 42,
+    counter: 105,
     text: "TEAM MEMBERS",
   },
   {
@@ -65,7 +65,7 @@ const Counter = ({ cls = "pt-40 pb-100" }) => {
                       <span className="counter">
                         <Count
                           number={item.counter}
-                          suffix={(item.id === 1 || item.id === 2) ? 'M' : ''}
+                          suffix={(item.id === 1 || item.id === 2) ? 'M' : '+'}
                         />
                       </span>
                     </h4>
