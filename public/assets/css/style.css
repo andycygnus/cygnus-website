@@ -1213,12 +1213,11 @@ input[type=color] {
 }
 
 .header-top-mob {
-  margin-left: 80px;
   font-size: 15px;
   line-height: 1;
   font-weight: 700;
   text-align: center;
-  display: inline-block;
+  display: flex;
   text-transform: uppercase;
   color: var(--tp-text-2);
   padding: 22px 0;

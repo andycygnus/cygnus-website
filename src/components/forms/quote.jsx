@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from '@emailjs/browser';
 
-const ContactUs = () => {
+const Quote = () => {
 
   const form = useRef();
   
@@ -12,10 +12,10 @@ const ContactUs = () => {
 
     btn.value = 'Sending...';
   
-    emailjs.sendForm('cygnus_email', 'inquiry_template', form.current, 'i17TpKkycbJFV1O6x')
+    emailjs.sendForm('cygnus_email', 'quote_template', form.current, 'i17TpKkycbJFV1O6x')
       .then((result) => {
           // show the user a success message
-          alert('Thank you for your submission. A member of our team will get back to you shortly!');
+          alert('Thank you for your submission. We will get back to you with an estimately quote!');
           window.location.href = "/";
       }, (error) => {
           // show the user an error
@@ -31,7 +31,7 @@ const ContactUs = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="contactform__input mb-30">
-                <input name="name" type="text" placeholder="Enter your Name" />
+                <input name="name" type="text" placeholder="Full Name" />
               </div>
             </div>
             <div className="col-lg-6">
@@ -39,7 +39,16 @@ const ContactUs = () => {
                 <input
                   name="email"
                   type="email"
-                  placeholder="Enter your mail"
+                  placeholder="Email Address"
+                />
+              </div>
+            </div>
+            <div className="col-lg-12">
+              <div className="contactform__input mb-30">
+                <input
+                  name="dba"
+                  type="text"
+                  placeholder="DBA (Doing Business As)"
                 />
               </div>
             </div>
@@ -48,7 +57,7 @@ const ContactUs = () => {
                 <input
                   name="number"
                   type="text"
-                  placeholder="Enter your number"
+                  placeholder="Phone Number"
                 />
               </div>
             </div>
@@ -57,7 +66,30 @@ const ContactUs = () => {
                 <input
                   name="website"
                   type="text"
-                  placeholder="Enter your website"
+                  placeholder="Website Address"
+                />
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="contactform__input mb-30">
+                <input
+                  name="lastVolume"
+                  type="number"
+                  min="0.01"
+                  step="0.01"
+                  placeholder="Enter your last month's processing volume"
+                />
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="contactform__input mb-30">
+                <input
+                  name="totalFeePaid"
+                  type="number"
+                  
+                  min="0.01"
+                  step="0.01"
+                  placeholder="Enter your last month's total fee"
                 />
               </div>
             </div>
@@ -72,7 +104,7 @@ const ContactUs = () => {
             <div className="col-lg-12">
               <div className="contactform__input mb-30-btn">
                 <button id='button' type="submit" className="tp-btn">
-                  Send Massage
+                  Send for Quote
                 </button>
               </div>
               <p className="ajax-response"></p>
@@ -84,4 +116,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default Quote;

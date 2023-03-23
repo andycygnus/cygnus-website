@@ -128,8 +128,9 @@
   border-bottom: 0px solid var(--tp-border-primary);
 }
 .header-logo-box {
+  margin-left: 15px;
   flex: 0 0 auto;
-  width: 345px;
+  width: 220px;
   text-align: center;
   & img {
     width: 220px;
@@ -141,6 +142,8 @@
 }
 .header-menu-top {
   border-bottom: 0px solid var(--tp-border-primary);
+  margin-right: 0;
+  margin-left: auto;
 }
 .header-time {
   text-align: right;
@@ -163,12 +166,11 @@
   }
 }
 .header-top-mob {
-  margin-left: 80px;
   font-size: 15px;
   line-height: 1;
   font-weight: 700;
   text-align: center;
-  display: inline-block;
+  display: flexbox;
   text-transform: uppercase;
   color: var(--tp-text-2);
   padding: 22px 0;
@@ -186,9 +188,9 @@
   }
 }
 .main-menu-second {
-  margin: 0 0 0 80px;
+  margin: 0 0 0 18%;
   @media #{$xl} {
-    margin: 0 0 0 30px;
+    margin: 0 0 0 12%;
   }
 }
 .header-cart-list {
@@ -196,6 +198,9 @@
   @media #{$xl} {
     margin-right: 25px;
   }
+}
+.header-top-content-padded {
+  margin-right: 10px;
 }
 .header-bottom-btn {
   font-size: 15px;

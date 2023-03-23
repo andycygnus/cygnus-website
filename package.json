@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@popperjs/core": "^2.11.6",
     "antd": "^5.1.7",
     "bootstrap": "^5.2.3",
+    "email-js": "^2.0.2",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "git": "^0.1.5",

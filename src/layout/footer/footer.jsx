@@ -11,7 +11,7 @@ const footer_content = {
       links: [
         { name: "Contact Us", link: "/contact-us" },
         { name: "About us", link: "/about" },
-        { name: "Services", link: "/service" },
+        { name: "Careers", link: "/career" },
       ],
     },
     {
@@ -57,7 +57,7 @@ const Footer = () => {
         <div className="footer-area theme-bg pt-100 pb-50">
           <div className="container">
             <div className="row">
-              <div className="col-xl-3 col-lg-4 col-md-6">
+              <div className="col-xl-3 col-lg-3 col-md-6">
                 <div
                   className="footer-widget footer-col-1 mb-50 wow fadeInUp"
                   data-wow-delay=".2s"
@@ -72,8 +72,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              {/*
-                footer_info.map(item =>  <div key={item.id} className="col-xl-3 col-lg-4 col-md-6">
+              {footer_info.map(item =>  <div key={item.id} className="col-xl-3 col-lg-3 col-md-6">
                 <div
                   className={`footer-widget ${item.cls} mb-50 wow fadeInUp`}
                   data-wow-delay=".4s"
@@ -91,9 +90,8 @@ const Footer = () => {
                     </ul>
                   </div>
                 </div>
-              </div>)*/
-              }
-              <div className="col-xl-3 col-lg-4 col-md-6">
+              </div>)}
+              {/* <div className="col-xl-3 col-lg-4 col-md-6">
                 <div
                   className="footer-widget footer-col-2 mb-50 wow fadeInUp"
                   data-wow-delay=".4s"
@@ -144,7 +142,7 @@ const Footer = () => {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

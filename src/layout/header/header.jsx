@@ -76,11 +76,7 @@ const Header = () => {
           <div className="header-menu-box">
             <div className="header-menu-top">
               <div className="row align-items-center">
-                <div className="col-lg-4">
-                  <div className="header-top-mob">
-                  </div>
-                </div>
-                <div className="col-lg-4">
+                <div className="d-flex justify-content-end">
                   <div className="header-top-mob">
                     <svg
                       width="14"
@@ -102,13 +98,8 @@ const Header = () => {
                     </svg>
                     <span>Call Us :</span>
                     <a href="tel:+18442003277"> +1 (844) 200-3277 </a>
-                  </div>
-                </div>
-                <div className="col-lg-4">
-                  <div className="header-time">
-                    <span>
-                      <i className="fa-light fa-clock-ten"></i> Monday - Friday
-                      09:00 am - 06:30 pm
+                    <span className="header-top-content-padded">
+                      <i className="fa-light fa-clock-ten "></i> 24/7 SUPPORT
                     </span>
                   </div>
                 </div>
@@ -116,16 +107,16 @@ const Header = () => {
             </div>
             <div className="header-menu-bottom">
               <div className="row">
-                <div className="col-lg-8">
+                <div className="col-lg-9 d-flex justify-content-center">
                   <div className="main-menu main-menu-second">
                     <nav id="mobile-menu">
                       <NavMenu />
                     </nav>
                   </div>
                 </div>
-                <div className="col-lg-4">
+                <div className="col-lg-3">
                   <div className="header-cart-order d-flex align-items-center justify-content-end">
-                    <Link className="header-bottom-btn" href="/contact">
+                    <Link className="header-bottom-btn" href="/quote">
                       Get a Quote
                     </Link>
                   </div>
