@@ -1,4 +1,4 @@
-const shop_data = [
+const pax_data = [
   {
     id: 1,
     img: "/assets/img/shop/shop-01.jpg",
@@ -170,4 +170,4 @@ const shop_data = [
   },
   */
 ];
-export default shop_data;
+export default pax_data;

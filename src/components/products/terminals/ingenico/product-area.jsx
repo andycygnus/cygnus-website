@@ -1,4 +1,4 @@
-import shop_data from "@/data/shop-data";
+import ingenico_data from "@/data/products/terminals/ingenico-data";
 import NiceSelect from "@/ui/nice-select";
 import Link from "next/link";
 import React from "react";
@@ -12,14 +12,14 @@ const ProductArea = () => {
           <div className="row mb-5">
             <div className="col-md-6">
               <div className="tpproduct">
-                <span>Showing 1-12 of 54 results</span>
+                <span>Showing 4 of 4 results</span>
               </div>
             </div>
             <div className="col-md-6">
             </div>
           </div>
           <div className="row">
-            {shop_data.map((item) => (
+            {ingenico_data.map((item) => (
               <div key={item.id} className="col-xl-3 col-lg-4 col-md-4">
                 <div
                   className="tpshopitem mb-50 wow fadeInUp"
@@ -38,38 +38,6 @@ const ProductArea = () => {
                 </div>
               </div>
             ))}
-          </div>
-          <div className="row">
-            <div className="col-12">
-              <div className="basic-pagination text-center mt-15">
-                <nav>
-                  <ul>
-                    <li>
-                      <Link href="/product-details">
-                        <i className="fa-light fa-arrow-left-long"></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/product-details">1</Link>
-                    </li>
-                    <li>
-                      <span className="current">2</span>
-                    </li>
-                    <li>
-                      <Link href="/product-details">3</Link>
-                    </li>
-                    <li>
-                      <Link href="/product-details">...</Link>
-                    </li>
-                    <li>
-                      <Link href="/product-details">
-                        <i className="fa-light fa-arrow-right-long"></i>
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
           </div>
         </div>
       </div>

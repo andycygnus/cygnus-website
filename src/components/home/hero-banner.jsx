@@ -5,31 +5,13 @@ import { Navigation } from "swiper";
 
 const hero_slider = [
   {
-    id: 1,
-    title: (
-      <>
-        Honesty,<br/> Transparency<br/> & Convenience
-        
-      </>
-    ),
-    des: (
-      <>
-        Viris lucilius ad quo. In pro nihil aliquam inimicus, munere ique mel in. Posse facer{" "}
-        <br /> pertinacia sed, eum phaedrum contentiones et
-      </>
-    ),
-    appointment: "Get a Quote",
-    about: "About us",
-    img_1: "/assets/img/slider/slider-bg-1.png",
-    img_2: "/assets/img/slider/slider-bg-2.png",
-  },
-  {
     id: 2,
     title: (
       <>
         Cygnus Payments<br/> Is Easy to Work With!
       </>
     ),
+    subtitle: "Honesty, Transparency & Convenience",
     des: (
       <>
         We make it easy for you to accept payments with flexible options<br/> and competitive rates. We have the solution for you.
@@ -86,14 +68,6 @@ const HeroBanner = () => {
                 </div>
               </div>
               <div className="col-lg-6 col-md-2 col-12 d-none d-md-block">
-                <div className="slider-content__arrow d-flex align-items-center">
-                  <div className="slider-p">
-                    <i className="fa-regular fa-arrow-left"></i>
-                  </div>
-                  <div className="slider-n">
-                    <i className="fa-regular fa-arrow-right"></i>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -112,6 +86,7 @@ const HeroBanner = () => {
                     <div className="col-lg-6 col-md-12 col-12 order-2 order-lg-1">
                       <div className="slider-content pt-60">
                       <h2 className="slider-content__title mb-45" style={{ color: '#424143' }}>{item.title}</h2>
+                      <h3 className="slider-content__subtitle mb-30">{item.subtitle}</h3> {/* Add this line */}
                       <p>{item.des}</p>
                       <div className="slider-content__btn mb-165">
                         <Link className="tp-btn" href="/quote">

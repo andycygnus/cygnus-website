@@ -40,7 +40,7 @@ const menu_data = [
           { link: "/products/terminals/dejavoo", title: "Dejavoo" },
           { link: "/products/terminals/firstdata", title: "FirstData" },
           { link: "/products/terminals/ingenico", title: "Ingenico" },
-          { link: "/products/terminals/ingenico", title: "ValorPay" },
+          { link: "/products/terminals/valorpay", title: "ValorPay" },
         ],
       },
       {
@@ -48,10 +48,10 @@ const menu_data = [
         title: "POS Solutions",
         has_dropdown: true,
         sub_menus: [
-          { link: "/pos-solution-1", title: "Documentor POS" },
-          { link: "/pos-solution-2", title: "Supermenu POS" },
-          { link: "/pos-solution-1", title: "JMSC POS" },
-          { link: "/pos-solution-2", title: "Clover POS" },
+          { link: "/products/pos/documentor", title: "Documentor POS" },
+          { link: "/products/pos/supermenu", title: "Supermenu POS" },
+          { link: "/products/pos/jmsc", title: "JMSC POS" },
+          { link: "/products/pos/clover", title: "Clover POS" },
         ],
       },
       { link: "/service-3", title: "Online Ordering" },
