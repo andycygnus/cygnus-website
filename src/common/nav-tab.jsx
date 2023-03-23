@@ -54,17 +54,16 @@ const tab_content = [
     title: "Our Mission To Provide Best Solutions",
     des_1: (
       <>
-        Cygnus Payments tailors robust, cloud-based solutions, leveraging their value to keep 
-        costs low. Currently, Cygnus offers five different product-types to help our partners:
+        Cygnus Payments tailors robust, cloud-based solutions, leveraging their value to maximize profitability. Currently, Cygnus offer many value-added product lines including: 
       </>
     ),
     des_2: (
       <>
         1. Verticalized POS Equipment<br />
-        2. Same-Day Onboarding<br />
-        3. Small Business Lending<br />
-        4. Gift and Loyalty Programs<br />
-        5. Leasing
+        2. Integrated Payments<br />
+        3. Value Added Marketing Programs<br />
+        4. Small Business Lending<br />
+        5. POS Leasing available
 
       </>
     ),
@@ -79,23 +78,16 @@ const tab_content = [
     aria_labelledby: "contact-tab",
     header: (
       <>
-        To minimize cost and maximize value through <br />
-        consultative, merchant-focused approach to modern point-of-sale solutions and transparent payment processing. 
       </>
     ),
-    title: "We are Trusted by over 25000+ customers",
+    title: "We are Trusted by over 2500+ customers",
     des_1: (
       <>
-        Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo
-        claritatem insitamconse quat.Exerci tation ullamcorper suscipit loborti
-        excommodo habent claritatem insitamconse quat.Exerci tationlobortis nisl
-        aliquip ex ea commodo habent claritatem insitamconse quat.
+        PLACEHOLDER TEXT
       </>
     ),
     des_2: (
       <>
-        Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo
-        claritatem insitamconse quat.Exerci tation ullamcorper suscip
       </>
     ),
     images: [

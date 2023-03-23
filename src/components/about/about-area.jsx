@@ -68,18 +68,13 @@ const AboutArea = () => {
                 <div className="tp-about__info-list ab-check-list mb-55">
                   <ul>
                     <li>
-                      <i className="fa-solid fa-check"></i>Extramural Funding
+                      <i className="fa-solid fa-check"></i>Honesty
                     </li>
                     <li>
-                      <i className="fa-solid fa-check"></i>Bacteria Markers
+                      <i className="fa-solid fa-check"></i>Transparency
                     </li>
                     <li>
-                      <i className="fa-solid fa-check"></i>Nam nec mi euismod
-                      euismod
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>In aliquet dui nec
-                      lectus
+                      <i className="fa-solid fa-check"></i>Convenience
                     </li>
                   </ul>
                 </div>

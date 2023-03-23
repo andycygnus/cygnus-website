@@ -5,7 +5,6 @@ import AboutArea from "./about-area";
 import Banner from "./banner";
 import Specialists from "@/common/specialists";
 import NavTab from "@/common/nav-tab";
-import Team from "@/common/team";
 import Footer from "@/layout/footer/footer";
 
 const About = () => {
