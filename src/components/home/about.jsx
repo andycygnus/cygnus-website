@@ -1,4 +1,3 @@
-import VideoPopup from "@/modals/video-popup";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -110,14 +109,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* video modal start */}
-      <VideoPopup
-        isVideoOpen={isVideoOpen}
-        setIsVideoOpen={setIsVideoOpen}
-        videoId={"-s4lQxg2GXo"}
-      />
-      {/* video modal end */}
     </>
   );
 };

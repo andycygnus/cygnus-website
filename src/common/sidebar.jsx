@@ -1,5 +1,4 @@
 import MobileMenus from '@/layout/header/mobile-menus';
-import ImagePopup from '@/modals/ImagePopup';
 import Link from 'next/link';
 import React, { useState } from "react";
 

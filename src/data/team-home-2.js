@@ -49,7 +49,7 @@ const term_home = [
   },
   {
     id: 2,
-    img: "/assets/img/services/terminals/term-thumb-01.png",
+    img: "/assets/img/services/terminals/term-thumb-02.png",
     name: "Ingenico",
     title: "Genetic Subtext",
     social_links: [
@@ -58,7 +58,7 @@ const term_home = [
   },
   {
     id: 3,
-    img: "/assets/img/services/terminals/term-thumb-01.png",
+    img: "/assets/img/services/terminals/term-thumb-03.png",
     name: "Dejavoo",
     title: "Genetic Subtext",
     social_links: [
@@ -67,7 +67,7 @@ const term_home = [
   },
   {
     id: 4,
-    img: "/assets/img/services/terminals/term-thumb-01.png",
+    img: "/assets/img/services/terminals/term-thumb-04.png",
     name: "Galaxy POS",
     title: "Genetic Subtext",
     social_links: [

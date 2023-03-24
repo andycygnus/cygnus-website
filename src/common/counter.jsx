@@ -5,7 +5,7 @@ const counter_text = [
   {
     id: 1,
     color: "sky-hard",
-    counter: 110,
+    counter: 133,
     text: "MONTHLY PROCESSING VOLUME",
   },
   {
@@ -23,7 +23,7 @@ const counter_text = [
   {
     id: 4,
     color: "pink-hard",
-    counter: 1800,
+    counter: 3400,
     text: "ACTIVE MERCHANTS",
   },
 ];

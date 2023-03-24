@@ -12,7 +12,7 @@ const HomeTwo = () => {
       <HeroBanner />
       <About />
       <Team />
-      <Counter cls="pt-40 pb-50 mr-30 ml-30" />
+      <Counter cls="pt-80 pb-110 mr-30 ml-30" />
       <Choose />
       <Brands border_style={true} />
     </>

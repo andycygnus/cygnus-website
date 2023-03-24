@@ -86,7 +86,7 @@ const HeroBanner = () => {
                     <div className="col-lg-6 col-md-12 col-12 order-2 order-lg-1">
                       <div className="slider-content pt-60">
                       <h2 className="slider-content__title mb-45" style={{ color: '#424143' }}>{item.title}</h2>
-                      <h3 className="slider-content__subtitle mb-30">{item.subtitle}</h3> {/* Add this line */}
+                      <h3 className="slider-content__subtitle mb-30" style={{color: '#808285'}}>{item.subtitle}</h3>
                       <p>{item.des}</p>
                       <div className="slider-content__btn mb-165">
                         <Link className="tp-btn" href="/quote">
