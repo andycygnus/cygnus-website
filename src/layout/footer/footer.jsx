@@ -11,7 +11,7 @@ const footer_content = {
       links: [
         { name: "Contact Us", link: "/contact-us" },
         { name: "About us", link: "/about" },
-        { name: "Careers", link: "/career" },
+        { name: "Careers", link: "https://apply.workable.com/cygnus-pay-careers/?lng=en" },
       ],
     },
     {
@@ -21,7 +21,7 @@ const footer_content = {
       links: [
         { name: "2100 Reston Pkwy STE 415," },
         { name: "Reston, VA 20191" },
-        { name: "1 (+844) 200-3277" },
+        { name: "(844) 200-3277" },
         { name: "sale@cygnuspay.com" },
         { name: "Office Hours: 9AM EST - 6:30PM EST" },
         { name: "Monday - Friday" },

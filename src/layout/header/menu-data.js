@@ -74,5 +74,13 @@ const menu_data = [
     link: "/contact",
     active: "",
   },
+  {
+    id: 6,
+    mega_menu: false,
+    has_dropdown: false,
+    title: "Careers",
+    link: "https://apply.workable.com/cygnus-pay-careers/?lng=en",
+    active: "",
+  },
 ];
 export default menu_data;
