@@ -47,7 +47,6 @@ const setting = {
    { img: "/assets/img/brand/brand-02.png" },
    { img: "/assets/img/brand/brand-03.png" },
    { img: "/assets/img/brand/brand-04.png" },
-   { img: "/assets/img/brand/brand-05.png" },
 ];
  
 const Brands = ({ style_2 = false, border_style = false }) => {
