@@ -83,7 +83,6 @@ const tab_content = [
     title: "We are Trusted by over 2500+ customers",
     des_1: (
       <>
-        PLACEHOLDER TEXT
       </>
     ),
     des_2: (

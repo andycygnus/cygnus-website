@@ -11,7 +11,6 @@ const TeamOne = () => {
       <Header />
       <BannerTeamOne />
       <TeamArea />
-      <DirectContactUs />
       <Footer />
     </>
   );

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const BannerTeamOne = () => {
+const Banner = () => {
   return (
     <>
       <section
@@ -14,7 +14,7 @@ const BannerTeamOne = () => {
           <div className="row align-items-center">
             <div className="col-xl-7 col-lg-12 col-md-12 col-12">
               <div className="tp-breadcrumb">
-                <h2 className="tp-breadcrumb__title">Our Partners</h2>
+                <h2 className="tp-breadcrumb__title">Online Ordering</h2>
               </div>
             </div>
             <div className="col-xl-5 col-lg-12 col-md-12 col-12">
@@ -28,4 +28,4 @@ const BannerTeamOne = () => {
   );
 };
 
-export default BannerTeamOne;
+export default Banner;

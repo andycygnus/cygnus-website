@@ -54,8 +54,8 @@ const menu_data = [
           { link: "/products/pos/clover", title: "Clover POS" },
         ],
       },
-      { link: "/service-3", title: "Online Ordering" },
-      { link: "/service-details", title: "Mobile App" },
+      { link: "/products/online-ordering", title: "Online Ordering" },
+      { link: "/products/mobile-app", title: "Mobile App" },
     ],
   },
   {

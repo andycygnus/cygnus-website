@@ -13,7 +13,7 @@ const TeamArea = () => {
                 <span className="tp-section__sub-title left-line right-line mb-25">
                   OUr Team
                 </span>
-                <h3 className="tp-section__title mb-70">Our Specialist</h3>
+                <h3 className="tp-section__title mb-70">Meet Our Partners</h3>
               </div>
             </div>
           </div>
@@ -21,7 +21,7 @@ const TeamArea = () => {
             {team_one_data.map((item) => (
               <div key={item.id} className="col-xl-3 col-lg-4 col-md-6">
                 <div
-                  className="team-item mb-35 wow fadeInUp"
+                  className="team-item mb-100 wow fadeInUp"
                   data-wow-delay=".8s"
                 >
                   <div className="team-item__thumb mb-40">
@@ -33,18 +33,6 @@ const TeamArea = () => {
                     </h5>
                     <span>{item.title}</span>
                     <div className="team-item__social-info">
-                      <a href="#">
-                        <i className="fa-brands fa-facebook-f"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fa-brands fa-twitter"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fa-brands fa-instagram"></i>
-                      </a>
-                      <a href="#">
-                        <i className="fa-light fa-basketball"></i>
-                      </a>
                     </div>
                   </div>
                 </div>
