@@ -1,36 +1,8 @@
 const dejavoo_data = [
   {
     id: 1,
-    img: "/assets/img/shop/dejavoo/product-01.jpg",
-    title: "Dejavoo Z8",
-    price: 46.0,
-    product_news: "",
-    ratting: [
-      "fa-solid fa-star",
-      "fa-solid fa-star",
-      "fa-solid fa-star",
-      "fa-solid fa-star",
-      "fa-regular fa-star",
-    ],
-  },
-  {
-    id: 2,
-    img: "/assets/img/shop/dejavoo/product-02.jpg",
-    title: "Dejavoo Z9",
-    price: 58.1,
-    product_news: "",
-    ratting: [
-      "fa-solid fa-star",
-      "fa-solid fa-star",
-      "fa-solid fa-star",
-      "fa-solid fa-star",
-      "fa-regular fa-star",
-    ],
-  },
-  {
-    id: 3,
     img: "/assets/img/shop/dejavoo/product-03.jpg",
-    title: "Dejavoo QD2",
+    title: "Dejavoo QD2 (WiFi & 4G)",
     price: 88.0,
     product_news: "HOT",
     ratting: [
@@ -42,9 +14,9 @@ const dejavoo_data = [
     ],
   },
   {
-    id: 4,
+    id: 2,
     img: "/assets/img/shop/dejavoo/product-03.jpg",
-    title: "Dejavoo QD4",
+    title: "Dejavoo QD4 (WiFi)",
     price: 70.0,
     product_news: "NEW",
     ratting: [
@@ -56,7 +28,7 @@ const dejavoo_data = [
     ],
   },
   {
-    id: 5,
+    id: 3,
     img: "/assets/img/shop/dejavoo/product-04.jpg",
     title: "Dejavoo P1",
     price: 96.0,
@@ -70,9 +42,9 @@ const dejavoo_data = [
     ],
   },
   {
-    id: 6,
+    id: 4,
     img: "/assets/img/shop/dejavoo/product-04.jpg",
-    title: "Dejavoo P3",
+    title: "Dejavoo P3 (WiFi & 4G)",
     price: 69.0,
     product_news: "",
     ratting: [

@@ -1,22 +1,8 @@
-const ingenico_data = [
-  {
-    id: 1,
-    img: "/assets/img/shop/ingenico/product-01.jpg",
-    title: "Lane 3500",
-    price: 46.0,
-    product_news: "",
-    ratting: [
-      "fa-solid fa-star",
-      "fa-solid fa-star",
-      "fa-solid fa-star",
-      "fa-solid fa-star",
-      "fa-regular fa-star",
-    ],
-  },
+const nmi_data = [
   {
     id: 2,
-    img: "/assets/img/shop/ingenico/product-02.jpg",
-    title: "Lane 3000",
+    img: "/assets/img/shop/nmi/product-01.jpg",
+    title: "Lane 3000 Cloud",
     price: 58.1,
     product_news: "",
     ratting: [
@@ -29,7 +15,7 @@ const ingenico_data = [
   },
   {
     id: 3,
-    img: "/assets/img/shop/ingenico/product-03.jpg",
+    img: "/assets/img/shop/nmi/product-02.jpg",
     title: "Lane 5000",
     price: 88.0,
     product_news: "HOT",
@@ -42,11 +28,11 @@ const ingenico_data = [
     ],
   },
   {
-    id: 4,
-    img: "/assets/img/shop/ingenico/product-04.jpg",
-    title: "Desk 1500 (Pin Pad)",
-    price: 70.0,
-    product_news: "NEW",
+    id: 1,
+    img: "/assets/img/shop/nmi/product-03.jpg",
+    title: "BBPOS Chipper 2X BT",
+    price: 46.0,
+    product_news: "",
     ratting: [
       "fa-solid fa-star",
       "fa-solid fa-star",
@@ -55,5 +41,7 @@ const ingenico_data = [
       "fa-regular fa-star",
     ],
   },
+
+
 ];
-export default ingenico_data;
+export default nmi_data;

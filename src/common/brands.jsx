@@ -15,9 +15,6 @@ const setting = {
     disableOnInteraction: true,
   },
   breakpoints: {
-    1400: {
-      slidesPerView: 5,
-    },
     1200: {
       slidesPerView: 4,
     },

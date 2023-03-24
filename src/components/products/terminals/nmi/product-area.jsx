@@ -1,4 +1,4 @@
-import ingenico_data from "@/data/products/terminals/ingenico-data";
+import nmi_data from "@/data/products/terminals/nmi-data";
 import NiceSelect from "@/ui/nice-select";
 import Link from "next/link";
 import React from "react";
@@ -19,7 +19,7 @@ const ProductArea = () => {
             </div>
           </div>
           <div className="row">
-            {ingenico_data.map((item) => (
+            {nmi_data.map((item) => (
               <div key={item.id} className="col-xl-3 col-lg-4 col-md-4">
                 <div
                   className="tpshopitem mb-50 wow fadeInUp"
