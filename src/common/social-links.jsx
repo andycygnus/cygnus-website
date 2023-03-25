@@ -6,23 +6,23 @@ const social_links = [
     color: "tp-f-linkedin",
   },
   {
-    link: "http://twitter.com",
+    link: "https://www.instagram.com/cygnuspay/?igshid=YmMyMTA2M2Y%3D",
     target: "_blank",
-    icon: "fab fa-twitter",
-    color: "tp-f-twitter",
+    icon: "fab fa-instagram",
+    color: "tp-f-instagram",
   },
-  {
-    link: "http://facebook.com",
-    target: "_blank",
-    icon: "fab fa-facebook-f",
-    color: "tp-f-fb",
-  },
-  {
-    link: "https://www.skype.com/en/",
-    target: "_blank",
-    icon: "fab fa-skype",
-    color: "tp-f-skype",
-  },
+  // {
+  //   link: "http://facebook.com",
+  //   target: "_blank",
+  //   icon: "fab fa-facebook-f",
+  //   color: "tp-f-fb",
+  // },
+  // {
+  //   link: "https://www.skype.com/en/",
+  //   target: "_blank",
+  //   icon: "fab fa-skype",
+  //   color: "tp-f-skype",
+  // },
 ];
 
 const SocialLinks = () => {

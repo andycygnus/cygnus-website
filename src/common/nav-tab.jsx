@@ -39,6 +39,67 @@ const progress_data = [
   },
 ];
 
+const connection_data = [
+  {
+    id: 1,
+    title: "Up to  50% of our profits go to YOU!",
+    des: (
+      <>
+        You, representing your 501(c) 
+        charitable organization, introduce 
+        Cynus Payments Connections 
+        to your community business 
+        contacts. If they elect to 
+        work with Cygnus 
+        Connections, 
+        we’ll ensure you 
+        receive up to 
+        50% of the profits 
+        your connection 
+        generates for Cynus 
+        Payments! It’s that easy!
+      </>
+    ),
+  },
+  {
+    id: 2,
+    title: "More opportunities in your community",
+    des: (
+      <>
+        Local businesses know that 
+        their customers are communityfocused and looking for simple 
+        ways to make a difference 
+        right at home.
+        Once they see how 
+        easy it is to work with 
+        Cyngus Payments, 
+        more businesses will 
+        get involved with your 
+        charity, and you benefit!
+      </>
+    ),
+  },
+  {
+    id: 3,
+    title: "More time for you to focus on helping",
+    des: (
+      <>
+        Partnering with Cygnus 
+        Connections and local business to 
+        generate passive income for your 
+        work frees you and your team 
+        from the time and effort
+        involved in constant fundraising. 
+        This gives you and your 
+        volunteers and staff more time
+        to do what you really love -
+        and what your community
+        needs most.
+      </>
+    ),
+  },
+]
+
 // tab_content
 const tab_content = [
   {
@@ -134,16 +195,16 @@ const NavTab = () => {
             <li className="nav-item" role="presentation">
               <button
                 className="nav-link"
-                id="contact-tab"
+                id="connection-tab"
                 data-bs-toggle="tab"
-                data-bs-target="#contact-tab-pane"
+                data-bs-target="#connection-tab-pane"
                 type="button"
                 role="tab"
-                aria-controls="contact-tab-pane"
+                aria-controls="connection-tab-pane"
                 aria-selected="false"
                 tabIndex="-1"
               >
-                OUR VALUES
+                CYGNUS CONNECTIONS
               </button>
             </li>
           </ul>
@@ -186,54 +247,54 @@ const NavTab = () => {
               </div>
             ))} */}
             <div
-                className="tab-pane fade show active"
-                id="mission-tab-pane"
-                role="tabpanel"
-                aria-labelledby="mission-tab"
-              >
-                <span className="nav-info d-flex justify-content-center text-center mb-75">
-                  <>
-                    To maximize value and minimize cost through a consultative, merchant-focused approach<br />
-                    to modern point-of-sale solutions and transparent payment processing. 
-                  </>
-                </span>
-                <div className="row">
-                  <div className="col-xl-6 col-lg-6 col-md-12 order-lg-2">
-                    <div className="nabmission mb-30">
-                      <div className="nabmission__content text-center ml-50 mr-50 pt-20">
-                        <h4 className="nabmission__title mb-35">
-                          Our Mission To Provide Best Solutions
-                        </h4>
-                        <p className="mb-35">
-                          <>
-                            Cygnus Payments tailors robust, cloud-based solutions, leveraging their value to maximize profitability. Currently, Cygnus offer many value-added product lines including: 
-                          </>
-                        </p>
-                        <p>
-                          <>
-                            1. Verticalized POS Equipment<br />
-                            2. Integrated Payments<br />
-                            3. Value Added Marketing Programs<br />
-                            4. Small Business Lending<br />
-                            5. POS Leasing available
+              className="tab-pane fade show active"
+              id="mission-tab-pane"
+              role="tabpanel"
+              aria-labelledby="mission-tab"
+            >
+              <span className="nav-info d-flex justify-content-center text-center mb-75">
+                <>
+                  To maximize value and minimize cost through a consultative, merchant-focused approach<br />
+                  to modern point-of-sale solutions and transparent payment processing. 
+                </>
+              </span>
+              <div className="row">
+                <div className="col-xl-6 col-lg-6 col-md-12 order-lg-2">
+                  <div className="nabmission mb-30">
+                    <div className="nabmission__content text-center ml-50 mr-50 pt-20">
+                      <h4 className="nabmission__title mb-35">
+                        Our Mission To Provide Best Solutions
+                      </h4>
+                      <p className="mb-35">
+                        <>
+                          Cygnus Payments tailors robust, cloud-based solutions, leveraging their value to maximize profitability. Currently, Cygnus offer many value-added product lines including: 
+                        </>
+                      </p>
+                      <p>
+                        <>
+                          1. Verticalized POS Equipment<br />
+                          2. Integrated Payments<br />
+                          3. Value Added Marketing Programs<br />
+                          4. Small Business Lending<br />
+                          5. POS Leasing available
 
-                          </>
-                        </p>
-                      </div>
+                        </>
+                      </p>
                     </div>
                   </div>
-                  <div className="col-xl-3 col-lg-3 col-md-6 order-lg-1">
-                      <div className="nabthumb mb-30">
-                        <img src="/assets/img/tab/tab-thumb-03.jpg" alt="tab-thumb" />
-                      </div>
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-6 order-lg-3">
-                      <div className="nabthumb mb-30">
-                        <img src="/assets/img/tab/tab-thumb-04.jpg" alt="tab-thumb" />
-                      </div>
-                  </div>
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 order-lg-1">
+                    <div className="nabthumb mb-30">
+                      <img src="/assets/img/tab/tab-thumb-03.jpg" alt="tab-thumb" />
+                    </div>
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 order-lg-3">
+                    <div className="nabthumb mb-30">
+                      <img src="/assets/img/tab/tab-thumb-04.jpg" alt="tab-thumb" />
+                    </div>
                 </div>
               </div>
+            </div>
             <div
               className="tab-pane fade"
               id="home-tab-pane"
@@ -254,6 +315,35 @@ const NavTab = () => {
                         <h5 className="navtabs__title mb-25 mb-10">
                           {item.title}
                         </h5>
+                        <p>{item.des}</p>
+                      </div>
+                      {item.img && (
+                        <div className="navtabs__shape d-none d-lg-block">
+                          <img src={item?.img} alt="shape" />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div
+              className="tab-pane fade"
+              id="connection-tab-pane"
+              role="tabpanel"
+              aria-labelledby="connection-tab"
+            >
+              <span className="nav-info d-flex justify-content-center text-center mb-75">
+                One swipe can make a world of different in YOUR community!
+              </span>
+              <div className="row d-flex justify-content-center">
+                {connection_data.map((item) => (
+                  <div key={item.id} className="col-xl-3 col-lg-3 col-md-6 mr-20 ml-30">
+                    <div className="navtabs nav-primary p-relative text-center">
+                      <div className="navtabs__content">
+                        <h6 className="navtabs__title pr-20 pl-20 pt-30 pb-30 mb-25 theme-bg">
+                          {item.title}
+                        </h6>
                         <p>{item.des}</p>
                       </div>
                       {item.img && (

@@ -6,7 +6,7 @@ const Choose = () => {
   return (
     <>
       <section
-        className="choose-area grey-bg pt-125 pb-70 tp-box-space ml-30 mr-30"
+        className="choose-area grey-bg pt-125 pb-70 tp-box-space"
       >
         <div className="container">
           <div className="row">

@@ -70,7 +70,9 @@
         background-color: var(--tp-common-white);
     }
     & button {
-        padding: 24px 120px;
+        width: 400px;
+        padding-top: 25px;
+        padding-bottom: 25px;
         background-color: var(--tp-grey-1);
         color: var(--tp-text-2);
         border-bottom: 4px solid var(--tp-grey-1);

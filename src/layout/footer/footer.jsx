@@ -72,6 +72,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
+              <div className="col-xl-3 col-lg-3 col-md-6"></div>
               {footer_info.map(item =>  <div key={item.id} className="col-xl-3 col-lg-3 col-md-6">
                 <div
                   className={`footer-widget ${item.cls} mb-50 wow fadeInUp`}

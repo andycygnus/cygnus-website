@@ -99,7 +99,7 @@ const Header = () => {
                     <span>Call Us :</span>
                     <a href="tel:+18442003277"> +1 (844) 200-3277 </a>
                     <span className="header-top-content-padded">
-                      <i className="fa-light fa-clock-ten "></i> 24/7 SUPPORT
+                      <i className="fa-light fa-clock-ten "></i> 24/7 CUSTOMER SUPPORT
                     </span>
                   </div>
                 </div>

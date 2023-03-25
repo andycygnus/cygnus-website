@@ -32,7 +32,7 @@ const menu_data = [
     active: "",
     sub_menus: [
       {
-        link: "",
+        link: "/products/terminals",
         title: "Terminal Solutions",
         has_dropdown: true,
         sub_menus: [
@@ -44,7 +44,7 @@ const menu_data = [
         ],
       },
       {
-        link: "",
+        link: "/products/pos",
         title: "POS Solutions",
         has_dropdown: true,
         sub_menus: [

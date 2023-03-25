@@ -35,7 +35,7 @@ const Sidebar = ({ isActive, setIsActive }) => {
   return (
     <>
       <div
-        className={`tpsideinfo tp-side-info-area ${
+        className={`tpsideinfo tp-side-info-area theme-bg ${
           isActive ? "tp-sidebar-opened" : ""
         }`}
       >
@@ -56,12 +56,13 @@ const Sidebar = ({ isActive, setIsActive }) => {
             <MobileMenus />
           </div>
         </div>
+        <div className="header-cart-order d-flex align-items-center mt-25">
+          <Link className="header-bottom-btn" href="/quote">
+            Get a Quote
+          </Link>
+        </div>
 
         <div className="tpsideinfo__content mb-0">
-          <p className=" d-none d-xl-block">
-            Our mission is to ensure the generation of accurate and precise
-            findings.
-          </p>
           <span>Contact Us</span>
           <a href="#">
             2100 Reston Pkwy Suite 415<br />Reston, VA 20191
@@ -76,6 +77,9 @@ const Sidebar = ({ isActive, setIsActive }) => {
         <div className="tpsideinfo__socialicon">
           <a href="https://www.linkedin.com/company/cygnuspaymentsolutions/">
             <i className="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/cygnuspaymentsolutions/">
+            <i className="fa-brands fa-instagram"></i>
           </a>
         </div>
       </div>

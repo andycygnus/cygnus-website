@@ -57,7 +57,7 @@ const About = () => {
   return (
     <>
       <section
-        className="about-area grey-bg pt-130 tp-box-space pb-130 ml-30 mr-30"
+        className="about-area grey-bg pt-130 tp-box-space pb-130"
         style={{
           backgroundImage: `url(${about_bg})`,
         }}
@@ -99,7 +99,7 @@ const About = () => {
                     <p className=" mr-20 mb-35">{dex_2}</p>
                   </div>
                   <div className="about-content__btn">
-                    <Link href="/about" className="tp-btn">
+                    <Link href="/contact" className="tp-btn">
                       {btn}
                     </Link>
                   </div>

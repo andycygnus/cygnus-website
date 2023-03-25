@@ -55,7 +55,7 @@ const AboutArea = () => {
                     We’ll Ensure You Always Get Best Solutions.
                   </h3>
                   <a className="tp-section__link" href="#nav-area">
-                    Read our Mission & Values{" "}
+                    Read our Mission Statement{" "}
                     <i className="fa-solid fa-arrow-right"></i>
                   </a>
                   <p className=" mr-20 mb-40">
