@@ -67,7 +67,7 @@ const connection_data = [
     des: (
       <>
         Local businesses know that 
-        their customers are communityfocused and looking for simple 
+        their customers are community-focused and looking for simple 
         ways to make a difference 
         right at home.
         Once they see how 
