@@ -1,27 +1,35 @@
-import Link from "next/link";
-import React from "react";
-import Quote from "../forms/quote";
-
+import Link from 'next/link'
+import React from 'react'
+import Quote from '../forms/quote'
 
 const sendEmail = (e) => {
-  e.preventDefault(); // prevents the page from reloading when you hit “Send”
+    e.preventDefault() // prevents the page from reloading when you hit “Send”
 
-  emailjs.sendForm('cygnus_email', 'cygnus_email_template', form.current, 'i17TpKkycbJFV1O6x')
-    .then((result) => {
-        // show the user a success message
-    }, (error) => {
-        // show the user an error
-    });
-};
+    emailjs
+        .sendForm(
+            'cygnus_email',
+            'cygnus_email_template',
+            form.current,
+            'i17TpKkycbJFV1O6x'
+        )
+        .then(
+            (result) => {
+                // show the user a success message
+            },
+            (error) => {
+                // show the user an error
+            }
+        )
+}
 
 // const { address, phone_1, open } = contact_info;
 const QuoteForm = () => {
-  return (
-    <>
-      <section className="contact-area pt-130 pb-115">
-        <div className="container">
-          <div className="row">
-            {/* <div
+    return (
+        <>
+            <section className="contact-area pt-130 pb-115">
+                <div className="container">
+                    <div className="row">
+                        {/* <div
               className="col-lg-4 col-md-5 col-12 wow fadeInLeft"
               data-wow-delay=".4s"
             >
@@ -72,19 +80,22 @@ const QuoteForm = () => {
                 </div>
               </div>
             </div> */}
-            <div className="col-lg-12 col-md-7 col-12">
-              <div className="contactform wow fadeInRight" data-wow-delay=".4s">
-                <h4 className="contactform__title mb-35">
-                  Receive Your Personalized Quote :
-                </h4>
-                <Quote />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-};
+                        <div className="col-lg-12 col-md-7 col-12">
+                            <div
+                                className="contactform wow fadeInRight"
+                                data-wow-delay=".4s"
+                            >
+                                <h4 className="contactform__title mb-35">
+                                    Receive Your Personalized Quote :
+                                </h4>
+                                <Quote />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </>
+    )
+}
 
-export default QuoteForm;
+export default QuoteForm

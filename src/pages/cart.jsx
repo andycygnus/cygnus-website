@@ -1,7 +1,7 @@
-import Cart from '@/components/cart';
-import SEO from '@/components/seo';
-import Wrapper from '@/layout/wrapper';
-import React from 'react';
+import Cart from '@/components/cart'
+import SEO from '@/components/seo'
+import Wrapper from '@/layout/wrapper'
+import React from 'react'
 
 const index = () => {
     return (
@@ -9,7 +9,7 @@ const index = () => {
             <SEO pageTitle="cart" />
             <Cart />
         </Wrapper>
-    );
-};
+    )
+}
 
-export default index;
+export default index

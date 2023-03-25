@@ -1,8 +1,8 @@
-import Footer from '@/layout/footer/footer';
-import Header from '@/layout/header/header';
-import React from 'react';
-import ProjectDetailsArea from './project-details-area';
-import ProjectDetailsBanner from './project-details-banner';
+import Footer from '@/layout/footer/footer'
+import Header from '@/layout/header/header'
+import React from 'react'
+import ProjectDetailsArea from './project-details-area'
+import ProjectDetailsBanner from './project-details-banner'
 
 const ProjectDetails = () => {
     return (
@@ -12,7 +12,7 @@ const ProjectDetails = () => {
             <ProjectDetailsArea />
             <Footer />
         </>
-    );
-};
+    )
+}
 
-export default ProjectDetails;
+export default ProjectDetails

@@ -1,9 +1,9 @@
-import "../styles/index.scss";
+import '../styles/index.scss'
 
-if (typeof window !== "undefined") {
-  require("bootstrap/dist/js/bootstrap");
+if (typeof window !== 'undefined') {
+    require('bootstrap/dist/js/bootstrap')
 }
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+    return <Component {...pageProps} />
 }
