@@ -9,7 +9,7 @@ const footer_content = {
             title: 'Useful links',
             cls: 'footer-col-2',
             links: [
-                { name: 'Contact Us', link: '/contact-us' },
+                { name: 'Contact Us', link: '/contact' },
                 { name: 'About us', link: '/about' },
                 {
                     name: 'Careers',
@@ -22,8 +22,11 @@ const footer_content = {
             title: 'Contact info',
             cls: 'footer-col-3',
             links: [
-                { name: '2100 Reston Pkwy STE 415,' },
-                { name: 'Reston, VA 20191' },
+                { 
+                  name: '2100 Reston Pkwy STE 415\nReston, VA 20191' ,
+                  link: 'https://www.google.com/maps/place/2100+Reston+Pkwy+%23415,+Reston,+VA+20191',
+                  target: "_blank"
+                },
                 { name: '(844) 200-3277' },
                 { name: 'sale@cygnuspay.com' },
                 { name: 'Office Hours: 9AM EST - 6:30PM EST' },
