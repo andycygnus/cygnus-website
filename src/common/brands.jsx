@@ -63,31 +63,21 @@ const Brands = ({ style_2 = false, border_style = false }) => {
             >
                 <div className="container">
                     <div
-                        className={`${
+                        className={`row ${
                             border_style ? 'brand-border pt-60 pb-60' : ''
-                        }`}
+                        } d-flex justify-content-center`}
                     >
-                        <Swiper
-                            {...setting}
-                            loop={isLoop}
-                            modules={Navigation}
-                            className="swiper-container brand-active"
-                        >
-                            {brands_img.map((item, i) => (
-                                <SwiperSlide key={i}>
-                                    <div className="swiper-wrapper brand-items">
-                                        <div className="swiper-slide">
-                                            <Link href="/">
-                                                <img
-                                                    src={item.img}
-                                                    alt="brand"
-                                                />
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
+                        {brands_img.map((item, i) => (
+                            <div 
+                                className="col-md-6 mb-50 text-center wow fadeInUp"
+                                data-wow-delay=".2s"
+                            >
+                                <img
+                                    src={item.img}
+                                    alt="brand"
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
