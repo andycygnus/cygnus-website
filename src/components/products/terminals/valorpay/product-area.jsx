@@ -11,9 +11,6 @@ const ProductArea = () => {
                 <div className="container">
                     <div className="row mb-5">
                         <div className="col-md-6">
-                            <div className="tpproduct">
-                                <span>Showing 1-12 of 54 results</span>
-                            </div>
                         </div>
                         <div className="col-md-6"></div>
                     </div>
@@ -45,44 +42,6 @@ const ProductArea = () => {
                                 </div>
                             </div>
                         ))}
-                    </div>
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="basic-pagination text-center mt-15">
-                                <nav>
-                                    <ul>
-                                        <li>
-                                            <Link href="/product-details">
-                                                <i className="fa-light fa-arrow-left-long"></i>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/product-details">
-                                                1
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <span className="current">2</span>
-                                        </li>
-                                        <li>
-                                            <Link href="/product-details">
-                                                3
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/product-details">
-                                                ...
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="/product-details">
-                                                <i className="fa-light fa-arrow-right-long"></i>
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

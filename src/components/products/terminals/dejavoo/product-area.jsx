@@ -11,9 +11,6 @@ const ProductArea = () => {
                 <div className="container">
                     <div className="row mb-5">
                         <div className="col-md-6">
-                            <div className="tpproduct">
-                                <span>Showing 6 of 6 results</span>
-                            </div>
                         </div>
                         <div className="col-md-6"></div>
                     </div>
