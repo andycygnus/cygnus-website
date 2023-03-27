@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
+import VideoPopup from '@/modules/video-popup'
 
 const About = () => {
     // about content data
     const about_content = {
         about_bg: '/assets/img/shape/shape-bg-05.png',
         about_img: '/assets/img/about/about-bg-02.png',
-        popup_video: 'https://www.youtube.com/watch?v=-s4lQxg2GXo',
+        popup_video: '-s4lQxg2GXo',
         about_thumb: '/assets/img/about/about-bg-03.png',
         title: 'Hear What Our Partners Say About Us',
         sub_title: 'About',
@@ -78,7 +79,6 @@ const About = () => {
                                         <button
                                             onClick={() => setIsVideoOpen(true)}
                                             className="popup-video"
-                                            href={popup_video}
                                         >
                                             <i className="fa-solid fa-play"></i>
                                         </button>
@@ -119,6 +119,12 @@ const About = () => {
                         </div>
                     </div>
                 </div>
+                      {/* video modal start */}
+                <VideoPopup
+                  isVideoOpen={isVideoOpen}
+                  setIsVideoOpen={setIsVideoOpen}
+                  videoId={popup_video}
+                />
             </section>
         </>
     )
