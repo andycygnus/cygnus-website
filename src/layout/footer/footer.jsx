@@ -148,7 +148,7 @@ const Footer = () => {
                                                 ))}
                                                 {item.misc.map((office_hour, i) => (
                                                   <li key={i}>
-                                                    <span>{office_hour.name}</span>
+                                                    {office_hour.name}
                                                   </li>
                                                 ))}
                                             </ul>
