@@ -7,7 +7,7 @@ const About = () => {
     const about_content = {
         about_bg: '/assets/img/shape/shape-bg-05.png',
         about_img: '/assets/img/about/about-bg-02.png',
-        popup_video: '-s4lQxg2GXo',
+        popup_video: 'fKhI0iL-OXY',
         about_thumb: '/assets/img/about/about-bg-03.png',
         title: 'Hear What Our Partners Say About Us',
         sub_title: 'About',
