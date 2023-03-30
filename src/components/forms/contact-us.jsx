@@ -95,7 +95,7 @@ const ContactUs = () => {
                                     type="submit"
                                     className="tp-btn"
                                 >
-                                    Send Massage
+                                    Send Message
                                 </button>
                             </div>
                             <p className="ajax-response"></p>
