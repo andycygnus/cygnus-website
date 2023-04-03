@@ -47,7 +47,7 @@ const connection_data = [
       <>
         You, representing your 501(c) 
         charitable organization, introduce 
-        Cynus Payments Connections 
+        Cygnus Payments Connections 
         to your community business 
         contacts. If they elect to 
         work with Cygnus 
@@ -56,7 +56,7 @@ const connection_data = [
         receive up to 
         50% of the profits 
         your connection 
-        generates for Cynus 
+        generates for Cygnus 
         Payments! It’s that easy!
       </>
     ),
@@ -72,7 +72,7 @@ const connection_data = [
         right at home.
         Once they see how 
         easy it is to work with 
-        Cyngus Payments, 
+        Cygnus Payments, 
         more businesses will 
         get involved with your 
         charity, and you benefit!
