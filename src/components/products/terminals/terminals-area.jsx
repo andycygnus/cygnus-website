@@ -31,7 +31,7 @@ const TerminalsArea = () => {
                                     </div>
                                     <div className="tpshopitem__content text-center">
                                         <span className="tpshopitem__title mb-5">
-                                            <Link href="/product-details">
+                                            <Link href="">
                                                 {item.title}
                                             </Link>
                                         </span>
