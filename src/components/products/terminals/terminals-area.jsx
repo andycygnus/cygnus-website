@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { term_home } from '@/data/team-home-2'
+import { terminals } from '@/data/term-solutions'
 
 const TerminalsArea = () => {
     const selectHandler = (e) => {}
@@ -12,7 +12,7 @@ const TerminalsArea = () => {
                         <div className="col-md-6"></div>
                     </div>
                     <div className="row">
-                        {term_home.map((item) => (
+                        {terminals.map((item) => (
                             <div
                                 key={item.id}
                                 className="col-xl-3 col-lg-4 col-md-4"
