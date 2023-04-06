@@ -61,7 +61,7 @@ const About = () => {
     return (
         <>
             <section
-                className="about-area grey-bg pt-130 tp-box-space pb-130"
+                className="about-area grey-bg pt-50 tp-box-space"
                 style={{
                     backgroundImage: `url(${about_bg})`,
                 }}

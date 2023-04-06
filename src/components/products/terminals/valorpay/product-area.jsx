@@ -25,18 +25,14 @@ const ProductArea = () => {
                                     data-wow-delay=".6s"
                                 >
                                     <div className="tpshopitem__thumb p-relative fix p-relative mb-35">
-                                        <Link href="">
                                             <img
                                                 src={item.img}
                                                 alt="shop-thumb"
                                             />
-                                        </Link>
                                     </div>
                                     <div className="tpshopitem__content text-center">
                                         <span className="tpshopitem__title mb-5">
-                                            <Link href="">
                                                 {item.title}
-                                            </Link>
                                         </span>
                                     </div>
                                 </div>
