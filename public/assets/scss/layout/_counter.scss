@@ -21,10 +21,10 @@
     }
     &:hover {
       &.counter__item {
-        border: 1px solid var(--tp-icon-blue);
+        border: 1px solid transparent;
       }
       &.blue-border {
-        border: 1px solid var(--tp-icon-blue);
+        border: 1px solid transparent;
       }
       &.pink-border {
         border: 1px solid var(--tp-icon-pink);

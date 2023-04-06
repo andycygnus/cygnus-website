@@ -87,6 +87,12 @@ const About = () => {
                                         <img
                                             src={about_thumb}
                                             alt="about-shape"
+                                            style={{
+                                                width: '100%',
+                                                height: 'auto',
+                                                maxWidth: '40%',
+                                                marginRight: '100%',
+                                            }}v         
                                         />
                                     </div>
                                 </div>

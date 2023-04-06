@@ -29,7 +29,7 @@ const Choose = () => {
                                     <div className="d-flex align-items-center justify-content-center">
                                         <Progress
                                             type="circle"
-                                            percent={100}
+                                            percent={99}
                                             width={165}
                                             height={165}
                                             strokeWidth={3.2}
@@ -52,7 +52,7 @@ const Choose = () => {
                                 <div className="progress-circular tl-progress">
                                     <Progress
                                         type="circle"
-                                        percent={100}
+                                        percent={99}
                                         width={165}
                                         height={165}
                                         strokeWidth={3.2}
@@ -74,7 +74,7 @@ const Choose = () => {
                                 <div className="progress-circular tl-progress">
                                     <Progress
                                         type="circle"
-                                        percent={100}
+                                        percent={99}
                                         width={165}
                                         height={165}
                                         strokeWidth={3.2}
@@ -96,7 +96,7 @@ const Choose = () => {
                                 <div className="progress-circular tl-progress">
                                     <Progress
                                         type="circle"
-                                        percent={100}
+                                        percent={99}
                                         width={165}
                                         height={165}
                                         strokeWidth={3.2}

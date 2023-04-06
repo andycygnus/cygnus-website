@@ -85,12 +85,24 @@ const HeroBanner = () => {
                                         <img
                                             src={item.img_1}
                                             alt="slider-img"
+                                            style={{
+                                                width: '100%',
+                                                height: 'auto',
+                                                maxWidth: '100%',
+                                                objectFit: 'contain',
+                                            }}
                                         />
                                     </div>
-                                    <div className="slider-content__shape d-none d-md-block">
+                                    <div className="col-lg-2 slider-content__shape d-none d-md-block">
                                         <img
                                             src={item.img_2}
                                             alt="slider-shape"
+                                            style={{
+                                                width: '90%',
+                                                height: 'auto',
+                                                maxWidth: '250px',
+                                                objectFit: 'contain',
+                                            }}
                                         />
                                     </div>
                                 </div>
