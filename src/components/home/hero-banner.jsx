@@ -9,7 +9,7 @@ const hero_slider = [
         title: (
             <>
                 Cygnus Payments
-                <br /> Is Easy to Work With!
+                <br /> is Easy to Work With!
             </>
         ),
         subtitle: 'Honesty, Transparency & Convenience',
@@ -52,7 +52,7 @@ const HeroBanner = () => {
         <>
             <section className="slider-area slider-tp-top p-relative">
                 {hero_slider.map((item) => (
-                    <div className="swiper-slide bg-white mt-50">
+                    <div className="swiper-slide bg-white mt-15">
                         <div className="container">
                             <div className="row align-items-center">
                                 <div className="col-lg-6 col-md-12 col-12 order-2 order-lg-1">

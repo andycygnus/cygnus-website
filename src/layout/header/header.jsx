@@ -12,7 +12,7 @@ const Header = () => {
         <>
             <div
                 id="header-mob-sticky"
-                className={`tp-mobile-header-area pt-15 pb-15 d-xl-none ${
+                className={`tp-mobile-header-area pt-5 pb-5 d-xl-none ${
                     sticky ? 'header-sticky' : ''
                 } `}
             >
