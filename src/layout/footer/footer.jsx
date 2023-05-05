@@ -1,4 +1,5 @@
 import SocialLinks from '@/common/social-links'
+import PrivacyPolicy from '@/components/privacy/privacy-policy'
 import Link from 'next/link'
 import React from 'react'
 
@@ -220,6 +221,10 @@ const Footer = () => {
                               <span>{copy_right_text2}</span>
                               <span>{copy_right_text3}</span>
                               <span>{copy_right_text4}</span>
+                              <br />
+                              <Link href="/privacy">Privacy Policy</Link>
+                              <span> - </span>
+                              <Link href="/terms">Terms of Service</Link>
                             </div>
                           </div>
                           {/* <div className="col-xl-6 col-lg-6 col-md-12 col-12">
