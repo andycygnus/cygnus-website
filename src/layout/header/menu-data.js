@@ -61,6 +61,7 @@ const menu_data = [
             },
             { link: '/products/online-ordering', title: 'Online Ordering' },
             { link: '/products/mobile-app', title: 'Mobile App' },
+            { link: 'https://finovacapital.com/cygnus-payments/', title: 'Finova Capital' },
         ],
     },
     {
