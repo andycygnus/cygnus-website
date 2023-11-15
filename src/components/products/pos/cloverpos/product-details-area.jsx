@@ -208,7 +208,7 @@ const ProductDetailsArea = () => {
                                         <div className="pro-quan-area d-sm-flex align-items-center mb-15"></div>
                                         <div className="product-button">
                                             <a
-                                                href="https://jmscpos.com/"
+                                                href="https://clover.com/"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
