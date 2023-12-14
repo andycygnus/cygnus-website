@@ -87,5 +87,41 @@ const menu_data = [
         link: 'https://apply.workable.com/cygnus-pay-careers/?lng=en',
         active: '',
     },
+    {
+        id: 7,
+        mega_menu: false,
+        has_dropdown: true,
+        title: 'Self Services',
+        link: '',
+        active: '',
+        sub_menus: [
+            {
+                link: '',
+                title: 'Merchant Services',
+                has_dropdown: true,
+                sub_menus: [
+                    { link: 'https://pciapply.com/cygnuspayments', title: 'PCI Compliance' },
+                ],
+            },
+            {
+                link: '',
+                title: 'Agent Services',
+                has_dropdown: true,
+                sub_menus: [
+                    { link: 'https://cygnus.iriscrm.com/v2/login?ref=/v2', title: 'IRIS CRM',},
+                    { link: 'https://forms.zohopublic.com/mikekim1/form/TerminalRequestForm/formperma/njHZPrUSICCUT9HiX3LugEWak7JCEQ1Rdd74mLSWRps', title: 'Terminal Request Form' },
+                ],
+            },
+        ],
+    },
+    {
+        id: 2,
+        mega_menu: false,
+        has_dropdown: false,
+        title: 'FRS',
+        link: '/products/frs',
+        active: '',
+        sub_menus: [],
+    },
 ]
 export default menu_data
