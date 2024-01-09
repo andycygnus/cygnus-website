@@ -28,9 +28,9 @@ const ProductDetailsArea = () => {
                             <div className="col-lg-6 col-md-6">
                                 <div className="productthumb mb-40 wow fadeInRighLeft" data-wow-delay=".4s">
                                     <img
-                                        src="/assets/img/products/frs/frs.jpg"
+                                        src="/assets/img/products/frs/frs-logo-updated-black.png"
                                         alt="product-thumb"
-                                        style={{ width: '89%', display: 'block', marginLeft: 'auto', marginRight: 'auto', marginTop: '65px' }}
+                                        style={{ width: '100%', display: 'block', marginLeft: 'auto', marginRight: 'auto', marginTop: '65px' }}
                                     />
                                 </div>
                             </div>
