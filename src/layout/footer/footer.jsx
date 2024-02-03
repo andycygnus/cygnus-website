@@ -87,6 +87,8 @@ const footer_content = {
         The Clover® name and logo are owned by Clover Network, Inc. 
         a wholly owned subsidiary of First Data corporation, and 
         are registered or used in the U.S. and many foreign countries.
+        <br/><br/>
+        Cygnus Payment Solutions is a registered Independent Sales Organization of Wells Fargo Bank, N.A., Concord, CA
       </>
     ],
     
