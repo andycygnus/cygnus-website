@@ -7,10 +7,10 @@ const progress_data = [
     id: 1,
     icon: "flaticon-approval",
     img: "/assets/img/shape/navtabs-01.png",
-    title: "Application Approved",
+    title: "Application Submitted",
     des: (
       <>
-        Submit your statement alongside your application <br /> and our in-house underwriting team will approve and board the account.
+        Submit your statement alongside your application <br /> and our in-house underwriting team will review the application.
       </>
     ),
   },
@@ -21,7 +21,7 @@ const progress_data = [
     title: "Terminal Deployment",
     des: (
       <>
-        We will configure, test, and deploy the equipments <br />
+        If your application is approved we will configure, test, and deploy the equipments
         for you to use to accept payments.
       </>
     ),
