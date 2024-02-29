@@ -37,10 +37,7 @@ const menu_data = [
                 sub_menus: [
                     { link: '/products/terminals/pax', title: 'PAX' },
                     { link: '/products/terminals/dejavoo', title: 'Dejavoo' },
-                    {
-                        link: '/products/terminals/firstdata',
-                        title: 'FirstData',
-                    },
+                    { link: '/products/terminals/firstdata', title: 'FirstData' ,},
                     { link: '/products/terminals/nmi', title: 'NMI Gateway' },
                     { link: '/products/terminals/valorpay', title: 'ValorPay' },
                 ],

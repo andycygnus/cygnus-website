@@ -51,14 +51,6 @@ const term_home = [
         social_links: [],
     },
     {
-        id: 3,
-        img: '/assets/img/services/terminals/term-thumb-03.png',
-        name: 'First Data',
-        title: 'FirstData',
-        links: '/products/terminals/firstdata',
-        social_links: [],
-    },
-    {
         id: 4,
         img: '/assets/img/services/terminals/term-thumb-04.png',
         name: 'NMI',
