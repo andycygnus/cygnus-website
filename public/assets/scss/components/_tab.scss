@@ -110,6 +110,12 @@
             }
         }
     }
+    @media (max-width: 767px) {
+        &.right-border {
+            flex-direction: row!important;
+            .w-100 {width: auto!important;}
+        }
+    }
 }
 .nav-info {
     font-size: 18px;
