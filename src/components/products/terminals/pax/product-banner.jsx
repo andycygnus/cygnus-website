@@ -12,9 +12,9 @@ const ProductBanner = () => {
             >
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-xl-7 col-lg-12 col-md-12 col-12">
+                        <div className="col-xl-12">
                             <div className="tp-breadcrumb">
-                                <h2 className="tp-breadcrumb__title">PAX</h2>
+                                <h2 className="tp-breadcrumb__title">PRODUCTS</h2>
                             </div>
                         </div>
                         <div className="col-xl-5 col-lg-12 col-md-12 col-12">
