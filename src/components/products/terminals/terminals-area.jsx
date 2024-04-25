@@ -6,6 +6,7 @@ import firstdata_data from '@/data/products/terminals/firstdata-data'
 import dejavoo_data from '@/data/products/terminals/dejavoo-data'
 import { terminals } from '@/data/term-solutions'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 const ProductArea = (props) => {
     const { firstSelected } = props
@@ -33,8 +34,8 @@ const ProductArea = (props) => {
     }
 
     const changeSelectionOfProduct = (e) => (id) => {
-        e.preventDefault();
-        setSelectedTerminalId(id);
+        e.preventDefault()
+        setSelectedTerminalId(id)
     }
 
     return (
@@ -97,9 +98,11 @@ const ProductArea = (props) => {
                                                 aria-selected="false"
                                                 tabIndex="-1"
                                             >
-                                                <img
+                                                <Image
+                                                    priority
                                                     src={terminal.img}
-                                                    height="40px"
+                                                    height={40}
+                                                    width={90}
                                                     alt=""
                                                 />
                                             </button>
@@ -115,7 +118,10 @@ const ProductArea = (props) => {
                                         key={item.id}
                                         className="col-xl-4 col-lg-4 col-md-6"
                                         onClick={(e) =>
-                                            moveToProductDetail(e)(selectedTerminalId, item.id)
+                                            moveToProductDetail(e)(
+                                                selectedTerminalId,
+                                                item.id
+                                            )
                                         }
                                     >
                                         <div
