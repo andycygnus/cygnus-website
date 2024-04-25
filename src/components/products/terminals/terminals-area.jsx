@@ -10,6 +10,7 @@ import Image from 'next/image'
 
 const ProductArea = (props) => {
     const { firstSelected } = props
+    const [searchedText, setSearchedText] = useState("");
     const [selectedTerminalId, setSelectedTerminalId] = useState(1)
     const router = useRouter()
 
@@ -24,8 +25,13 @@ const ProductArea = (props) => {
     }, [])
 
     const products = useMemo(() => {
-        return mergedProducts[selectedTerminalId]
-    }, [selectedTerminalId, mergedProducts])
+        if(searchedText === "") {
+            return mergedProducts[selectedTerminalId]
+        }
+        return mergedProducts[selectedTerminalId].filter((item) => {
+            return item.title.toLowerCase().includes(searchedText.toLowerCase());
+        })
+    }, [selectedTerminalId, mergedProducts, searchedText])
 
     const moveToProductDetail = (e) => (terminalId, productId) => {
         e.preventDefault()
@@ -36,6 +42,10 @@ const ProductArea = (props) => {
     const changeSelectionOfProduct = (e) => (id) => {
         e.preventDefault()
         setSelectedTerminalId(id)
+    }
+
+    const setSearchProducts = (e) => {
+        setSearchedText(e.target.value);
     }
 
     return (
@@ -54,6 +64,8 @@ const ProductArea = (props) => {
                                                     name="name"
                                                     type="text"
                                                     placeholder="Search your product here"
+                                                    onChange={setSearchProducts}
+                                                    value={searchedText}
                                                 />
                                                 <div className="text-primary">
                                                     <i class="fa-light fa-search fa-lg"></i>
