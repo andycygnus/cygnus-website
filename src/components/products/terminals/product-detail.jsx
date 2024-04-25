@@ -95,14 +95,16 @@ const PaxProductDetails = (props) => {
                                     role="tabpanel"
                                     aria-labelledby="key-features"
                                 >
-                                    <ul className="list-style-number pl-20">
-                                        <li>Versatile Payment Options</li>
-                                        <li>Lightning-fast Processing</li>
-                                        <li>Robust Security Feature</li>
-                                        <li>User-friendly Interface</li>
-                                        <li>Compact and Portable</li>
-                                        <li>Seamless Integration</li>
-                                    </ul>
+                                    <div class="tp-about__info-list ab-check-list mb-55">
+                                        <ul>
+                                            <li><i class="fa-solid fa-check"></i>Versatile Payment Options</li>
+                                            <li><i class="fa-solid fa-check"></i>Lightning-fast Processing</li>
+                                            <li><i class="fa-solid fa-check"></i>Robust Security Feature</li>
+                                            <li><i class="fa-solid fa-check"></i>User-friendly Interface</li>
+                                            <li><i class="fa-solid fa-check"></i>Compact and Portable</li>
+                                            <li><i class="fa-solid fa-check"></i>Seamless Integration</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div
                                     className="tab-pane fade"
@@ -110,16 +112,15 @@ const PaxProductDetails = (props) => {
                                     role="tabpanel"
                                     aria-labelledby="specifications"
                                 >
-                                    <ul className="list-style-disc pl-20">
-                                        <li>Versatile Payment Options</li>
-                                        <li>
-                                            EMV and NFC Contactless Built In –
-                                            EMV 4.x L1 and L2 certified
-                                        </li>
-                                        <li>Quad-Core @ 1.1GHz</li>
-                                        <li>Ethernet, WiFi, USB</li>
-                                        <li>Large touch screen</li>
-                                    </ul>
+                                    <div class="tp-about__info-list ab-check-list mb-55">
+                                        <ul>
+                                            <li><i class="fa-solid fa-check"></i>Versatile Payment Options</li>
+                                            <li><i class="fa-solid fa-check"></i>EMV and NFC Contactless Built In – EMV 4.x L1 and L2 certified</li>
+                                            <li><i class="fa-solid fa-check"></i>Quad-Core @ 1.1GHz</li>
+                                            <li><i class="fa-solid fa-check"></i>Ethernet, WiFi, USB</li>
+                                            <li><i class="fa-solid fa-check"></i>Large touch screen</li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div
                                     className="tab-pane fade"
