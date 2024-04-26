@@ -131,6 +131,182 @@ const ProductArea = (props) => {
                                     )
                                 })}
                             </ul>
+                            <h4 className="d-flex align-items-center gap-2 mb-4">
+                                <i class="fa-light fa-grid-2"></i> Filter
+                            </h4>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item border-top-0">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Brands
+                                    </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckDefault1"
+                                            />
+                                            <label class="form-check-label" for="flexCheckDefault1">Valor</label>
+                                        </div>
+                                        <div class="form-check">
+                                        <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckChecked"
+                                                checked
+                                            />
+                                            <label class="form-check-label" for="flexCheckChecked">Pax</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckDefault2"
+                                            />
+                                            <label class="form-check-label" for="flexCheckDefault2">Dejawoo</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckDefault3"
+                                            />
+                                            <label class="form-check-label" for="flexCheckDefault3">nmi</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckDefault4"
+                                            />
+                                            <label class="form-check-label" for="flexCheckDefault4">First Data</label>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Price
+                                    </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckDefault1"
+                                            />
+                                            <label class="form-check-label" for="flexCheckDefault1">Valor</label>
+                                        </div>
+                                        <div class="form-check">
+                                        <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckChecked"
+                                                checked
+                                            />
+                                            <label class="form-check-label" for="flexCheckChecked">Pax</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckDefault2"
+                                            />
+                                            <label class="form-check-label" for="flexCheckDefault2">Dejawoo</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckDefault3"
+                                            />
+                                            <label class="form-check-label" for="flexCheckDefault3">nmi</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckDefault4"
+                                            />
+                                            <label class="form-check-label" for="flexCheckDefault4">First Data</label>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Categories
+                                    </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckDefault1"
+                                            />
+                                            <label class="form-check-label" for="flexCheckDefault1">Valor</label>
+                                        </div>
+                                        <div class="form-check">
+                                        <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckChecked"
+                                                checked
+                                            />
+                                            <label class="form-check-label" for="flexCheckChecked">Pax</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckDefault2"
+                                            />
+                                            <label class="form-check-label" for="flexCheckDefault2">Dejawoo</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckDefault3"
+                                            />
+                                            <label class="form-check-label" for="flexCheckDefault3">nmi</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                name="name"
+                                                type="checkbox"
+                                                id="flexCheckDefault4"
+                                            />
+                                            <label class="form-check-label" for="flexCheckDefault4">First Data</label>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
                         </div>
                         <div className="col-md-8 col-lg-9">
                             <div className="row">

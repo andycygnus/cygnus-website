@@ -25,3 +25,36 @@
     &-disc li {list-style: disc;}
 }
 .shop-area .tpshopitem {cursor: pointer;}
+.accordion {
+    &-item,&-button {border-radius: 0;}
+    &-item {
+        box-shadow: none!important;
+        border-width: 1px 0;
+        &:first-of-type {border-radius: 0;}
+    }
+    &-button {
+        background: none!important;
+        box-shadow: none!important;
+        padding: var(--bs-accordion-btn-padding-y) 0;
+        &:after{background-size: 15px;}
+    }
+}
+.accordion-button:not(.collapsed) {color: var(--tp-theme-secondary);}
+.form-check {
+    display: flex;
+    grid-gap: 10px;
+    min-height: 2rem;
+    align-items: center;
+    &-input {
+        margin: 0;
+        width: 1.5em;
+        height: 1.5em;
+        background-size: 16px;
+        border-color: var(--tp-grey-1);
+        background-color: var(--tp-grey-1);
+        &:checked {
+            background-color: var(--tp-theme-secondary);
+            border-color: var(--tp-theme-secondary);
+        }
+    }
+}
