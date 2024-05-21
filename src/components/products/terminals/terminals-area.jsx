@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo, useState, useEffect, useRef } from 'react'
 import valorpay_data from '@/data/products/terminals/valorpay=data'
 import pax_data from '@/data/products/terminals/pax-data'
 import nmi_data from '@/data/products/terminals/nmi-data'
@@ -10,37 +10,23 @@ import Image from 'next/image'
 
 const ProductArea = (props) => {
     const { firstSelected } = props
-    const [searchedText, setSearchedText] = useState('')
     const [selectedTerminalId, setSelectedTerminalId] = useState(1)
     const router = useRouter()
-
+    const [search, setSearch] = useState("");
+    const [searchError, setSearchError] = useState(false);
+    
     const mergedProducts = useMemo(() => {
-        return {
-            1: [...pax_data],
-            2: [...dejavoo_data],
-            3: [...firstdata_data],
-            4: [...nmi_data],
-            5: [...valorpay_data],
-        }
-    }, [])
-
-    const products = useMemo(() => {
-        if (searchedText === '') {
-            return mergedProducts[selectedTerminalId]
-        }
-
-        const allProducts = [
+    return [
             ...pax_data,
             ...dejavoo_data,
             ...firstdata_data,
             ...nmi_data,
             ...valorpay_data,
         ]
+    }, [])
+        
+        const [filterSearch, setFilterSearch] = useState(mergedProducts);
 
-        return allProducts.filter((item) => {
-            return item.title.toLowerCase().includes(searchedText.toLowerCase())
-        })
-    }, [selectedTerminalId, mergedProducts, searchedText])
 
     const moveToProductDetail = (e) => (terminalId, productId) => {
         e.preventDefault()
@@ -53,9 +39,38 @@ const ProductArea = (props) => {
         setSelectedTerminalId(id)
     }
 
-    const setSearchProducts = (e) => {
-        setSearchedText(e.target.value)
-    }
+
+    const debounceTimeoutRef = useRef(null);
+    const debounce = (func, delay) => {
+        clearTimeout(debounceTimeoutRef.current);
+        debounceTimeoutRef.current = setTimeout(func, delay);
+    };
+
+    const onDelaySearch = (search) => {
+        if (search.trim().length < 1) {
+            setFilterSearch(mergedProducts); // Show all products if search is empty
+            setSearchError(false);
+        } else {
+            const result = mergedProducts.filter(item => item.title.toLowerCase().includes(search.toLowerCase()));
+            setFilterSearch(result);
+            setSearchError(result.length === 0);
+        }
+    };
+
+    const handleInputChange = (e) => {
+        const searchValue = e.target.value;
+        setSearch(searchValue);
+        debounce(() => onDelaySearch(searchValue), 500); // Reduced delay for quicker response
+    };
+
+
+    useEffect(() => {
+        setFilterSearch(mergedProducts);
+    }, [mergedProducts]);
+
+    
+
+    console.log("all filter results", filterSearch)
 
     return (
         <>
@@ -73,8 +88,8 @@ const ProductArea = (props) => {
                                                     name="name"
                                                     type="text"
                                                     placeholder="Search your product here"
-                                                    onChange={setSearchProducts}
-                                                    value={searchedText}
+                                                    onChange={(e) => handleInputChange(e)}
+                                                    value={search}
                                                 />
                                                 <div className="text-primary">
                                                     <i class="fa-light fa-search fa-lg"></i>
@@ -86,7 +101,7 @@ const ProductArea = (props) => {
                             </div>
                         </div>
                         <div className="col-md-4 col-lg-3">
-                            <ul
+                            {/* <ul
                                 className="nav tp-nav-tavs right-border mb-70 flex-column gap-4"
                                 id="myTab"
                                 role="tablist"
@@ -130,7 +145,7 @@ const ProductArea = (props) => {
                                         </li>
                                     )
                                 })}
-                            </ul>
+                            </ul> */}
                             <h4 className="d-flex align-items-center gap-2 mb-4">
                                 <i class="fa-light fa-grid-2"></i> Filter
                             </h4>
@@ -310,7 +325,8 @@ const ProductArea = (props) => {
                         </div>
                         <div className="col-md-8 col-lg-9">
                             <div className="row">
-                                {products.map((item) => (
+                                {console.log("In UI", filterSearch)}
+                                {filterSearch?.map((item) => (
                                     <div
                                         key={item.id}
                                         className="col-xl-4 col-lg-4 col-md-6"

@@ -1,6 +1,6 @@
 const pax_data = [
     {
-        id: 1,
+        id: 10,
         img: '/assets/img/shop/pax/product-01.jpg',
         title: 'PAX A35',
         price: 46.0,
@@ -14,7 +14,7 @@ const pax_data = [
         ],
     },
     {
-        id: 2,
+        id: 11,
         img: '/assets/img/shop/pax/product-02.jpg',
         title: 'PAX S300',
         price: 58.1,
@@ -28,7 +28,7 @@ const pax_data = [
         ],
     },
     {
-        id: 3,
+        id: 12,
         img: '/assets/img/shop/pax/product-03.jpg',
         title: 'PAX A80',
         price: 88.0,
@@ -42,7 +42,7 @@ const pax_data = [
         ],
     },
     {
-        id: 4,
+        id: 13,
         img: '/assets/img/shop/pax/product-04.jpg',
         title: 'PAX SP30 Mono (Pin Pad)',
         price: 52.0,
