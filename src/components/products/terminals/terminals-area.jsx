@@ -152,176 +152,235 @@ const ProductArea = (props) => {
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item border-top-0">
                                     <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Brands
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TerminalTypes" aria-expanded="true" aria-controls="TerminalTypes">
+                                        Terminal Types
                                     </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
-                                            <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckDefault1"
-                                            />
-                                            <label class="form-check-label" for="flexCheckDefault1">Valor</label>
+                                    <div id="TerminalTypes" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input
+                                                    class="form-check-input"
+                                                    name="name"
+                                                    type="checkbox"
+                                                    id="Standalone"
+                                                />
+                                                <label class="form-check-label" for="Standalone">Standalone</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input
+                                                    class="form-check-input"
+                                                    name="name"
+                                                    type="checkbox"
+                                                    id="Semi-Integrated"
+                                                />
+                                                <label class="form-check-label" for="Semi-Integrated">Semi-Integrated</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input
+                                                    class="form-check-input"
+                                                    name="name"
+                                                    type="checkbox"
+                                                    id="Pin-Pad"
+                                                />
+                                                <label class="form-check-label" for="Pin-Pad">Pin-Pad</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input
+                                                    class="form-check-input"
+                                                    name="name"
+                                                    type="checkbox"
+                                                    id="MobileApp"
+                                                />
+                                                <label class="form-check-label" for="MobileApp">Mobile App</label>
+                                            </div>
                                         </div>
-                                        <div class="form-check">
-                                        <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckChecked"
-                                                checked
-                                            />
-                                            <label class="form-check-label" for="flexCheckChecked">Pax</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckDefault2"
-                                            />
-                                            <label class="form-check-label" for="flexCheckDefault2">Dejawoo</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckDefault3"
-                                            />
-                                            <label class="form-check-label" for="flexCheckDefault3">nmi</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckDefault4"
-                                            />
-                                            <label class="form-check-label" for="flexCheckDefault4">First Data</label>
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Price
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ConnectionType" aria-expanded="false" aria-controls="ConnectionType">
+                                        Connection Type
                                     </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
+                                    <div id="ConnectionType" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input
+                                                    class="form-check-input"
+                                                    name="name"
+                                                    type="checkbox"
+                                                    id="Ethernet"
+                                                />
+                                                <label class="form-check-label" for="Ethernet">Ethernet</label>
+                                            </div>
+                                            <div class="form-check">
                                             <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckDefault1"
-                                            />
-                                            <label class="form-check-label" for="flexCheckDefault1">Valor</label>
+                                                    class="form-check-input"
+                                                    name="name"
+                                                    type="checkbox"
+                                                    id="Wifi"
+                                                />
+                                                <label class="form-check-label" for="Wifi">Wifi</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input
+                                                    class="form-check-input"
+                                                    name="name"
+                                                    type="checkbox"
+                                                    id="Cellular"
+                                                />
+                                                <label class="form-check-label" for="Cellular">Cellular</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input
+                                                    class="form-check-input"
+                                                    name="name"
+                                                    type="checkbox"
+                                                    id="Dial"
+                                                />
+                                                <label class="form-check-label" for="Dial">Dial</label>
+                                            </div>
                                         </div>
-                                        <div class="form-check">
-                                        <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckChecked"
-                                                checked
-                                            />
-                                            <label class="form-check-label" for="flexCheckChecked">Pax</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckDefault2"
-                                            />
-                                            <label class="form-check-label" for="flexCheckDefault2">Dejawoo</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckDefault3"
-                                            />
-                                            <label class="form-check-label" for="flexCheckDefault3">nmi</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckDefault4"
-                                            />
-                                            <label class="form-check-label" for="flexCheckDefault4">First Data</label>
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Categories
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#BatteryEquipped" aria-expanded="false" aria-controls="BatteryEquipped">
+                                        Battery Equipped
                                     </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <div class="form-check">
+                                    <div id="BatteryEquipped" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input
+                                                    class="form-check-input"
+                                                    name="Battery Equipped"
+                                                    type="radio"
+                                                    id="BatteryEquipped-Yes"
+                                                    checked
+                                                />
+                                                <label class="form-check-label" for="BatteryEquipped-Yes">Yes</label>
+                                            </div>
+                                            <div class="form-check">
                                             <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckDefault1"
-                                            />
-                                            <label class="form-check-label" for="flexCheckDefault1">Valor</label>
-                                        </div>
-                                        <div class="form-check">
-                                        <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckChecked"
-                                                checked
-                                            />
-                                            <label class="form-check-label" for="flexCheckChecked">Pax</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckDefault2"
-                                            />
-                                            <label class="form-check-label" for="flexCheckDefault2">Dejawoo</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckDefault3"
-                                            />
-                                            <label class="form-check-label" for="flexCheckDefault3">nmi</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input
-                                                class="form-check-input"
-                                                name="name"
-                                                type="checkbox"
-                                                id="flexCheckDefault4"
-                                            />
-                                            <label class="form-check-label" for="flexCheckDefault4">First Data</label>
+                                                    class="form-check-input"
+                                                    name="Battery Equipped"
+                                                    type="radio"
+                                                    id="BatteryEquipped-No"
+                                                />
+                                                <label class="form-check-label" for="BatteryEquipped-No">No</label>
+                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ReceiptPrinter" aria-expanded="false" aria-controls="ReceiptPrinter">
+                                        Receipt Printer
+                                    </button>
+                                    </h2>
+                                    <div id="ReceiptPrinter" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input
+                                                    class="form-check-input"
+                                                    name="Receipt Printer"
+                                                    type="radio"
+                                                    id="ReceiptPrinter-Yes"
+                                                    checked
+                                                />
+                                                <label class="form-check-label" for="ReceiptPrinter-Yes">Yes</label>
+                                            </div>
+                                            <div class="form-check">
+                                            <input
+                                                    class="form-check-input"
+                                                    name="Receipt Printer"
+                                                    type="radio"
+                                                    id="ReceiptPrinter-No"
+                                                />
+                                                <label class="form-check-label" for="ReceiptPrinter-No">No</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Features" aria-expanded="false" aria-controls="Features">
+                                        Features
+                                    </button>
+                                    </h2>
+                                    <div id="Features" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input
+                                                    class="form-check-input"
+                                                    name="name"
+                                                    type="checkbox"
+                                                    id="SupportsPin-Pad"
+                                                />
+                                                <label class="form-check-label" for="SupportsPin-Pad">Supports Pin-Pad</label>
+                                            </div>
+                                            <div class="form-check">
+                                            <input
+                                                    class="form-check-input"
+                                                    name="name"
+                                                    type="checkbox"
+                                                    id="Contactless"
+                                                />
+                                                <label class="form-check-label" for="Wifi">Contactless</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input
+                                                    class="form-check-input"
+                                                    name="name"
+                                                    type="checkbox"
+                                                    id="EmailReceipt"
+                                                />
+                                                <label class="form-check-label" for="EmailReceipt">Email Receipt</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input
+                                                    class="form-check-input"
+                                                    name="name"
+                                                    type="checkbox"
+                                                    id="SMSReceipt"
+                                                />
+                                                <label class="form-check-label" for="SMSReceipt">SMS Receipt</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PricingProgram" aria-expanded="false" aria-controls="PricingProgram">
+                                        Pricing Program
+                                    </button>
+                                    </h2>
+                                    <div id="PricingProgram" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="form-check">
+                                                <input
+                                                    class="form-check-input"
+                                                    name="name"
+                                                    type="checkbox"
+                                                    id="CygnusCashDiscount"
+                                                />
+                                                <label class="form-check-label" for="CygnusCashDiscount">Cygnus Cash Discount</label>
+                                            </div>
+                                            <div class="form-check">
+                                            <input
+                                                    class="form-check-input"
+                                                    name="name"
+                                                    type="checkbox"
+                                                    id="Surcharge"
+                                                />
+                                                <label class="form-check-label" for="Surcharge">Surcharge</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div className="col-md-8 col-lg-9">
                             <div className="row">
