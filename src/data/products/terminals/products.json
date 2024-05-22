@@ -1,0 +1,154 @@
+[
+    {
+        "id": "pax-s300",
+        "title": "Pax S300",
+        "terminalType": ["Semi-Integrated"],
+        "connectionType": ["Ethernet"],
+        "features": ["Contactless"],
+        "pricingProgram": ["Surcharge"],
+        "supportedPOS": ["JMSC", "UServe"],
+        "img": "/assets/img/shop/pax/product-01.jpg"
+    },
+    {
+        "id": "pax-a80",
+        "title": "Pax A80",
+        "terminalType": ["Standalone", "Semi-Integrated"],
+        "connectionType": ["Ethernet", "Wi-Fi", "Dial"],
+        "features": ["Supports Pin-Pad", "Prints Receipts", "Contactless"],
+        "pricingProgram": ["Surcharge"],
+        "supportedPOS": ["JMSC", "UServe"],
+        "img": "/assets/img/shop/pax/product-01.jpg"
+    },
+    {
+        "id": "first-data-fd150",
+        "title": "First Data FD150",
+        "terminalType": ["Standalone"],
+        "connectionType": ["Ethernet", "Wi-Fi", "Dial"],
+        "features": ["Prints Receipts", "Supports Pin-Pad", "Contactless"],
+        "pricingProgram": ["Surcharge"],
+        "img": "/assets/img/shop/pax/product-01.jpg"
+    },
+    {
+        "id": "first-data-rp10",
+        "title": "First Data RP10",
+        "terminalType": ["Pin-Pad"],
+        "features": ["Contactless"],
+        "notes": "Works with FD150 ONLY",
+        "pricingProgram": ["Surcharge"],
+        "img": "/assets/img/shop/pax/product-01.jpg"
+    },
+    {
+        "id": "dejavoo-qd2",
+        "title": "Dejavoo QD2",
+        "terminalType": ["Standalone"],
+        "connectionType": ["Wi-Fi", "Cellular"],
+        "features": [
+            "Battery Equipped",
+            "Prints Receipts",
+            "Supports Pin-Pad",
+            "Contactless",
+            "Email Receipt (Add-On)",
+            "SMS Receipt (Add-On)"
+        ],
+        "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
+        "img": "/assets/img/shop/pax/product-01.jpg"
+    },
+    {
+        "id": "dejavoo-qd4",
+        "title": "Dejavoo QD4",
+        "terminalType": ["Standalone"],
+        "connectionType": ["Ethernet", "Wi-Fi"],
+        "features": [
+            "Prints Receipts",
+            "Supports Pin-Pad",
+            "Contactless",
+            "Email Receipt (Add-On)",
+            "SMS Receipt (Add-On)"
+        ],
+        "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
+        "img": "/assets/img/shop/pax/product-01.jpg"
+    },
+    {
+        "id": "dejavoo-qd3",
+        "title": "Dejavoo QD3",
+        "terminalType": ["Pin-Pad"],
+        "features": ["Contactless"],
+        "notes": "Works with QD2, QD4, P1, P3",
+        "pricingProgram": ["Surcharge"],
+        "img": "/assets/img/shop/pax/product-01.jpg"
+    },
+    {
+        "id": "dejavoo-p1",
+        "title": "Dejavoo P1",
+        "terminalType": ["Standalone"],
+        "connectionType": ["Ethernet", "Wi-Fi"],
+        "features": [
+            "Battery Equipped",
+            "Prints Receipts",
+            "Supports Pin-Pad",
+            "Contactless",
+            "Email Receipt (Add-On)",
+            "SMS Receipt (Add-On)"
+        ],
+        "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
+        "img": "/assets/img/shop/pax/product-01.jpg"
+    },
+    {
+        "id": "dejavoo-p3",
+        "title": "Dejavoo P3",
+        "terminalType": ["Standalone"],
+        "connectionType": ["Wi-Fi", "Cellular"],
+        "features": [
+            "Battery Equipped",
+            "Prints Receipts",
+            "Supports Pin-Pad",
+            "Contactless",
+            "Email Receipt (Add-On)",
+            "SMS Receipt (Add-On)"
+        ],
+        "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
+        "img": "/assets/img/shop/pax/product-01.jpg"
+    },
+    {
+        "id": "dejavoo-p5",
+        "title": "Dejavoo P5",
+        "terminalType": ["Standalone", "Pin-Pad"],
+        "connectionType": ["Wi-Fi", "Cellular"],
+        "features": [
+            "Battery Equipped",
+            "Contactless",
+            "Email Receipt (Add-On)",
+            "SMS Receipt (Add-On)"
+        ],
+        "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
+        "img": "/assets/img/shop/pax/product-01.jpg"
+    },
+    {
+        "id": "aprivapay-bbpos-emv-nfc",
+        "title": "AprivaPay BBPOS EMV/NFC",
+        "terminalType": ["Mobile App"],
+        "connectionType": ["Bluetooth"],
+        "features": [
+            "Battery Equipped",
+            "Contactless",
+            "Email Receipt",
+            "SMS Receipt"
+        ],
+        "pricingProgram": ["Surcharge"],
+        "img": "/assets/img/shop/pax/product-01.jpg"
+    },
+    {
+        "id": "nmi-bbpos-chipper-2x-bt",
+        "title": "NMI BBPOS Chipper 2X BT",
+        "terminalType": ["Mobile App"],
+        "connectionType": ["Bluetooth"],
+        "features": [
+            "Battery Equipped",
+            "Contactless",
+            "Email Receipt",
+            "SMS Receipt"
+        ],
+        "pricingProgram": ["Surcharge"],
+        "img": "/assets/img/shop/pax/product-01.jpg"
+    }
+]

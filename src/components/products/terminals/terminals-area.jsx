@@ -7,26 +7,129 @@ import dejavoo_data from '@/data/products/terminals/dejavoo-data'
 import { terminals } from '@/data/term-solutions'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import Product from './product'
+
+import productsData from '@/data/products/terminals/products.json'
 
 const ProductArea = (props) => {
-    const { firstSelected } = props
     const [selectedTerminalId, setSelectedTerminalId] = useState(1)
     const router = useRouter()
-    const [search, setSearch] = useState("");
-    const [searchError, setSearchError] = useState(false);
-    
-    const mergedProducts = useMemo(() => {
-    return [
-            ...pax_data,
-            ...dejavoo_data,
-            ...firstdata_data,
-            ...nmi_data,
-            ...valorpay_data,
-        ]
-    }, [])
-        
-        const [filterSearch, setFilterSearch] = useState(mergedProducts);
+    const [search, setSearch] = useState('')
+    const [searchError, setSearchError] = useState(false)
+    const [baseFilteredProducts, setBaseFilteredProducts] =
+        useState(productsData)
 
+    const [filters, setFilters] = useState({
+        Standalone: false,
+        SemiIntegrated: false,
+        PinPad: false,
+        MobileApp: false,
+        Ethernet: false,
+        Wifi: false,
+        Cellular: false,
+        Dial: false,
+        BatteryEquipped: null,
+        ReceiptPrinter: null,
+        SupportsPinPad: false,
+        Contactless: false,
+        EmailReceipt: false,
+        SMSReceipt: false,
+        CygnusCashDiscount: false,
+        Surcharge: false,
+    })
+
+    const applyFilters = () => {
+        const isAnyFilterActive = Object.values(filters).some((value) =>
+            typeof value === 'boolean' ? value : value !== null
+        )
+
+        if (!isAnyFilterActive) {
+            setBaseFilteredProducts(productsData)
+            setFilterSearch(
+                productsData.filter((product) =>
+                    product.title.toLowerCase().includes(search.toLowerCase())
+                )
+            )
+            return
+        }
+
+        const filtered = productsData.filter((product) => {
+            const matchesType =
+                (filters.Standalone &&
+                    product.terminalType?.includes('Standalone')) ||
+                (filters.SemiIntegrated &&
+                    product.terminalType?.includes('Semi-Integrated')) ||
+                (filters.PinPad && product.terminalType?.includes('Pin-Pad')) ||
+                (filters.MobileApp &&
+                    product.terminalType?.includes('Mobile App'))
+            const matchesConnection =
+                (filters.Ethernet &&
+                    product.connectionType?.includes('Ethernet')) ||
+                (filters.Wifi && product.connectionType?.includes('Wifi')) ||
+                (filters.Cellular &&
+                    product.connectionType?.includes('Cellular')) ||
+                (filters.Dial && product.connectionType?.includes('Dial'))
+            const matchesFeatures =
+                (filters.SupportsPinPad &&
+                    product.features?.includes('Supports Pin-Pad')) ||
+                (filters.Contactless &&
+                    product.features?.includes('Contactless')) ||
+                (filters.EmailReceipt &&
+                    product.features?.includes('Email Receipt')) ||
+                (filters.SMSReceipt &&
+                    product.features?.includes('SMS Receipt')) ||
+                (filters.BatteryEquipped === 'yes' &&
+                    product.features?.includes('Battery Equipped')) ||
+                (filters.BatteryEquipped === 'no' &&
+                    !product.features?.includes('Battery Equipped')) ||
+                (filters.PrintsReceipts === 'yes' &&
+                    product.features?.includes('Prints Receipts')) ||
+                (filters.PrintsReceipts === 'no' &&
+                    !product.features?.includes('Prints Receipts'))
+            const matchesPricing =
+                (filters.CygnusCashDiscount &&
+                    product.pricingProgram?.includes('Cygnus Cash Discount')) ||
+                (filters.Surcharge &&
+                    product.pricingProgram?.includes('Surcharge'))
+
+            return (
+                matchesType ||
+                matchesConnection ||
+                matchesFeatures ||
+                matchesPricing
+            )
+        })
+
+        setBaseFilteredProducts(filtered)
+        setFilterSearch(
+            filtered.filter((product) =>
+                product.title.toLowerCase().includes(search.toLowerCase())
+            )
+        )
+    }
+
+    // Trigger filtering on both filter and search changes
+    useEffect(() => {
+        applyFilters()
+    }, [filters, search]) // Depend on search state as well
+
+    useEffect(() => {
+        onDelaySearch(search)
+    }, [search, baseFilteredProducts])
+
+    console.log('filters', filters)
+
+    const handleCheckboxChange = (event) => {
+        const { id, checked } = event.target
+        setFilters((prev) => ({ ...prev, [id]: checked }))
+    }
+
+    const handleRadioChange = (event) => {
+        const { id, value } = event.target
+        setFilters((prev) => ({ ...prev, [id.split('-')[0]]: value }))
+    }
+
+    const [filterSearch, setFilterSearch] = useState(productsData)
 
     const moveToProductDetail = (e) => (terminalId, productId) => {
         e.preventDefault()
@@ -39,38 +142,34 @@ const ProductArea = (props) => {
         setSelectedTerminalId(id)
     }
 
-
-    const debounceTimeoutRef = useRef(null);
+    const debounceTimeoutRef = useRef(null)
     const debounce = (func, delay) => {
-        clearTimeout(debounceTimeoutRef.current);
-        debounceTimeoutRef.current = setTimeout(func, delay);
-    };
+        clearTimeout(debounceTimeoutRef.current)
+        debounceTimeoutRef.current = setTimeout(func, delay)
+    }
 
     const onDelaySearch = (search) => {
         if (search.trim().length < 1) {
-            setFilterSearch(mergedProducts); // Show all products if search is empty
-            setSearchError(false);
+            setFilterSearch(baseFilteredProducts)
+            setSearchError(false)
         } else {
-            const result = mergedProducts.filter(item => item.title.toLowerCase().includes(search.toLowerCase()));
-            setFilterSearch(result);
-            setSearchError(result.length === 0);
+            const result = baseFilteredProducts.filter((item) =>
+                item.title.toLowerCase().includes(search.toLowerCase())
+            )
+            setFilterSearch(result)
+            setSearchError(result.length === 0)
         }
-    };
+    }
 
     const handleInputChange = (e) => {
-        const searchValue = e.target.value;
-        setSearch(searchValue);
-        debounce(() => onDelaySearch(searchValue), 500); // Reduced delay for quicker response
-    };
-
+        const searchValue = e.target.value
+        setSearch(searchValue)
+        debounce(() => onDelaySearch(searchValue), 500) // Apply search to the filtered results
+    }
 
     useEffect(() => {
-        setFilterSearch(mergedProducts);
-    }, [mergedProducts]);
-
-    
-
-    console.log("all filter results", filterSearch)
+        setFilterSearch(productsData)
+    }, [productsData])
 
     return (
         <>
@@ -88,7 +187,9 @@ const ProductArea = (props) => {
                                                     name="name"
                                                     type="text"
                                                     placeholder="Search your product here"
-                                                    onChange={(e) => handleInputChange(e)}
+                                                    onChange={(e) =>
+                                                        handleInputChange(e)
+                                                    }
                                                     value={search}
                                                 />
                                                 <div className="text-primary">
@@ -101,281 +202,466 @@ const ProductArea = (props) => {
                             </div>
                         </div>
                         <div className="col-md-4 col-lg-3">
-                            {/* <ul
-                                className="nav tp-nav-tavs right-border mb-70 flex-column gap-4"
-                                id="myTab"
-                                role="tablist"
-                            >
-                                {terminals.map((terminal) => {
-                                    return (
-                                        <li
-                                            className="w-100 nav-item"
-                                            role="presentation"
-                                            key={terminal.id}
-                                        >
-                                            <button
-                                                className={`w-100 nav-link ${
-                                                    firstSelected &&
-                                                    terminal.id === 1
-                                                        ? 'active'
-                                                        : ''
-                                                }`}
-                                                onClick={(e) =>
-                                                    changeSelectionOfProduct(e)(
-                                                        terminal.id
-                                                    )
-                                                }
-                                                id="home-tab"
-                                                data-bs-toggle="tab"
-                                                data-bs-target="#home-tab-pane"
-                                                type="button"
-                                                role="tab"
-                                                aria-controls="home-tab-pane"
-                                                aria-selected="false"
-                                                tabIndex="-1"
-                                            >
-                                                <Image
-                                                    priority
-                                                    src={terminal.img}
-                                                    height={40}
-                                                    width={90}
-                                                    alt=""
-                                                />
-                                            </button>
-                                        </li>
-                                    )
-                                })}
-                            </ul> */}
                             <h4 className="d-flex align-items-center gap-2 mb-4">
                                 <i class="fa-light fa-grid-2"></i> Filter
                             </h4>
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item border-top-0">
                                     <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TerminalTypes" aria-expanded="true" aria-controls="TerminalTypes">
-                                        Terminal Types
-                                    </button>
+                                        <button
+                                            class="accordion-button"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#TerminalTypes"
+                                            aria-expanded="true"
+                                            aria-controls="TerminalTypes"
+                                        >
+                                            Terminal Types
+                                        </button>
                                     </h2>
-                                    <div id="TerminalTypes" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                    <div
+                                        id="TerminalTypes"
+                                        class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample"
+                                    >
                                         <div class="accordion-body">
                                             <div class="form-check">
                                                 <input
-                                                    class="form-check-input"
-                                                    name="name"
+                                                    className="form-check-input"
                                                     type="checkbox"
                                                     id="Standalone"
+                                                    checked={filters.Standalone}
+                                                    onChange={
+                                                        handleCheckboxChange
+                                                    }
                                                 />
-                                                <label class="form-check-label" for="Standalone">Standalone</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    htmlFor="Standalone"
+                                                >
+                                                    Standalone
+                                                </label>
                                             </div>
-                                            <div class="form-check">
+                                            <div className="form-check">
                                                 <input
-                                                    class="form-check-input"
-                                                    name="name"
+                                                    className="form-check-input"
                                                     type="checkbox"
-                                                    id="Semi-Integrated"
+                                                    id="SemiIntegrated"
+                                                    checked={
+                                                        filters.SemiIntegrated
+                                                    }
+                                                    onChange={
+                                                        handleCheckboxChange
+                                                    }
                                                 />
-                                                <label class="form-check-label" for="Semi-Integrated">Semi-Integrated</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    htmlFor="SemiIntegrated"
+                                                >
+                                                    Semi-Integrated
+                                                </label>
                                             </div>
-                                            <div class="form-check">
+                                            <div className="form-check">
                                                 <input
-                                                    class="form-check-input"
-                                                    name="name"
+                                                    className="form-check-input"
                                                     type="checkbox"
-                                                    id="Pin-Pad"
+                                                    id="PinPad"
+                                                    checked={filters.PinPad}
+                                                    onChange={
+                                                        handleCheckboxChange
+                                                    }
                                                 />
-                                                <label class="form-check-label" for="Pin-Pad">Pin-Pad</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    htmlFor="PinPad"
+                                                >
+                                                    Pin-Pad
+                                                </label>
                                             </div>
-                                            <div class="form-check">
+                                            <div className="form-check">
                                                 <input
-                                                    class="form-check-input"
-                                                    name="name"
+                                                    className="form-check-input"
                                                     type="checkbox"
                                                     id="MobileApp"
+                                                    checked={filters.MobileApp}
+                                                    onChange={
+                                                        handleCheckboxChange
+                                                    }
                                                 />
-                                                <label class="form-check-label" for="MobileApp">Mobile App</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    htmlFor="MobileApp"
+                                                >
+                                                    Mobile App
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ConnectionType" aria-expanded="false" aria-controls="ConnectionType">
-                                        Connection Type
-                                    </button>
+                                        <button
+                                            class="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#ConnectionType"
+                                            aria-expanded="false"
+                                            aria-controls="ConnectionType"
+                                        >
+                                            Connection Type
+                                        </button>
                                     </h2>
-                                    <div id="ConnectionType" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div
+                                        id="ConnectionType"
+                                        class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample"
+                                    >
                                         <div class="accordion-body">
-                                            <div class="form-check">
+                                            <div className="form-check">
                                                 <input
-                                                    class="form-check-input"
-                                                    name="name"
+                                                    className="form-check-input"
                                                     type="checkbox"
                                                     id="Ethernet"
+                                                    checked={filters.Ethernet}
+                                                    onChange={
+                                                        handleCheckboxChange
+                                                    }
                                                 />
-                                                <label class="form-check-label" for="Ethernet">Ethernet</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    htmlFor="Ethernet"
+                                                >
+                                                    Ethernet
+                                                </label>
                                             </div>
-                                            <div class="form-check">
-                                            <input
-                                                    class="form-check-input"
-                                                    name="name"
+                                            <div className="form-check">
+                                                <input
+                                                    className="form-check-input"
                                                     type="checkbox"
                                                     id="Wifi"
+                                                    checked={filters.Wifi}
+                                                    onChange={
+                                                        handleCheckboxChange
+                                                    }
                                                 />
-                                                <label class="form-check-label" for="Wifi">Wifi</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    htmlFor="Wifi"
+                                                >
+                                                    Wifi
+                                                </label>
                                             </div>
-                                            <div class="form-check">
+                                            <div className="form-check">
                                                 <input
-                                                    class="form-check-input"
-                                                    name="name"
+                                                    className="form-check-input"
                                                     type="checkbox"
                                                     id="Cellular"
+                                                    checked={filters.Cellular}
+                                                    onChange={
+                                                        handleCheckboxChange
+                                                    }
                                                 />
-                                                <label class="form-check-label" for="Cellular">Cellular</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    htmlFor="Cellular"
+                                                >
+                                                    Cellular
+                                                </label>
                                             </div>
-                                            <div class="form-check">
+                                            <div className="form-check">
                                                 <input
-                                                    class="form-check-input"
-                                                    name="name"
+                                                    className="form-check-input"
                                                     type="checkbox"
                                                     id="Dial"
+                                                    checked={filters.Dial}
+                                                    onChange={
+                                                        handleCheckboxChange
+                                                    }
                                                 />
-                                                <label class="form-check-label" for="Dial">Dial</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    htmlFor="Dial"
+                                                >
+                                                    Dial
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#BatteryEquipped" aria-expanded="false" aria-controls="BatteryEquipped">
-                                        Battery Equipped
-                                    </button>
+                                        <button
+                                            class="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#BatteryEquipped"
+                                            aria-expanded="false"
+                                            aria-controls="BatteryEquipped"
+                                        >
+                                            Battery Equipped
+                                        </button>
                                     </h2>
-                                    <div id="BatteryEquipped" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div
+                                        id="BatteryEquipped"
+                                        class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample"
+                                    >
                                         <div class="accordion-body">
-                                            <div class="form-check">
+                                            <div className="form-check">
                                                 <input
-                                                    class="form-check-input"
-                                                    name="Battery Equipped"
+                                                    className="form-check-input"
                                                     type="radio"
+                                                    name="BatteryEquipped"
                                                     id="BatteryEquipped-Yes"
-                                                    checked
+                                                    value="yes"
+                                                    checked={
+                                                        filters.BatteryEquipped ===
+                                                        'yes'
+                                                    }
+                                                    onChange={handleRadioChange}
                                                 />
-                                                <label class="form-check-label" for="BatteryEquipped-Yes">Yes</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    htmlFor="BatteryEquipped-Yes"
+                                                >
+                                                    Yes
+                                                </label>
                                             </div>
-                                            <div class="form-check">
-                                            <input
-                                                    class="form-check-input"
-                                                    name="Battery Equipped"
+                                            <div className="form-check">
+                                                <input
+                                                    className="form-check-input"
                                                     type="radio"
+                                                    name="BatteryEquipped"
                                                     id="BatteryEquipped-No"
+                                                    value="no"
+                                                    checked={
+                                                        filters.BatteryEquipped ===
+                                                        'no'
+                                                    }
+                                                    onChange={handleRadioChange}
                                                 />
-                                                <label class="form-check-label" for="BatteryEquipped-No">No</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    htmlFor="BatteryEquipped-No"
+                                                >
+                                                    No
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ReceiptPrinter" aria-expanded="false" aria-controls="ReceiptPrinter">
-                                        Receipt Printer
-                                    </button>
+                                        <button
+                                            class="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#ReceiptPrinter"
+                                            aria-expanded="false"
+                                            aria-controls="ReceiptPrinter"
+                                        >
+                                            Receipt Printer
+                                        </button>
                                     </h2>
-                                    <div id="ReceiptPrinter" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div
+                                        id="ReceiptPrinter"
+                                        class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample"
+                                    >
                                         <div class="accordion-body">
-                                            <div class="form-check">
+                                            <div className="form-check">
                                                 <input
-                                                    class="form-check-input"
-                                                    name="Receipt Printer"
+                                                    className="form-check-input"
                                                     type="radio"
+                                                    name="ReceiptPrinter"
                                                     id="ReceiptPrinter-Yes"
-                                                    checked
+                                                    value="yes" // Set the value attribute
+                                                    checked={
+                                                        filters.ReceiptPrinter ===
+                                                        'yes'
+                                                    } // Conditionally render checked attribute
+                                                    onChange={handleRadioChange} // Attach the onChange event handler
                                                 />
-                                                <label class="form-check-label" for="ReceiptPrinter-Yes">Yes</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    htmlFor="ReceiptPrinter-Yes"
+                                                >
+                                                    Yes
+                                                </label>
                                             </div>
-                                            <div class="form-check">
-                                            <input
-                                                    class="form-check-input"
-                                                    name="Receipt Printer"
+                                            <div className="form-check">
+                                                <input
+                                                    className="form-check-input"
                                                     type="radio"
+                                                    name="ReceiptPrinter"
                                                     id="ReceiptPrinter-No"
+                                                    value="no" // Set the value attribute
+                                                    checked={
+                                                        filters.ReceiptPrinter ===
+                                                        'no'
+                                                    } // Conditionally render checked attribute
+                                                    onChange={handleRadioChange} // Attach the onChange event handler
                                                 />
-                                                <label class="form-check-label" for="ReceiptPrinter-No">No</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    htmlFor="ReceiptPrinter-No"
+                                                >
+                                                    No
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Features" aria-expanded="false" aria-controls="Features">
-                                        Features
-                                    </button>
+                                        <button
+                                            class="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#Features"
+                                            aria-expanded="false"
+                                            aria-controls="Features"
+                                        >
+                                            Features
+                                        </button>
                                     </h2>
-                                    <div id="Features" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div
+                                        id="Features"
+                                        class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample"
+                                    >
                                         <div class="accordion-body">
-                                            <div class="form-check">
+                                            <div className="form-check">
                                                 <input
-                                                    class="form-check-input"
-                                                    name="name"
+                                                    className="form-check-input"
                                                     type="checkbox"
-                                                    id="SupportsPin-Pad"
+                                                    id="SupportsPinPad"
+                                                    checked={
+                                                        filters.SupportsPinPad
+                                                    }
+                                                    onChange={
+                                                        handleCheckboxChange
+                                                    }
                                                 />
-                                                <label class="form-check-label" for="SupportsPin-Pad">Supports Pin-Pad</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    for="SupportsPinPad"
+                                                >
+                                                    Supports Pin-Pad
+                                                </label>
                                             </div>
-                                            <div class="form-check">
-                                            <input
-                                                    class="form-check-input"
-                                                    name="name"
+                                            <div className="form-check">
+                                                <input
+                                                    className="form-check-input"
                                                     type="checkbox"
                                                     id="Contactless"
+                                                    checked={
+                                                        filters.Contactless
+                                                    }
+                                                    onChange={
+                                                        handleCheckboxChange
+                                                    }
                                                 />
-                                                <label class="form-check-label" for="Wifi">Contactless</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    for="Contactless"
+                                                >
+                                                    Contactless
+                                                </label>
                                             </div>
-                                            <div class="form-check">
+                                            <div className="form-check">
                                                 <input
-                                                    class="form-check-input"
-                                                    name="name"
+                                                    className="form-check-input"
                                                     type="checkbox"
                                                     id="EmailReceipt"
+                                                    checked={
+                                                        filters.EmailReceipt
+                                                    }
+                                                    onChange={
+                                                        handleCheckboxChange
+                                                    }
                                                 />
-                                                <label class="form-check-label" for="EmailReceipt">Email Receipt</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    for="EmailReceipt"
+                                                >
+                                                    Email Receipt
+                                                </label>
                                             </div>
-                                            <div class="form-check">
+                                            <div className="form-check">
                                                 <input
-                                                    class="form-check-input"
-                                                    name="name"
+                                                    className="form-check-input"
                                                     type="checkbox"
                                                     id="SMSReceipt"
+                                                    checked={filters.SMSReceipt}
+                                                    onChange={
+                                                        handleCheckboxChange
+                                                    }
                                                 />
-                                                <label class="form-check-label" for="SMSReceipt">SMS Receipt</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    for="SMSReceipt"
+                                                >
+                                                    SMS Receipt
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#PricingProgram" aria-expanded="false" aria-controls="PricingProgram">
-                                        Pricing Program
-                                    </button>
+                                        <button
+                                            class="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#PricingProgram"
+                                            aria-expanded="false"
+                                            aria-controls="PricingProgram"
+                                        >
+                                            Pricing Program
+                                        </button>
                                     </h2>
-                                    <div id="PricingProgram" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div
+                                        id="PricingProgram"
+                                        class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample"
+                                    >
                                         <div class="accordion-body">
-                                            <div class="form-check">
+                                            <div className="form-check">
                                                 <input
-                                                    class="form-check-input"
-                                                    name="name"
+                                                    className="form-check-input"
                                                     type="checkbox"
                                                     id="CygnusCashDiscount"
+                                                    checked={
+                                                        filters.CygnusCashDiscount
+                                                    }
+                                                    onChange={
+                                                        handleCheckboxChange
+                                                    }
                                                 />
-                                                <label class="form-check-label" for="CygnusCashDiscount">Cygnus Cash Discount</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    for="CygnusCashDiscount"
+                                                >
+                                                    Cygnus Cash Discount
+                                                </label>
                                             </div>
-                                            <div class="form-check">
-                                            <input
-                                                    class="form-check-input"
-                                                    name="name"
+                                            <div className="form-check">
+                                                <input
+                                                    className="form-check-input"
                                                     type="checkbox"
                                                     id="Surcharge"
+                                                    checked={filters.Surcharge}
+                                                    onChange={
+                                                        handleCheckboxChange
+                                                    }
                                                 />
-                                                <label class="form-check-label" for="Surcharge">Surcharge</label>
+                                                <label
+                                                    className="form-check-label"
+                                                    for="Surcharge"
+                                                >
+                                                    Surcharge
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
@@ -384,38 +670,16 @@ const ProductArea = (props) => {
                         </div>
                         <div className="col-md-8 col-lg-9">
                             <div className="row">
-                                {console.log("In UI", filterSearch)}
+                                <span>{filterSearch?.length}</span>
                                 {filterSearch?.map((item) => (
-                                    <div
+                                    <Product
                                         key={item.id}
-                                        className="col-xl-4 col-lg-4 col-md-6"
-                                        onClick={(e) =>
-                                            moveToProductDetail(e)(
-                                                selectedTerminalId,
-                                                item.id
-                                            )
+                                        item={item}
+                                        moveToProductDetail={
+                                            moveToProductDetail
                                         }
-                                    >
-                                        <div
-                                            className="tpshopitem mb-50 wow fadeInUp"
-                                            data-wow-delay=".6s"
-                                        >
-                                            <div className="tpshopitem__thumb p-relative fix p-relative mb-35">
-                                                <img
-                                                    src={item.img}
-                                                    alt="shop-thumb"
-                                                />
-                                            </div>
-                                            <div className="tpshopitem__content text-center">
-                                                <span className="tpshopitem__title mb-0">
-                                                    <h4>{item.title}</h4>
-                                                </span>
-                                                <span className="tpshopitem__title mb-5">
-                                                    {item.title}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        selectedTerminalId={selectedTerminalId}
+                                    />
                                 ))}
                             </div>
                         </div>
