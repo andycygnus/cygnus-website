@@ -2,6 +2,7 @@
     {
         "id": "pax-s300",
         "title": "Pax S300",
+        "description": "The S300 is the high-performance retail payment solution for multilane merchants who wish to offer high levels of transactional security combined with contactless, e-Signature, magnetic stripe and EMV Chip. With state of the art levels of security design, including PCI PTS 4.x and SRED, the S300 protects and encrypts all transaction information. Featuring a large, color touchscreen and loudspeaker, the S300 comes with a 32- bit ARM11 processor and massive amounts of memory for exceptional multimedia performance. With USB and LAN connectivity options, the S300 offers everything merchants could want in a sleek, stylish payment devices.",
         "terminalType": ["Semi-Integrated"],
         "connectionType": ["Ethernet"],
         "features": ["Contactless"],
@@ -12,6 +13,7 @@
     {
         "id": "pax-a80",
         "title": "Pax A80",
+        "description": "PAX A80, the most cost-effective in the A-series, is a powerful, game-changing countertop device that can also be used as an indoor portable device. Always running at peak performance, full connectivity means the A80 is a reliable wor Dejavoo QD4 khorse that will process payments safely and fast, even during the busiest hours. ",
         "terminalType": ["Standalone", "Semi-Integrated"],
         "connectionType": ["Ethernet", "Wi-Fi", "Dial"],
         "features": ["Supports Pin-Pad", "Prints Receipts", "Contactless"],
@@ -22,6 +24,7 @@
     {
         "id": "first-data-fd150",
         "title": "First Data FD150",
+        "description": "The FD150 is replacing the FD130 as the latest affordable terminal solution that combines performance, reliability and ease of use in a compact, feature-rich device. It offers faster processing and expanded memory with a familiar look and feel.",
         "terminalType": ["Standalone"],
         "connectionType": ["Ethernet", "Wi-Fi", "Dial"],
         "features": ["Prints Receipts", "Supports Pin-Pad", "Contactless"],
@@ -40,6 +43,7 @@
     {
         "id": "dejavoo-qd2",
         "title": "Dejavoo QD2",
+        "description": "Fast-forward your growth with Dejavoo’s versatile wireless Android POS",
         "terminalType": ["Standalone"],
         "connectionType": ["Wi-Fi", "Cellular"],
         "features": [
@@ -56,6 +60,7 @@
     {
         "id": "dejavoo-qd4",
         "title": "Dejavoo QD4",
+        "description": "",
         "terminalType": ["Standalone"],
         "connectionType": ["Ethernet", "Wi-Fi"],
         "features": [
@@ -71,6 +76,7 @@
     {
         "id": "dejavoo-qd3",
         "title": "Dejavoo QD3",
+        "description": "mPOS Terminal • 4G, WiFi, Bluetooth • 4” touch screen • Pocket size • Insertion, MSR, contactless • Vending version available ",
         "terminalType": ["Pin-Pad"],
         "features": ["Contactless"],
         "notes": "Works with QD2, QD4, P1, P3",
@@ -80,6 +86,7 @@
     {
         "id": "dejavoo-p1",
         "title": "Dejavoo P1",
+        "description": "Intelligent entry level hardware solution.Empowering ISOs with the ability to fully control and manage the payment process easily and generate new sales opportunities.",
         "terminalType": ["Standalone"],
         "connectionType": ["Ethernet", "Wi-Fi"],
         "features": [
@@ -96,6 +103,7 @@
     {
         "id": "dejavoo-p3",
         "title": "Dejavoo P3",
+        "description": "Gets the job done in any environment",
         "terminalType": ["Standalone"],
         "connectionType": ["Wi-Fi", "Cellular"],
         "features": [
@@ -112,6 +120,7 @@
     {
         "id": "dejavoo-p5",
         "title": "Dejavoo P5",
+        "description": "As a handheld payment solution, the Dejavoo P5 is so lightweight and easy to use that it can be operated single handedly. Its portability capabilities and numerous payment methods offer today’s merchants the versatility they need. And with its 5 in. HD touchscreen display, the Dejavoo P5 creates an ultramodern checkout experience!",
         "terminalType": ["Standalone", "Pin-Pad"],
         "connectionType": ["Wi-Fi", "Cellular"],
         "features": [

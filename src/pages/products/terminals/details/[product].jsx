@@ -10,46 +10,29 @@ import Wrapper from '@/layout/wrapper'
 import Footer from '@/layout/footer/footer'
 import Header from '@/layout/header/header'
 import { useRouter } from 'next/router'
+import productsData from '@/data/products/terminals/products.json'
 
 const ProductDetails = () => {
     const router = useRouter()
 
-    const mergedProducts = useMemo(() => {
-        return {
-            1: [...pax_data],
-            2: [...dejavoo_data],
-            3: [...firstdata_data],
-            4: [...nmi_data],
-            5: [...valorpay_data],
-        }
-    }, [])
-
-    const terminalId = useMemo(() => {
-        return Number(router.query.terminal)
-    }, [router.query.terminal])
-
-    const productId = useMemo(() => {
-        return Number(router.query.product)
+    const productName = useMemo(() => {
+        return router.query.product
     }, [router.query.product])
 
     const productDetail = useMemo(() => {
-        if (!terminalId) return undefined
-        const terminal = mergedProducts[terminalId]
-        return terminal.filter((item) => {
-            if (item.id === productId) {
-                return true
-            } else {
-                return false
-            }
-        })[0]
-    }, [terminalId, productId, mergedProducts])
+        return productsData.find((item) => item.id === productName)
+    }, [productName])
 
     return (
         <>
             <Wrapper>
                 <SEO pageTitle="PAX" />
                 <Header />
-                {productDetail && <ProductDetail item={productDetail} />}
+                {productDetail ? (
+                    <ProductDetail item={productDetail} />
+                ) : (
+                    'NO Product Detail Found'
+                )}
                 <Footer />
             </Wrapper>
         </>

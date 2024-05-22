@@ -134,7 +134,7 @@ const ProductArea = (props) => {
     const moveToProductDetail = (e) => (terminalId, productId) => {
         e.preventDefault()
         const defaultPathName = router.pathname
-        router.push(`${defaultPathName}/details/${terminalId}/${productId}`)
+        router.push(`${defaultPathName}/details/${productId}`)
     }
 
     const changeSelectionOfProduct = (e) => (id) => {
@@ -669,19 +669,24 @@ const ProductArea = (props) => {
                             </div>
                         </div>
                         <div className="col-md-8 col-lg-9">
-                            <div className="row">
-                                <span>{filterSearch?.length}</span>
-                                {filterSearch?.map((item) => (
-                                    <Product
-                                        key={item.id}
-                                        item={item}
-                                        moveToProductDetail={
-                                            moveToProductDetail
-                                        }
-                                        selectedTerminalId={selectedTerminalId}
-                                    />
-                                ))}
-                            </div>
+                            {filterSearch?.length ? (
+                                <div className="row">
+                                    {filterSearch?.map((item) => (
+                                        <Product
+                                            key={item.id}
+                                            item={item}
+                                            moveToProductDetail={
+                                                moveToProductDetail
+                                            }
+                                            selectedTerminalId={
+                                                selectedTerminalId
+                                            }
+                                        />
+                                    ))}
+                                </div>
+                            ) : (
+                                <span>No Product Found</span>
+                            )}
                         </div>
                     </div>
                 </div>
