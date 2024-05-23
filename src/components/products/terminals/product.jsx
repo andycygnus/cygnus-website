@@ -15,7 +15,7 @@ const Product = ({ item, moveToProductDetail, selectedTerminalId }) => {
                     <span className="tpshopitem__title mb-0">
                         <h4>{item.title}</h4>
                     </span>
-                    <span className="tpshopitem__title mb-5">{item.title}</span>
+                    {/* <span className="tpshopitem__title mb-5">{item.title}</span> */}
                 </div>
             </div>
         </div>
