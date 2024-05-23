@@ -111,7 +111,7 @@ const Footer = () => {
                                     <h4 className="footer-widget__title mb-30">
                                         <a href="index">
                                             <img
-                                                src="/assets/img/logo/logo.png"
+                                                src="/assets/img/logo/logo-dark-light.png"
                                                 alt="logo"
                                             />
                                         </a>

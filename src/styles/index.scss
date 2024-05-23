@@ -24,7 +24,37 @@
     &-number li {list-style: decimal;}
     &-disc li {list-style: disc;}
 }
-.shop-area .tpshopitem {cursor: pointer;}
+.shop-area {
+    .tpshopitem {
+        cursor: pointer;
+        &__thumb {
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                object-fit: contain;
+                height: 70%;
+                width: 70%;
+                object-position: center;
+            }
+        }
+    }
+    &.detailed-shop {
+        .tpshopitem {
+            &__thumb {
+                height: 500px;
+                img {
+                    width:  80%;
+                    height: 80%;
+                }
+                @media (max-width: 550px) {
+                    height: 320px;
+                }
+            }
+        }
+    }
+}
 .accordion {
     &-item,&-button {border-radius: 0;}
     &-item {

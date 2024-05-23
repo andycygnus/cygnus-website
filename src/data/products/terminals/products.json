@@ -130,7 +130,7 @@
             "SMS Receipt (Add-On)"
         ],
         "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
-        "img": "/assets/img/shop/pax/product-01.jpg"
+        "img": "/assets/img/shop/pax/product-01.png"
     },
     {
         "id": "aprivapay-bbpos-emv-nfc",
@@ -144,7 +144,7 @@
             "SMS Receipt"
         ],
         "pricingProgram": ["Surcharge"],
-        "img": "/assets/img/shop/pax/product-01.jpg"
+        "img": "/assets/img/shop/pax/product-01.png"
     },
     {
         "id": "nmi-bbpos-chipper-2x-bt",
@@ -158,6 +158,6 @@
             "SMS Receipt"
         ],
         "pricingProgram": ["Surcharge"],
-        "img": "/assets/img/shop/pax/product-01.jpg"
+        "img": "/assets/img/shop/pax/product-01.png"
     }
 ]

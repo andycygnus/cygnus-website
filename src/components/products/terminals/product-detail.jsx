@@ -3,7 +3,7 @@ const PaxProductDetails = (props) => {
 
     return (
         <>
-            <div className="shop-area pt-50 pb-130">
+            <div className="shop-area detailed-shop pt-50 pb-130">
                 <div className="container">
                     <div className="row gx-5">
                         <div className="col-lg-6 col-xl-5">
