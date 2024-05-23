@@ -8,7 +8,7 @@
         "features": ["Contactless"],
         "pricingProgram": ["Surcharge"],
         "supportedPOS": ["JMSC", "UServe"],
-        "img": "/assets/img/shop/pax/product-01.jpg"
+        "img": "/assets/img/products/terminals/pax-s300.png"
     },
     {
         "id": "pax-a80",
@@ -19,7 +19,7 @@
         "features": ["Supports Pin-Pad", "Prints Receipts", "Contactless"],
         "pricingProgram": ["Surcharge"],
         "supportedPOS": ["JMSC", "UServe"],
-        "img": "/assets/img/shop/pax/product-01.jpg"
+        "img": "/assets/img/products/terminals/pax-a80.png"
     },
     {
         "id": "first-data-fd150",
@@ -29,7 +29,7 @@
         "connectionType": ["Ethernet", "Wi-Fi", "Dial"],
         "features": ["Prints Receipts", "Supports Pin-Pad", "Contactless"],
         "pricingProgram": ["Surcharge"],
-        "img": "/assets/img/shop/pax/product-01.jpg"
+        "img": "/assets/img/products/terminals/fad-150.png"
     },
     {
         "id": "first-data-rp10",
@@ -38,7 +38,7 @@
         "features": ["Contactless"],
         "notes": "Works with FD150 ONLY",
         "pricingProgram": ["Surcharge"],
-        "img": "/assets/img/shop/pax/product-01.jpg"
+        "img": "/assets/img/products/terminals/fad-150.png"
     },
     {
         "id": "dejavoo-qd2",
@@ -55,7 +55,7 @@
             "SMS Receipt (Add-On)"
         ],
         "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
-        "img": "/assets/img/shop/pax/product-01.jpg"
+        "img": "/assets/img/products/terminals/qd2.jpg"
     },
     {
         "id": "dejavoo-qd4",
@@ -71,7 +71,7 @@
             "SMS Receipt (Add-On)"
         ],
         "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
-        "img": "/assets/img/shop/pax/product-01.jpg"
+        "img": "/assets/img/products/terminals/qd3.jpg"
     },
     {
         "id": "dejavoo-qd3",
@@ -81,7 +81,7 @@
         "features": ["Contactless"],
         "notes": "Works with QD2, QD4, P1, P3",
         "pricingProgram": ["Surcharge"],
-        "img": "/assets/img/shop/pax/product-01.jpg"
+        "img": "/assets/img/products/terminals/qd2.jpg"
     },
     {
         "id": "dejavoo-p1",
@@ -98,7 +98,7 @@
             "SMS Receipt (Add-On)"
         ],
         "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
-        "img": "/assets/img/shop/pax/product-01.jpg"
+        "img": "/assets/img/products/terminals/p1.png"
     },
     {
         "id": "dejavoo-p3",
@@ -115,7 +115,7 @@
             "SMS Receipt (Add-On)"
         ],
         "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
-        "img": "/assets/img/shop/pax/product-01.jpg"
+        "img": "/assets/img/products/terminals/p3.png"
     },
     {
         "id": "dejavoo-p5",
