@@ -456,11 +456,11 @@ const ProductArea = (props) => {
                                                 >
                                                     No
                                                 </label>
-                                                <button
+                                            </div>
+                                            <div className='text-end'>
+                                                <button className='btn btn-light mt-1'
                                                     onClick={() =>
-                                                        resetRadioGroup(
-                                                            'BatteryEquipped'
-                                                        )
+                                                        resetRadioGroup ('BatteryEquipped')
                                                     }
                                                 >
                                                     Reset
