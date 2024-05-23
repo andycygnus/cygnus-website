@@ -4,7 +4,6 @@
 @import 'node_modules/react-18-image-lightbox/src/style.css';
 @import '/public/assets/scss/main.scss';
 
-
 .breadcrumb__area {
     text-align: center;
     background-size: cover;
@@ -21,8 +20,12 @@
     }
 }
 .list-style {
-    &-number li {list-style: decimal;}
-    &-disc li {list-style: disc;}
+    &-number li {
+        list-style: decimal;
+    }
+    &-disc li {
+        list-style: disc;
+    }
 }
 .shop-area {
     .tpshopitem {
@@ -45,7 +48,7 @@
             &__thumb {
                 height: 500px;
                 img {
-                    width:  80%;
+                    width: 80%;
                     height: 80%;
                 }
                 @media (max-width: 550px) {
@@ -56,20 +59,29 @@
     }
 }
 .accordion {
-    &-item,&-button {border-radius: 0;}
+    &-item,
+    &-button {
+        border-radius: 0;
+    }
     &-item {
-        box-shadow: none!important;
+        box-shadow: none !important;
         border-width: 1px 0;
-        &:first-of-type {border-radius: 0;}
+        &:first-of-type {
+            border-radius: 0;
+        }
     }
     &-button {
-        background: none!important;
-        box-shadow: none!important;
+        background: none !important;
+        box-shadow: none !important;
         padding: var(--bs-accordion-btn-padding-y) 0;
-        &:after{background-size: 15px;}
+        &:after {
+            background-size: 15px;
+        }
     }
 }
-.accordion-button:not(.collapsed) {color: var(--tp-theme-secondary);}
+.accordion-button:not(.collapsed) {
+    color: var(--tp-theme-secondary);
+}
 .form-check {
     display: flex;
     grid-gap: 10px;

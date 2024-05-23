@@ -19,6 +19,15 @@ const ProductArea = (props) => {
     const [baseFilteredProducts, setBaseFilteredProducts] =
         useState(productsData)
 
+    const [isOpen, setIsOpen] = useState({
+        terminalTypes: true,
+        connectionType: false,
+        batteryEquipped: false,
+        receiptPrinter: false,
+        features: false,
+        pricingProgram: false,
+    })
+
     const [filters, setFilters] = useState({
         Standalone: false,
         SemiIntegrated: false,
@@ -129,6 +138,10 @@ const ProductArea = (props) => {
         setFilters((prev) => ({ ...prev, [id.split('-')[0]]: value }))
     }
 
+    const resetRadioGroup = (filterName) => {
+        setFilters((prev) => ({ ...prev, [filterName]: null }))
+    }
+
     const [filterSearch, setFilterSearch] = useState(productsData)
 
     const moveToProductDetail = (e) => (terminalId, productId) => {
@@ -222,7 +235,6 @@ const ProductArea = (props) => {
                                     <div
                                         id="TerminalTypes"
                                         class="accordion-collapse collapse show"
-                                        data-bs-parent="#accordionExample"
                                     >
                                         <div class="accordion-body">
                                             <div class="form-check">
@@ -314,7 +326,6 @@ const ProductArea = (props) => {
                                     <div
                                         id="ConnectionType"
                                         class="accordion-collapse collapse"
-                                        data-bs-parent="#accordionExample"
                                     >
                                         <div class="accordion-body">
                                             <div className="form-check">
@@ -404,7 +415,6 @@ const ProductArea = (props) => {
                                     <div
                                         id="BatteryEquipped"
                                         class="accordion-collapse collapse"
-                                        data-bs-parent="#accordionExample"
                                     >
                                         <div class="accordion-body">
                                             <div className="form-check">
@@ -446,6 +456,15 @@ const ProductArea = (props) => {
                                                 >
                                                     No
                                                 </label>
+                                                <button
+                                                    onClick={() =>
+                                                        resetRadioGroup(
+                                                            'BatteryEquipped'
+                                                        )
+                                                    }
+                                                >
+                                                    Reset
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -466,7 +485,6 @@ const ProductArea = (props) => {
                                     <div
                                         id="ReceiptPrinter"
                                         class="accordion-collapse collapse"
-                                        data-bs-parent="#accordionExample"
                                     >
                                         <div class="accordion-body">
                                             <div className="form-check">
@@ -528,7 +546,6 @@ const ProductArea = (props) => {
                                     <div
                                         id="Features"
                                         class="accordion-collapse collapse"
-                                        data-bs-parent="#accordionExample"
                                     >
                                         <div class="accordion-body">
                                             <div className="form-check">
@@ -624,7 +641,6 @@ const ProductArea = (props) => {
                                     <div
                                         id="PricingProgram"
                                         class="accordion-collapse collapse"
-                                        data-bs-parent="#accordionExample"
                                     >
                                         <div class="accordion-body">
                                             <div className="form-check">
