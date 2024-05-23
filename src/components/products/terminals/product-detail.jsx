@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const PaxProductDetails = (props) => {
     const { item } = props
 
@@ -5,6 +7,10 @@ const PaxProductDetails = (props) => {
         <>
             <div className="shop-area detailed-shop pt-50 pb-130">
                 <div className="container">
+                    <Link href="/products/terminals">
+                        &#60; Back to results
+                    </Link>
+
                     <div className="row gx-5">
                         <div className="col-lg-6 col-xl-5">
                             <div className="tpshopitem__thumb p-relative fix p-relative mb-35">
@@ -12,11 +18,7 @@ const PaxProductDetails = (props) => {
                             </div>
                         </div>
                         <div className="col-lg-6 col-xl-7">
-                            <img
-                                src="/assets/img/logo/logo.png"
-                                height="40px"
-                                alt=""
-                            />
+                            <img src={item.brandImg} height="40px" alt="" />
                             <h1 className="mt-20 mb-30">{item.title}</h1>
                             <p>{item.description}</p>
 

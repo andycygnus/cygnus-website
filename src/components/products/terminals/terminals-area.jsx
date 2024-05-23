@@ -1,10 +1,4 @@
-import React, { useMemo, useState, useEffect, useRef } from 'react'
-import valorpay_data from '@/data/products/terminals/valorpay=data'
-import pax_data from '@/data/products/terminals/pax-data'
-import nmi_data from '@/data/products/terminals/nmi-data'
-import firstdata_data from '@/data/products/terminals/firstdata-data'
-import dejavoo_data from '@/data/products/terminals/dejavoo-data'
-import { terminals } from '@/data/term-solutions'
+import React, { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Product from './product'
@@ -18,15 +12,6 @@ const ProductArea = (props) => {
     const [searchError, setSearchError] = useState(false)
     const [baseFilteredProducts, setBaseFilteredProducts] =
         useState(productsData)
-
-    const [isOpen, setIsOpen] = useState({
-        terminalTypes: true,
-        connectionType: false,
-        batteryEquipped: false,
-        receiptPrinter: false,
-        features: false,
-        pricingProgram: false,
-    })
 
     const [filters, setFilters] = useState({
         Standalone: false,
@@ -457,15 +442,22 @@ const ProductArea = (props) => {
                                                     No
                                                 </label>
                                             </div>
-                                            <div className='text-end'>
-                                                <button className='btn btn-light mt-1'
-                                                    onClick={() =>
-                                                        resetRadioGroup ('BatteryEquipped')
-                                                    }
-                                                >
-                                                    Reset
-                                                </button>
-                                            </div>
+                                            {filters.BatteryEquipped ? (
+                                                <div className="text-end">
+                                                    <button
+                                                        className="btn btn-light mt-1"
+                                                        onClick={() =>
+                                                            resetRadioGroup(
+                                                                'BatteryEquipped'
+                                                            )
+                                                        }
+                                                    >
+                                                        Reset
+                                                    </button>
+                                                </div>
+                                            ) : (
+                                                ''
+                                            )}
                                         </div>
                                     </div>
                                 </div>
@@ -527,6 +519,22 @@ const ProductArea = (props) => {
                                                     No
                                                 </label>
                                             </div>
+                                            {filters.ReceiptPrinter ? (
+                                                <div className="text-end">
+                                                    <button
+                                                        className="btn btn-light mt-1"
+                                                        onClick={() =>
+                                                            resetRadioGroup(
+                                                                'ReceiptPrinter'
+                                                            )
+                                                        }
+                                                    >
+                                                        Reset
+                                                    </button>
+                                                </div>
+                                            ) : (
+                                                ''
+                                            )}
                                         </div>
                                     </div>
                                 </div>
@@ -685,6 +693,13 @@ const ProductArea = (props) => {
                             </div>
                         </div>
                         <div className="col-md-8 col-lg-9">
+                            {filterSearch?.length ? (
+                                <span>
+                                    Total Products: {filterSearch?.length}{' '}
+                                </span>
+                            ) : (
+                                ''
+                            )}
                             {filterSearch?.length ? (
                                 <div className="row">
                                     {filterSearch?.map((item) => (
