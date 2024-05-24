@@ -43,18 +43,14 @@
             }
         }
     }
-    &.detailed-shop {
-        .tpshopitem {
-            &__thumb {
-                height: 500px;
-                img {
-                    width: 80%;
-                    height: 80%;
-                }
-                @media (max-width: 550px) {
-                    height: 320px;
-                }
-            }
+    .detailed-shop {
+        height: 500px;
+        img {
+            width: 80%;
+            height: 80%;
+        }
+        @media (max-width: 550px) {
+            height: 320px;
         }
     }
 }

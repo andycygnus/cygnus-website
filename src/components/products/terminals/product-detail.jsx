@@ -38,20 +38,20 @@ const PaxProductDetails = (props) => {
 
     return (
         <>
-            <div className="shop-area detailed-shop pt-50 pb-130">
+            <div className="shop-area pt-50 pb-130">
                 <div className="container">
-                    <Link href="/products/terminals">
-                        &#60; Back to results
+                    <Link href="/products/terminals" className='mb-2 d-flex align-items-center gap-2'>
+                        <i className="fa-solid fa-chevron-left"></i><span className='text-link fw-bold'>Back to results</span>
                     </Link>
 
                     <div className="row gx-5">
                         <div className="col-lg-6 col-xl-5">
-                            <div className="tpshopitem__thumb p-relative fix p-relative mb-35">
-                                <img src={item.img} alt="" />
+                            <div className="detailed-shop tpshopitem__thumb p-relative fix p-relative mb-35">
+                                <img src={item.img} alt=""/>
                             </div>
                         </div>
                         <div className="col-lg-6 col-xl-7">
-                            <img src={item.brandImg} height="40px" alt="" />
+                            <img src={item.brandImg} height="30px" alt="" />
                             <h1 className="mt-20 mb-30">{item.title}</h1>
                             <p>{item.description}</p>
 
@@ -137,28 +137,29 @@ const PaxProductDetails = (props) => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="container">
-                    <div className="col-12 text-center">
-                        <h3>Explore related items</h3>
-                    </div>
-                    <div className="mt-4 col-12">
-                        {relatedProducts.length ? (
-                            <div className="row">
-                                {relatedProducts.map((relatedItem) => (
-                                    <Product
-                                        key={relatedItem.id}
-                                        item={relatedItem}
-                                        moveToProductDetail={
-                                            moveToProductDetail
-                                        }
-                                        className="col-sm-6 col-md-4 col-lg-3"
-                                    />
-                                ))}
-                            </div>
-                        ) : (
-                            <span>No related products found</span>
-                        )}
+                    
+                    <div className="row">
+                        <div className="col-12 text-center">
+                            <h3 className='mt-60'>Explore related items</h3>
+                        </div>
+                        <div className="mt-4 col-12">
+                            {relatedProducts.length ? (
+                                <div className="row">
+                                    {relatedProducts.map((relatedItem) => (
+                                        <Product
+                                            key={relatedItem.id}
+                                            item={relatedItem}
+                                            moveToProductDetail={
+                                                moveToProductDetail
+                                            }
+                                            className="col-sm-6 col-md-4 col-lg-3"
+                                        />
+                                    ))}
+                                </div>
+                            ) : (
+                                <span>No related products found</span>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>

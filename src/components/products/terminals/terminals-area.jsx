@@ -694,12 +694,13 @@ const ProductArea = (props) => {
                         </div>
                         <div className="col-md-8 col-lg-9">
                             {filterSearch?.length ? (
-                                <span>
-                                    Total Products: {filterSearch?.length}{' '}
-                                </span>
+                                <div className='mb-2 d-flex align-items-center gap-1'>
+                                    Total Products:<span className='text-link fw-bold'>{filterSearch?.length}{' '}</span>
+                                </div>
                             ) : (
                                 ''
                             )}
+                            
                             {filterSearch?.length ? (
                                 <div className="row">
                                     {filterSearch?.map((item) => (
