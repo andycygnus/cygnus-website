@@ -7,6 +7,12 @@
         "terminalType": ["Semi-Integrated"],
         "connectionType": ["Ethernet"],
         "features": ["Contactless"],
+        "specifications": [
+            "EMV®, MSR and NFC/Contactless",
+            "EMV & PCI Compliant",
+            "Large Memory Capacity",
+            "User-friendly Interface with Powerful GUI"
+        ],
         "pricingProgram": ["Surcharge"],
         "supportedPOS": ["JMSC", "UServe"],
         "img": "/assets/img/products/terminals/pax-s300.png",
@@ -20,6 +26,12 @@
         "terminalType": ["Standalone", "Semi-Integrated"],
         "connectionType": ["Ethernet", "Wi-Fi", "Dial"],
         "features": ["Supports Pin-Pad", "Prints Receipts", "Contactless"],
+        "specifications": [
+            "PAXBiz® powered by Android™",
+            "4″ HD Touchscreen Display",
+            "3.5 in/sec high-speed printer",
+            "PCI PTS 6.x"
+        ],
         "pricingProgram": ["Surcharge"],
         "supportedPOS": ["JMSC", "UServe"],
         "img": "/assets/img/products/terminals/pax-a80.png",
@@ -33,6 +45,7 @@
         "terminalType": ["Standalone"],
         "connectionType": ["Ethernet", "Wi-Fi", "Dial"],
         "features": ["Prints Receipts", "Supports Pin-Pad", "Contactless"],
+        "specifications": [],
         "pricingProgram": ["Surcharge"],
         "img": "/assets/img/products/terminals/fad-150.png",
         "brandImg": "/assets/img/products/terminals/brands/firstdata.png"
@@ -43,6 +56,7 @@
         "brand": "FirstData",
         "terminalType": ["Pin-Pad"],
         "features": ["Contactless"],
+        "specifications": [],
         "notes": "Works with FD150 ONLY",
         "pricingProgram": ["Surcharge"],
         "img": "/assets/img/products/terminals/fad-150.png",
@@ -63,6 +77,12 @@
             "Email Receipt (Add-On)",
             "SMS Receipt (Add-On)"
         ],
+        "specifications": [
+            "5.5”  touch screen",
+            "E SIM world coverage",
+            "7.4V,  2 x 2600mAh batteries",
+            "All-In-One DejaPayPro"
+        ],
         "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
         "img": "/assets/img/products/terminals/qd2.jpg",
         "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
@@ -81,6 +101,12 @@
             "Email Receipt (Add-On)",
             "SMS Receipt (Add-On)"
         ],
+        "specifications": [
+            "Large touch screen",
+            "50 ft. paper roll",
+            "Quad-Core @ 1.1GHz",
+            "Ethernet, WiFi, USB"
+        ],
         "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
         "img": "/assets/img/products/terminals/qd3.jpg",
         "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
@@ -92,6 +118,13 @@
         "description": "mPOS Terminal • 4G, WiFi, Bluetooth • 4” touch screen • Pocket size • Insertion, MSR, contactless • Vending version available ",
         "terminalType": ["Pin-Pad"],
         "features": ["Contactless"],
+        "specifications": [
+            "4”  touch screen",
+            "Multi-unit charger",
+            "Pocket size",
+            "Insertion, MSR, contactless",
+            "Numerous color combinations available"
+        ],
         "notes": "Works with QD2, QD4, P1, P3",
         "pricingProgram": ["Surcharge"],
         "img": "/assets/img/products/terminals/dejavoo-qd3.png",
@@ -112,6 +145,13 @@
             "Email Receipt (Add-On)",
             "SMS Receipt (Add-On)"
         ],
+        "specifications": [
+            "Large 5” HD display, IPS, 1280*720",
+            "iPOSpays, Denovo and DVSPIn are compatible software solutions",
+            "Ethernet, WiFi, USB connectivity",
+            "Removable lithium polymer battery 7.4V/2600mAh",
+            "Quad-Core@1.5GH, Cortex A53 superfast processor"
+        ],
         "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
         "img": "/assets/img/products/terminals/p1.png",
         "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
@@ -131,6 +171,13 @@
             "Email Receipt (Add-On)",
             "SMS Receipt (Add-On)"
         ],
+        "specifications": [
+            "Large 5” color display",
+            "Quad-Core@1.5GHz, Cortex A53 superfast processor",
+            "Removable 7.4V/2600mAh lithium polymer battery",
+            "WiFi, 4G, USB connectivity",
+            "iPOSpays, Denovo and DVSPIn are compatible software solutions"
+        ],
         "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
         "img": "/assets/img/products/terminals/dejavoo-p3.png",
         "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
@@ -148,6 +195,14 @@
             "Email Receipt (Add-On)",
             "SMS Receipt (Add-On)"
         ],
+        "specifications": [
+            "Large 5” touch screen",
+            "Quad-Core 2.0GHz A53",
+            "Bluetooth, WiFi & 4G",
+            "USB port",
+            "EMV Contactless, chip & PIN/chip & sign or swipe",
+            "Lightweight, easy to operate single-handed"
+        ],
         "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
         "img": "/assets/img/products/terminals/dejavoo-p5.png",
         "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
@@ -164,6 +219,7 @@
             "Email Receipt",
             "SMS Receipt"
         ],
+        "specifications": [],
         "pricingProgram": ["Surcharge"],
         "img": "/assets/img/shop/pax/product-01.png",
         "brandImg": "/assets/img/products/terminals/brands/valor.png"
@@ -180,6 +236,7 @@
             "Email Receipt",
             "SMS Receipt"
         ],
+        "specifications": [],
         "pricingProgram": ["Surcharge"],
         "img": "/assets/img/products/terminals/nmi-bbpos-chipper-2x-bt.png",
         "brandImg": "/assets/img/products/terminals/brands/nmi.png"

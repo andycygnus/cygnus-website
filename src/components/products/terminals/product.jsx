@@ -1,10 +1,16 @@
 import React from 'react'
 
-const Product = ({ item, moveToProductDetail, selectedTerminalId }) => {
+const Product = ({
+    item,
+    moveToProductDetail,
+    selectedTerminalId,
+    className,
+}) => {
+    const featuresList = item.features?.join(', ')
     return (
         <div
             key={item.id}
-            className="col-xl-4 col-lg-4 col-md-6"
+            className={className}
             onClick={(e) => moveToProductDetail(e)(selectedTerminalId, item.id)}
         >
             <div className="tpshopitem mb-50 wow fadeInUp" data-wow-delay=".6s">
@@ -15,7 +21,11 @@ const Product = ({ item, moveToProductDetail, selectedTerminalId }) => {
                     <span className="tpshopitem__title mb-0">
                         <h4>{item.title}</h4>
                     </span>
-                    {/* <span className="tpshopitem__title mb-5">{item.title}</span> */}
+                    {featuresList && (
+                        <span className="tpshopitem__features">
+                            {featuresList}
+                        </span>
+                    )}
                 </div>
             </div>
         </div>

@@ -712,6 +712,7 @@ const ProductArea = (props) => {
                                             selectedTerminalId={
                                                 selectedTerminalId
                                             }
+                                            className="col-xl-4 col-lg-4 col-md-6"
                                         />
                                     ))}
                                 </div>

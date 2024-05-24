@@ -1,7 +1,40 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
+import Product from './product'
+
+import productsData from '@/data/products/terminals/products.json'
 
 const PaxProductDetails = (props) => {
     const { item } = props
+    const router = useRouter()
+
+    // Function to calculate similarity based on shared features
+    const getRelatedProducts = (selectedProduct, productsList) => {
+        const scoredProducts = productsList.map((product) => {
+            const sharedFeatures = product.features.filter((feature) =>
+                selectedProduct.features.includes(feature)
+            )
+            return {
+                ...product,
+                score: sharedFeatures.length,
+            }
+        })
+
+        const sortedProducts = scoredProducts.sort((a, b) => b.score - a.score)
+        const topRelatedProducts = sortedProducts
+            .filter((product) => product.id !== selectedProduct.id)
+            .slice(0, 4)
+        return topRelatedProducts
+    }
+
+    // Compute related products
+    const relatedProducts = getRelatedProducts(item, productsData)
+
+    const moveToProductDetail = (e) => (terminalId, productId) => {
+        e.preventDefault()
+        router.push(`/products/terminals/details/${productId}`)
+    }
 
     return (
         <>
@@ -29,14 +62,14 @@ const PaxProductDetails = (props) => {
                             >
                                 <li className="nav-item" role="presentation">
                                     <button
-                                        className="w-100 nav-link"
+                                        className="w-100 nav-link active"
                                         id="home-tab"
                                         data-bs-toggle="tab"
                                         data-bs-target="#key-features"
                                         type="button"
                                         role="tab"
                                         aria-controls="key-features"
-                                        aria-selected="false"
+                                        aria-selected="true"
                                         tabIndex="-1"
                                     >
                                         KEY FEATURES
@@ -44,14 +77,14 @@ const PaxProductDetails = (props) => {
                                 </li>
                                 <li className="nav-item" role="presentation">
                                     <button
-                                        className="w-100 nav-link active"
+                                        className="w-100 nav-link "
                                         id="mission-tab"
                                         data-bs-toggle="tab"
                                         data-bs-target="#specifications"
                                         type="button"
                                         role="tab"
                                         aria-controls="specifications"
-                                        aria-selected="true"
+                                        aria-selected="false"
                                         tabIndex="-1"
                                     >
                                         SPECIFICATIONS
@@ -71,30 +104,13 @@ const PaxProductDetails = (props) => {
                                 >
                                     <div class="tp-about__info-list ab-check-list mb-55">
                                         <ul>
-                                            <li>
-                                                <i class="fa-solid fa-check"></i>
-                                                Versatile Payment Options
-                                            </li>
-                                            <li>
-                                                <i class="fa-solid fa-check"></i>
-                                                Lightning-fast Processing
-                                            </li>
-                                            <li>
-                                                <i class="fa-solid fa-check"></i>
-                                                Robust Security Feature
-                                            </li>
-                                            <li>
-                                                <i class="fa-solid fa-check"></i>
-                                                User-friendly Interface
-                                            </li>
-                                            <li>
-                                                <i class="fa-solid fa-check"></i>
-                                                Compact and Portable
-                                            </li>
-                                            <li>
-                                                <i class="fa-solid fa-check"></i>
-                                                Seamless Integration
-                                            </li>
+                                            {item.features &&
+                                                item.features.map((feature) => (
+                                                    <li key={feature}>
+                                                        <i className="fa-solid fa-check"></i>{' '}
+                                                        {feature}
+                                                    </li>
+                                                ))}
                                         </ul>
                                     </div>
                                 </div>
@@ -106,32 +122,43 @@ const PaxProductDetails = (props) => {
                                 >
                                     <div class="tp-about__info-list ab-check-list mb-55">
                                         <ul>
-                                            <li>
-                                                <i class="fa-solid fa-check"></i>
-                                                Versatile Payment Options
-                                            </li>
-                                            <li>
-                                                <i class="fa-solid fa-check"></i>
-                                                EMV and NFC Contactless Built In
-                                                – EMV 4.x L1 and L2 certified
-                                            </li>
-                                            <li>
-                                                <i class="fa-solid fa-check"></i>
-                                                Quad-Core @ 1.1GHz
-                                            </li>
-                                            <li>
-                                                <i class="fa-solid fa-check"></i>
-                                                Ethernet, WiFi, USB
-                                            </li>
-                                            <li>
-                                                <i class="fa-solid fa-check"></i>
-                                                Large touch screen
-                                            </li>
+                                            {item.specifications &&
+                                                item.specifications.map(
+                                                    (specification) => (
+                                                        <li key={specification}>
+                                                            <i className="fa-solid fa-check"></i>{' '}
+                                                            {specification}
+                                                        </li>
+                                                    )
+                                                )}
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className="container">
+                    <div className="col-12 text-center">
+                        <h3>Explore related items</h3>
+                    </div>
+                    <div className="mt-4 col-12">
+                        {relatedProducts.length ? (
+                            <div className="row">
+                                {relatedProducts.map((relatedItem) => (
+                                    <Product
+                                        key={relatedItem.id}
+                                        item={relatedItem}
+                                        moveToProductDetail={
+                                            moveToProductDetail
+                                        }
+                                        className="col-sm-6 col-md-4 col-lg-3"
+                                    />
+                                ))}
+                            </div>
+                        ) : (
+                            <span>No related products found</span>
+                        )}
                     </div>
                 </div>
             </div>
