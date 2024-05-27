@@ -111,8 +111,6 @@ const ProductArea = (props) => {
         onDelaySearch(search)
     }, [search, baseFilteredProducts])
 
-    console.log('filters', filters)
-
     const handleCheckboxChange = (event) => {
         const { id, checked } = event.target
         setFilters((prev) => ({ ...prev, [id]: checked }))
@@ -201,7 +199,7 @@ const ProductArea = (props) => {
                         </div>
                         <div className="col-md-4 col-lg-3">
                             <h4 className="d-flex align-items-center gap-2 mb-4">
-                                <i class="fa-light fa-grid-2"></i> Filter
+                                <i class="fa-light fa-grid-2"></i> Filters
                             </h4>
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item border-top-0">
