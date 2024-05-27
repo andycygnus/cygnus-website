@@ -76,9 +76,9 @@ const ProductArea = (props) => {
                     product.features?.includes('Battery Equipped')) ||
                 (filters.BatteryEquipped === 'no' &&
                     !product.features?.includes('Battery Equipped')) ||
-                (filters.PrintsReceipts === 'yes' &&
+                (filters.ReceiptPrinter === 'yes' &&
                     product.features?.includes('Prints Receipts')) ||
-                (filters.PrintsReceipts === 'no' &&
+                (filters.ReceiptPrinter === 'no' &&
                     !product.features?.includes('Prints Receipts'))
             const matchesPricing =
                 (filters.CygnusCashDiscount &&
@@ -694,13 +694,16 @@ const ProductArea = (props) => {
                         </div>
                         <div className="col-md-8 col-lg-9">
                             {filterSearch?.length ? (
-                                <div className='mb-2 d-flex align-items-center gap-1'>
-                                    Total Products:<span className='text-link fw-bold'>{filterSearch?.length}{' '}</span>
+                                <div className="mb-2 d-flex align-items-center gap-1">
+                                    Total Products:
+                                    <span className="text-link fw-bold">
+                                        {filterSearch?.length}{' '}
+                                    </span>
                                 </div>
                             ) : (
                                 ''
                             )}
-                            
+
                             {filterSearch?.length ? (
                                 <div className="row">
                                     {filterSearch?.map((item) => (
