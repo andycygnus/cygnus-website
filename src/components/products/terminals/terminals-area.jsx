@@ -206,7 +206,7 @@ const ProductArea = (props) => {
                                                     value={search}
                                                 />
                                                 <div className="text-primary">
-                                                    <i class="fa-light fa-search fa-lg"></i>
+                                                    <i className="fa-light fa-search fa-lg"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -218,9 +218,9 @@ const ProductArea = (props) => {
                             <h4 className="d-flex align-items-center gap-2 mb-4">
                                 <i class="fa-light fa-grid-2"></i> Filters
                             </h4>
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item border-top-0">
-                                    <h2 class="accordion-header">
+                            <div className="accordion" id="accordionExample">
+                                <div className="accordion-item border-top-0">
+                                    <h2 className="accordion-header">
                                         <button
                                             className={`accordion-button ${
                                                 !accordionOpen.TerminalTypes &&
@@ -245,8 +245,8 @@ const ProductArea = (props) => {
                                             'show'
                                         }`}
                                     >
-                                        <div class="accordion-body">
-                                            <div class="form-check">
+                                        <div className="accordion-body">
+                                            <div className="form-check">
                                                 <input
                                                     className="form-check-input"
                                                     type="checkbox"
@@ -319,8 +319,8 @@ const ProductArea = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header">
                                         <button
                                             className={`accordion-button ${
                                                 !accordionOpen.ConnectionType &&
@@ -419,8 +419,8 @@ const ProductArea = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header">
                                         <button
                                             className={`accordion-button ${
                                                 !accordionOpen.BatteryEquipped &&
@@ -507,8 +507,8 @@ const ProductArea = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header">
                                         <button
                                             className={`accordion-button ${
                                                 !accordionOpen.ReceiptPrinter &&
@@ -535,7 +535,7 @@ const ProductArea = (props) => {
                                             'show'
                                         }`}
                                     >
-                                        <div class="accordion-body">
+                                        <div className="accordion-body">
                                             <div className="form-check">
                                                 <input
                                                     className="form-check-input"
@@ -595,8 +595,8 @@ const ProductArea = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header">
                                         <button
                                             className={`accordion-button ${
                                                 !accordionOpen.Features &&
@@ -620,7 +620,7 @@ const ProductArea = (props) => {
                                             accordionOpen.Features && 'show'
                                         }`}
                                     >
-                                        <div class="accordion-body">
+                                        <div className="accordion-body">
                                             <div className="form-check">
                                                 <input
                                                     className="form-check-input"
@@ -698,8 +698,8 @@ const ProductArea = (props) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header">
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header">
                                         <button
                                             className={`accordion-button ${
                                                 !accordionOpen.PricingProgram &&
@@ -726,7 +726,7 @@ const ProductArea = (props) => {
                                             'show'
                                         }`}
                                     >
-                                        <div class="accordion-body">
+                                        <div className="accordion-body">
                                             <div className="form-check">
                                                 <input
                                                     className="form-check-input"
