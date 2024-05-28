@@ -5,6 +5,8 @@ import Product from './product'
 
 import productsData from '@/data/products/terminals/products.json'
 
+import useLocalStorage from '../../../utils/customHooks/useLocalStorage'
+
 const ProductArea = (props) => {
     const [selectedTerminalId, setSelectedTerminalId] = useState(1)
     const router = useRouter()
@@ -13,7 +15,23 @@ const ProductArea = (props) => {
     const [baseFilteredProducts, setBaseFilteredProducts] =
         useState(productsData)
 
-    const [filters, setFilters] = useState({
+    const [accordionOpen, setAccordionOpen] = useLocalStorage('accordionOpen', {
+        TerminalTypes: true,
+        ConnectionType: false,
+        BatteryEquipped: false,
+        ReceiptPrinter: false,
+        Features: false,
+        PricingProgram: false,
+    })
+
+    const toggleAccordion = (panel) => {
+        setAccordionOpen((prev) => ({
+            ...prev,
+            [panel]: !prev[panel],
+        }))
+    }
+
+    const [filters, setFilters] = useLocalStorage('filters', {
         Standalone: false,
         SemiIntegrated: false,
         PinPad: false,
@@ -69,9 +87,13 @@ const ProductArea = (props) => {
                 (filters.Contactless &&
                     product.features?.includes('Contactless')) ||
                 (filters.EmailReceipt &&
-                    product.features?.includes('Email Receipt')) ||
+                    (product.features?.includes('Email Receipt') ||
+                        product.features?.includes(
+                            'Email Receipt (Add-On)'
+                        ))) ||
                 (filters.SMSReceipt &&
-                    product.features?.includes('SMS Receipt')) ||
+                    (product.features?.includes('SMS Receipt') ||
+                        product.features?.includes('SMS Receipt (Add-On)'))) ||
                 (filters.BatteryEquipped === 'yes' &&
                     product.features?.includes('Battery Equipped')) ||
                 (filters.BatteryEquipped === 'no' &&
@@ -131,11 +153,6 @@ const ProductArea = (props) => {
         e.preventDefault()
         const defaultPathName = router.pathname
         router.push(`${defaultPathName}/details/${productId}`)
-    }
-
-    const changeSelectionOfProduct = (e) => (id) => {
-        e.preventDefault()
-        setSelectedTerminalId(id)
     }
 
     const debounceTimeoutRef = useRef(null)
@@ -205,8 +222,14 @@ const ProductArea = (props) => {
                                 <div class="accordion-item border-top-0">
                                     <h2 class="accordion-header">
                                         <button
-                                            class="accordion-button"
+                                            className={`accordion-button ${
+                                                !accordionOpen.TerminalTypes &&
+                                                'collapsed'
+                                            }`}
                                             type="button"
+                                            onClick={() =>
+                                                toggleAccordion('TerminalTypes')
+                                            }
                                             data-bs-toggle="collapse"
                                             data-bs-target="#TerminalTypes"
                                             aria-expanded="true"
@@ -217,7 +240,10 @@ const ProductArea = (props) => {
                                     </h2>
                                     <div
                                         id="TerminalTypes"
-                                        class="accordion-collapse collapse show"
+                                        className={`accordion-collapse collapse ${
+                                            accordionOpen.TerminalTypes &&
+                                            'show'
+                                        }`}
                                     >
                                         <div class="accordion-body">
                                             <div class="form-check">
@@ -296,8 +322,16 @@ const ProductArea = (props) => {
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button
-                                            class="accordion-button collapsed"
+                                            className={`accordion-button ${
+                                                !accordionOpen.ConnectionType &&
+                                                'collapsed'
+                                            }`}
                                             type="button"
+                                            onClick={() =>
+                                                toggleAccordion(
+                                                    'ConnectionType'
+                                                )
+                                            }
                                             data-bs-toggle="collapse"
                                             data-bs-target="#ConnectionType"
                                             aria-expanded="false"
@@ -308,7 +342,10 @@ const ProductArea = (props) => {
                                     </h2>
                                     <div
                                         id="ConnectionType"
-                                        class="accordion-collapse collapse"
+                                        className={`accordion-collapse collapse ${
+                                            accordionOpen.ConnectionType &&
+                                            'show'
+                                        }`}
                                     >
                                         <div class="accordion-body">
                                             <div className="form-check">
@@ -385,8 +422,16 @@ const ProductArea = (props) => {
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button
-                                            class="accordion-button collapsed"
+                                            className={`accordion-button ${
+                                                !accordionOpen.BatteryEquipped &&
+                                                'collapsed'
+                                            }`}
                                             type="button"
+                                            onClick={() =>
+                                                toggleAccordion(
+                                                    'BatteryEquipped'
+                                                )
+                                            }
                                             data-bs-toggle="collapse"
                                             data-bs-target="#BatteryEquipped"
                                             aria-expanded="false"
@@ -397,7 +442,10 @@ const ProductArea = (props) => {
                                     </h2>
                                     <div
                                         id="BatteryEquipped"
-                                        class="accordion-collapse collapse"
+                                        className={`accordion-collapse collapse ${
+                                            accordionOpen.BatteryEquipped &&
+                                            'show'
+                                        }`}
                                     >
                                         <div class="accordion-body">
                                             <div className="form-check">
@@ -462,8 +510,16 @@ const ProductArea = (props) => {
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button
-                                            class="accordion-button collapsed"
+                                            className={`accordion-button ${
+                                                !accordionOpen.ReceiptPrinter &&
+                                                'collapsed'
+                                            }`}
                                             type="button"
+                                            onClick={() =>
+                                                toggleAccordion(
+                                                    'ReceiptPrinter'
+                                                )
+                                            }
                                             data-bs-toggle="collapse"
                                             data-bs-target="#ReceiptPrinter"
                                             aria-expanded="false"
@@ -474,7 +530,10 @@ const ProductArea = (props) => {
                                     </h2>
                                     <div
                                         id="ReceiptPrinter"
-                                        class="accordion-collapse collapse"
+                                        className={`accordion-collapse collapse ${
+                                            accordionOpen.ReceiptPrinter &&
+                                            'show'
+                                        }`}
                                     >
                                         <div class="accordion-body">
                                             <div className="form-check">
@@ -539,8 +598,14 @@ const ProductArea = (props) => {
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button
-                                            class="accordion-button collapsed"
+                                            className={`accordion-button ${
+                                                !accordionOpen.Features &&
+                                                'collapsed'
+                                            }`}
                                             type="button"
+                                            onClick={() =>
+                                                toggleAccordion('Features')
+                                            }
                                             data-bs-toggle="collapse"
                                             data-bs-target="#Features"
                                             aria-expanded="false"
@@ -551,7 +616,9 @@ const ProductArea = (props) => {
                                     </h2>
                                     <div
                                         id="Features"
-                                        class="accordion-collapse collapse"
+                                        className={`accordion-collapse collapse ${
+                                            accordionOpen.Features && 'show'
+                                        }`}
                                     >
                                         <div class="accordion-body">
                                             <div className="form-check">
@@ -634,8 +701,16 @@ const ProductArea = (props) => {
                                 <div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button
-                                            class="accordion-button collapsed"
+                                            className={`accordion-button ${
+                                                !accordionOpen.PricingProgram &&
+                                                'collapsed'
+                                            }`}
                                             type="button"
+                                            onClick={() =>
+                                                toggleAccordion(
+                                                    'PricingProgram'
+                                                )
+                                            }
                                             data-bs-toggle="collapse"
                                             data-bs-target="#PricingProgram"
                                             aria-expanded="false"
@@ -646,7 +721,10 @@ const ProductArea = (props) => {
                                     </h2>
                                     <div
                                         id="PricingProgram"
-                                        class="accordion-collapse collapse"
+                                        className={`accordion-collapse collapse ${
+                                            accordionOpen.PricingProgram &&
+                                            'show'
+                                        }`}
                                     >
                                         <div class="accordion-body">
                                             <div className="form-check">

@@ -24,7 +24,7 @@
         "brand": "Pax",
         "description": "PAX A80, the most cost-effective in the A-series, is a powerful, game-changing countertop device that can also be used as an indoor portable device. Always running at peak performance, full connectivity means the A80 is a reliable wor Dejavoo QD4 khorse that will process payments safely and fast, even during the busiest hours. ",
         "terminalType": ["Standalone", "Semi-Integrated"],
-        "connectionType": ["Ethernet", "Wi-Fi", "Dial"],
+        "connectionType": ["Ethernet", "Wifi", "Dial"],
         "features": ["Supports Pin-Pad", "Prints Receipts", "Contactless"],
         "specifications": [
             "PAXBiz® powered by Android™",
@@ -43,10 +43,10 @@
         "brand": "FirstData",
         "description": "The FD150 is replacing the FD130 as the latest affordable terminal solution that combines performance, reliability and ease of use in a compact, feature-rich device. It offers faster processing and expanded memory with a familiar look and feel.",
         "terminalType": ["Standalone"],
-        "connectionType": ["Ethernet", "Wi-Fi", "Dial"],
+        "connectionType": ["Ethernet", "Wifi", "Dial"],
         "features": ["Prints Receipts", "Supports Pin-Pad", "Contactless"],
         "specifications": [],
-        "pricingProgram": ["Surcharge"],
+        "pricingProgram": [],
         "img": "/assets/img/products/terminals/fad-150.png",
         "brandImg": "/assets/img/products/terminals/brands/firstdata.png"
     },
@@ -58,7 +58,7 @@
         "features": ["Contactless"],
         "specifications": [],
         "notes": "Works with FD150 ONLY",
-        "pricingProgram": ["Surcharge"],
+        "pricingProgram": [],
         "img": "/assets/img/products/terminals/fad-150.png",
         "brandImg": "/assets/img/products/terminals/brands/firstdata.png"
     },
@@ -68,7 +68,7 @@
         "brand": "Dejavoo",
         "description": "Fast-forward your growth with Dejavoo’s versatile wireless Android POS",
         "terminalType": ["Standalone"],
-        "connectionType": ["Wi-Fi", "Cellular"],
+        "connectionType": ["Wifi", "Cellular"],
         "features": [
             "Battery Equipped",
             "Prints Receipts",
@@ -93,7 +93,7 @@
         "brand": "Dejavoo",
         "description": "",
         "terminalType": ["Standalone"],
-        "connectionType": ["Ethernet", "Wi-Fi"],
+        "connectionType": ["Ethernet", "Wifi"],
         "features": [
             "Prints Receipts",
             "Supports Pin-Pad",
@@ -126,7 +126,7 @@
             "Numerous color combinations available"
         ],
         "notes": "Works with QD2, QD4, P1, P3",
-        "pricingProgram": ["Surcharge"],
+        "pricingProgram": [],
         "img": "/assets/img/products/terminals/dejavoo-qd3.png",
         "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
     },
@@ -136,7 +136,7 @@
         "brand": "Dejavoo",
         "description": "Intelligent entry level hardware solution.Empowering ISOs with the ability to fully control and manage the payment process easily and generate new sales opportunities.",
         "terminalType": ["Standalone"],
-        "connectionType": ["Ethernet", "Wi-Fi"],
+        "connectionType": ["Ethernet", "Wifi"],
         "features": [
             "Battery Equipped",
             "Prints Receipts",
@@ -162,7 +162,7 @@
         "brand": "Dejavoo",
         "description": "Gets the job done in any environment",
         "terminalType": ["Standalone"],
-        "connectionType": ["Wi-Fi", "Cellular"],
+        "connectionType": ["Wifi", "Cellular"],
         "features": [
             "Battery Equipped",
             "Prints Receipts",
@@ -188,7 +188,7 @@
         "brand": "Dejavoo",
         "description": "As a handheld payment solution, the Dejavoo P5 is so lightweight and easy to use that it can be operated single handedly. Its portability capabilities and numerous payment methods offer today’s merchants the versatility they need. And with its 5 in. HD touchscreen display, the Dejavoo P5 creates an ultramodern checkout experience!",
         "terminalType": ["Standalone", "Pin-Pad"],
-        "connectionType": ["Wi-Fi", "Cellular"],
+        "connectionType": ["Wifi", "Cellular"],
         "features": [
             "Battery Equipped",
             "Contactless",
@@ -220,7 +220,7 @@
             "SMS Receipt"
         ],
         "specifications": [],
-        "pricingProgram": ["Surcharge"],
+        "pricingProgram": [],
         "img": "/assets/img/shop/pax/product-01.png",
         "brandImg": "/assets/img/products/terminals/brands/valor.png"
     },
@@ -237,7 +237,7 @@
             "SMS Receipt"
         ],
         "specifications": [],
-        "pricingProgram": ["Surcharge"],
+        "pricingProgram": [],
         "img": "/assets/img/products/terminals/nmi-bbpos-chipper-2x-bt.png",
         "brandImg": "/assets/img/products/terminals/brands/nmi.png"
     }
