@@ -67,51 +67,69 @@ const ProductArea = (props) => {
 
         const filtered = productsData.filter((product) => {
             const matchesType =
-                (filters.Standalone &&
-                    product.terminalType?.includes('Standalone')) ||
-                (filters.SemiIntegrated &&
-                    product.terminalType?.includes('Semi-Integrated')) ||
-                (filters.PinPad && product.terminalType?.includes('Pin-Pad')) ||
-                (filters.MobileApp &&
-                    product.terminalType?.includes('Mobile App'))
+                (filters.Standalone
+                    ? product.terminalType?.includes('Standalone')
+                    : true) &&
+                (filters.SemiIntegrated
+                    ? product.terminalType?.includes('Semi-Integrated')
+                    : true) &&
+                (filters.PinPad
+                    ? product.terminalType?.includes('Pin-Pad')
+                    : true) &&
+                (filters.MobileApp
+                    ? product.terminalType?.includes('Mobile App')
+                    : true)
+
             const matchesConnection =
-                (filters.Ethernet &&
-                    product.connectionType?.includes('Ethernet')) ||
-                (filters.Wifi && product.connectionType?.includes('Wifi')) ||
-                (filters.Cellular &&
-                    product.connectionType?.includes('Cellular')) ||
-                (filters.Dial && product.connectionType?.includes('Dial'))
+                (filters.Ethernet
+                    ? product.connectionType?.includes('Ethernet')
+                    : true) &&
+                (filters.Wifi
+                    ? product.connectionType?.includes('Wifi')
+                    : true) &&
+                (filters.Cellular
+                    ? product.connectionType?.includes('Cellular')
+                    : true) &&
+                (filters.Dial ? product.connectionType?.includes('Dial') : true)
+
             const matchesFeatures =
-                (filters.SupportsPinPad &&
-                    product.features?.includes('Supports Pin-Pad')) ||
-                (filters.Contactless &&
-                    product.features?.includes('Contactless')) ||
-                (filters.EmailReceipt &&
-                    (product.features?.includes('Email Receipt') ||
-                        product.features?.includes(
-                            'Email Receipt (Add-On)'
-                        ))) ||
-                (filters.SMSReceipt &&
-                    (product.features?.includes('SMS Receipt') ||
-                        product.features?.includes('SMS Receipt (Add-On)'))) ||
-                (filters.BatteryEquipped === 'yes' &&
-                    product.features?.includes('Battery Equipped')) ||
-                (filters.BatteryEquipped === 'no' &&
-                    !product.features?.includes('Battery Equipped')) ||
-                (filters.ReceiptPrinter === 'yes' &&
-                    product.features?.includes('Prints Receipts')) ||
-                (filters.ReceiptPrinter === 'no' &&
-                    !product.features?.includes('Prints Receipts'))
+                (filters.SupportsPinPad
+                    ? product.features?.includes('Supports Pin-Pad')
+                    : true) &&
+                (filters.Contactless
+                    ? product.features?.includes('Contactless')
+                    : true) &&
+                (filters.EmailReceipt
+                    ? product.features?.includes('Email Receipt') ||
+                      product.features?.includes('Email Receipt (Add-On)')
+                    : true) &&
+                (filters.SMSReceipt
+                    ? product.features?.includes('SMS Receipt') ||
+                      product.features?.includes('SMS Receipt (Add-On)')
+                    : true) &&
+                (filters.BatteryEquipped === 'yes'
+                    ? product.features?.includes('Battery Equipped')
+                    : filters.BatteryEquipped === 'no'
+                    ? !product.features?.includes('Battery Equipped')
+                    : true) &&
+                (filters.ReceiptPrinter === 'yes'
+                    ? product.features?.includes('Prints Receipts')
+                    : filters.ReceiptPrinter === 'no'
+                    ? !product.features?.includes('Prints Receipts')
+                    : true)
+
             const matchesPricing =
-                (filters.CygnusCashDiscount &&
-                    product.pricingProgram?.includes('Cygnus Cash Discount')) ||
-                (filters.Surcharge &&
-                    product.pricingProgram?.includes('Surcharge'))
+                (filters.CygnusCashDiscount
+                    ? product.pricingProgram?.includes('Cygnus Cash Discount')
+                    : true) &&
+                (filters.Surcharge
+                    ? product.pricingProgram?.includes('Surcharge')
+                    : true)
 
             return (
-                matchesType ||
-                matchesConnection ||
-                matchesFeatures ||
+                matchesType &&
+                matchesConnection &&
+                matchesFeatures &&
                 matchesPricing
             )
         })
