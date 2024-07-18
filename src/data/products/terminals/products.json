@@ -1,0 +1,244 @@
+[
+    {
+        "id": "pax-s300",
+        "title": "Pax S300",
+        "brand": "Pax",
+        "description": "The S300 is the high-performance retail payment solution for multilane merchants who wish to offer high levels of transactional security combined with contactless, e-Signature, magnetic stripe and EMV Chip. With state of the art levels of security design, including PCI PTS 4.x and SRED, the S300 protects and encrypts all transaction information. Featuring a large, color touchscreen and loudspeaker, the S300 comes with a 32- bit ARM11 processor and massive amounts of memory for exceptional multimedia performance. With USB and LAN connectivity options, the S300 offers everything merchants could want in a sleek, stylish payment devices.",
+        "terminalType": ["Semi-Integrated"],
+        "connectionType": ["Ethernet"],
+        "features": ["Contactless"],
+        "specifications": [
+            "EMV®, MSR and NFC/Contactless",
+            "EMV & PCI Compliant",
+            "Large Memory Capacity",
+            "User-friendly Interface with Powerful GUI"
+        ],
+        "pricingProgram": ["Surcharge"],
+        "supportedPOS": ["JMSC", "UServe"],
+        "img": "/assets/img/products/terminals/pax-s300.png",
+        "brandImg": "/assets/img/products/terminals/brands/pax.png"
+    },
+    {
+        "id": "pax-a80",
+        "title": "Pax A80",
+        "brand": "Pax",
+        "description": "PAX A80, the most cost-effective in the A-series, is a powerful, game-changing countertop device that can also be used as an indoor portable device. Always running at peak performance, full connectivity means the A80 is a reliable wor Dejavoo QD4 khorse that will process payments safely and fast, even during the busiest hours. ",
+        "terminalType": ["Standalone", "Semi-Integrated"],
+        "connectionType": ["Ethernet", "Wifi", "Dial"],
+        "features": ["Supports Pin-Pad", "Prints Receipts", "Contactless"],
+        "specifications": [
+            "PAXBiz® powered by Android™",
+            "4″ HD Touchscreen Display",
+            "3.5 in/sec high-speed printer",
+            "PCI PTS 6.x"
+        ],
+        "pricingProgram": ["Surcharge"],
+        "supportedPOS": ["JMSC", "UServe"],
+        "img": "/assets/img/products/terminals/pax-a80.png",
+        "brandImg": "/assets/img/products/terminals/brands/pax.png"
+    },
+    {
+        "id": "first-data-fd150",
+        "title": "First Data FD150",
+        "brand": "FirstData",
+        "description": "The FD150 is replacing the FD130 as the latest affordable terminal solution that combines performance, reliability and ease of use in a compact, feature-rich device. It offers faster processing and expanded memory with a familiar look and feel.",
+        "terminalType": ["Standalone"],
+        "connectionType": ["Ethernet", "Wifi", "Dial"],
+        "features": ["Prints Receipts", "Supports Pin-Pad", "Contactless"],
+        "specifications": [],
+        "pricingProgram": [],
+        "img": "/assets/img/products/terminals/fad-150.png",
+        "brandImg": "/assets/img/products/terminals/brands/firstdata.png"
+    },
+    {
+        "id": "first-data-rp10",
+        "title": "First Data RP10",
+        "brand": "FirstData",
+        "terminalType": ["Pin-Pad"],
+        "features": ["Contactless"],
+        "specifications": [],
+        "notes": "Works with FD150 ONLY",
+        "pricingProgram": [],
+        "img": "/assets/img/products/terminals/fad-150.png",
+        "brandImg": "/assets/img/products/terminals/brands/firstdata.png"
+    },
+    {
+        "id": "dejavoo-qd2",
+        "title": "Dejavoo QD2",
+        "brand": "Dejavoo",
+        "description": "Fast-forward your growth with Dejavoo’s versatile wireless Android POS",
+        "terminalType": ["Standalone"],
+        "connectionType": ["Wifi", "Cellular"],
+        "features": [
+            "Battery Equipped",
+            "Prints Receipts",
+            "Supports Pin-Pad",
+            "Contactless",
+            "Email Receipt (Add-On)",
+            "SMS Receipt (Add-On)"
+        ],
+        "specifications": [
+            "5.5”  touch screen",
+            "E SIM world coverage",
+            "7.4V,  2 x 2600mAh batteries",
+            "All-In-One DejaPayPro"
+        ],
+        "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
+        "img": "/assets/img/products/terminals/qd2.jpg",
+        "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
+    },
+    {
+        "id": "dejavoo-qd4",
+        "title": "Dejavoo QD4",
+        "brand": "Dejavoo",
+        "description": "",
+        "terminalType": ["Standalone"],
+        "connectionType": ["Ethernet", "Wifi"],
+        "features": [
+            "Prints Receipts",
+            "Supports Pin-Pad",
+            "Contactless",
+            "Email Receipt (Add-On)",
+            "SMS Receipt (Add-On)"
+        ],
+        "specifications": [
+            "Large touch screen",
+            "50 ft. paper roll",
+            "Quad-Core @ 1.1GHz",
+            "Ethernet, WiFi, USB"
+        ],
+        "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
+        "img": "/assets/img/products/terminals/qd3.jpg",
+        "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
+    },
+    {
+        "id": "dejavoo-qd3",
+        "title": "Dejavoo QD3",
+        "brand": "Dejavoo",
+        "description": "mPOS Terminal • 4G, WiFi, Bluetooth • 4” touch screen • Pocket size • Insertion, MSR, contactless • Vending version available ",
+        "terminalType": ["Pin-Pad"],
+        "features": ["Contactless"],
+        "specifications": [
+            "4”  touch screen",
+            "Multi-unit charger",
+            "Pocket size",
+            "Insertion, MSR, contactless",
+            "Numerous color combinations available"
+        ],
+        "notes": "Works with QD2, QD4, P1, P3",
+        "pricingProgram": [],
+        "img": "/assets/img/products/terminals/dejavoo-qd3.png",
+        "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
+    },
+    {
+        "id": "dejavoo-p1",
+        "title": "Dejavoo P1",
+        "brand": "Dejavoo",
+        "description": "Intelligent entry level hardware solution.Empowering ISOs with the ability to fully control and manage the payment process easily and generate new sales opportunities.",
+        "terminalType": ["Standalone"],
+        "connectionType": ["Ethernet", "Wifi"],
+        "features": [
+            "Battery Equipped",
+            "Prints Receipts",
+            "Supports Pin-Pad",
+            "Contactless",
+            "Email Receipt (Add-On)",
+            "SMS Receipt (Add-On)"
+        ],
+        "specifications": [
+            "Large 5” HD display, IPS, 1280*720",
+            "iPOSpays, Denovo and DVSPIn are compatible software solutions",
+            "Ethernet, WiFi, USB connectivity",
+            "Removable lithium polymer battery 7.4V/2600mAh",
+            "Quad-Core@1.5GH, Cortex A53 superfast processor"
+        ],
+        "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
+        "img": "/assets/img/products/terminals/p1.png",
+        "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
+    },
+    {
+        "id": "dejavoo-p3",
+        "title": "Dejavoo P3",
+        "brand": "Dejavoo",
+        "description": "Gets the job done in any environment",
+        "terminalType": ["Standalone"],
+        "connectionType": ["Wifi", "Cellular"],
+        "features": [
+            "Battery Equipped",
+            "Prints Receipts",
+            "Supports Pin-Pad",
+            "Contactless",
+            "Email Receipt (Add-On)",
+            "SMS Receipt (Add-On)"
+        ],
+        "specifications": [
+            "Large 5” color display",
+            "Quad-Core@1.5GHz, Cortex A53 superfast processor",
+            "Removable 7.4V/2600mAh lithium polymer battery",
+            "WiFi, 4G, USB connectivity",
+            "iPOSpays, Denovo and DVSPIn are compatible software solutions"
+        ],
+        "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
+        "img": "/assets/img/products/terminals/dejavoo-p3.png",
+        "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
+    },
+    {
+        "id": "dejavoo-p5",
+        "title": "Dejavoo P5",
+        "brand": "Dejavoo",
+        "description": "As a handheld payment solution, the Dejavoo P5 is so lightweight and easy to use that it can be operated single handedly. Its portability capabilities and numerous payment methods offer today’s merchants the versatility they need. And with its 5 in. HD touchscreen display, the Dejavoo P5 creates an ultramodern checkout experience!",
+        "terminalType": ["Standalone", "Pin-Pad"],
+        "connectionType": ["Wifi", "Cellular"],
+        "features": [
+            "Battery Equipped",
+            "Contactless",
+            "Email Receipt (Add-On)",
+            "SMS Receipt (Add-On)"
+        ],
+        "specifications": [
+            "Large 5” touch screen",
+            "Quad-Core 2.0GHz A53",
+            "Bluetooth, WiFi & 4G",
+            "USB port",
+            "EMV Contactless, chip & PIN/chip & sign or swipe",
+            "Lightweight, easy to operate single-handed"
+        ],
+        "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
+        "img": "/assets/img/products/terminals/dejavoo-p5.png",
+        "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
+    },
+    {
+        "id": "aprivapay-bbpos-emv-nfc",
+        "title": "AprivaPay BBPOS EMV/NFC",
+        "brand": "ValorPay",
+        "terminalType": ["Mobile App"],
+        "connectionType": ["Bluetooth"],
+        "features": [
+            "Battery Equipped",
+            "Contactless",
+            "Email Receipt",
+            "SMS Receipt"
+        ],
+        "specifications": [],
+        "pricingProgram": [],
+        "img": "/assets/img/shop/pax/product-01.png",
+        "brandImg": "/assets/img/products/terminals/brands/valor.png"
+    },
+    {
+        "id": "nmi-bbpos-chipper-2x-bt",
+        "title": "NMI BBPOS Chipper 2X BT",
+        "brand": "NMI",
+        "terminalType": ["Mobile App"],
+        "connectionType": ["Bluetooth"],
+        "features": [
+            "Battery Equipped",
+            "Contactless",
+            "Email Receipt",
+            "SMS Receipt"
+        ],
+        "specifications": [],
+        "pricingProgram": [],
+        "img": "/assets/img/products/terminals/nmi-bbpos-chipper-2x-bt.png",
+        "brandImg": "/assets/img/products/terminals/brands/nmi.png"
+    }
+]

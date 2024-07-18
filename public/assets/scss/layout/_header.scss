@@ -611,10 +611,12 @@
   &__title {
     & img {
       width: 220px;
+      @media #{$xs,$md} {
+        width: 160px;
+      }
     }
   }
 }
-
 // tpsideinfo
 .tpsideinfo {
   text-align: start;

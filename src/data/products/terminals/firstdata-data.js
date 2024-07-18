@@ -1,6 +1,6 @@
 const firstdata_data = [
     {
-        id: 1,
+        id: 5,
         img: '/assets/img/shop/firstdata/product-01.jpg',
         title: 'FD150',
         price: 46.0,
@@ -14,7 +14,7 @@ const firstdata_data = [
         ],
     },
     {
-        id: 2,
+        id: 6,
         img: '/assets/img/shop/firstdata/product-02.jpg',
         title: 'RP10 (Pin Pad)',
         price: 58.1,
