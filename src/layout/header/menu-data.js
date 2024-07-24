@@ -108,6 +108,10 @@ const menu_data = [
                 sub_menus: [
                     { link: 'https://cygnus.iriscrm.com/v2/login?ref=/v2', title: 'IRIS CRM',},
                     { link: 'https://forms.zohopublic.com/mikekim1/form/TerminalRequestForm/formperma/njHZPrUSICCUT9HiX3LugEWak7JCEQ1Rdd74mLSWRps', title: 'Terminal Request Form' },
+                    {
+                        link: 'https://navigator.cygnuspay.com/',
+                        title: 'Cygnus Navigator',
+                    },
                 ],
             },
         ],
