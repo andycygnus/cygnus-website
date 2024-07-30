@@ -7,7 +7,7 @@ if (typeof window !== 'undefined') {
     require('bootstrap/dist/js/bootstrap')
 }
 
-const measurementId = 'G-7288K2MRD8' // Replace with your actual Measurement ID
+const measurementId = 'G-7288K2MRD8'
 
 const MyApp = ({ Component, pageProps }) => {
     const router = useRouter()
