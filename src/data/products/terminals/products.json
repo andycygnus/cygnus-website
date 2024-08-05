@@ -1,24 +1,5 @@
 [
     {
-        "id": "pax-s300",
-        "title": "Pax S300",
-        "brand": "Pax",
-        "description": "The S300 is the high-performance retail payment solution for multilane merchants who wish to offer high levels of transactional security combined with contactless, e-Signature, magnetic stripe and EMV Chip. With state of the art levels of security design, including PCI PTS 4.x and SRED, the S300 protects and encrypts all transaction information. Featuring a large, color touchscreen and loudspeaker, the S300 comes with a 32- bit ARM11 processor and massive amounts of memory for exceptional multimedia performance. With USB and LAN connectivity options, the S300 offers everything merchants could want in a sleek, stylish payment devices.",
-        "terminalType": ["Semi-Integrated"],
-        "connectionType": ["Ethernet"],
-        "features": ["Contactless"],
-        "specifications": [
-            "EMV®, MSR and NFC/Contactless",
-            "EMV & PCI Compliant",
-            "Large Memory Capacity",
-            "User-friendly Interface with Powerful GUI"
-        ],
-        "pricingProgram": ["Surcharge"],
-        "supportedPOS": ["JMSC", "UServe"],
-        "img": "/assets/img/products/terminals/pax-s300.png",
-        "brandImg": "/assets/img/products/terminals/brands/pax.png"
-    },
-    {
         "id": "pax-a80",
         "title": "Pax A80",
         "brand": "Pax",
@@ -47,7 +28,7 @@
         "features": ["Prints Receipts", "Supports Pin-Pad", "Contactless"],
         "specifications": [],
         "pricingProgram": [],
-        "img": "/assets/img/products/terminals/fad-150.png",
+        "img": "/assets/img/products/terminals/fad-150.jpg",
         "brandImg": "/assets/img/products/terminals/brands/firstdata.png"
     },
     {
@@ -59,7 +40,7 @@
         "specifications": [],
         "notes": "Works with FD150 ONLY",
         "pricingProgram": [],
-        "img": "/assets/img/products/terminals/fad-150.png",
+        "img": "/assets/img/products/terminals/fad-10.png",
         "brandImg": "/assets/img/products/terminals/brands/firstdata.png"
     },
     {
@@ -84,7 +65,7 @@
             "All-In-One DejaPayPro"
         ],
         "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
-        "img": "/assets/img/products/terminals/qd2.jpg",
+        "img": "/assets/img/products/terminals/qd2.png",
         "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
     },
     {
@@ -108,7 +89,7 @@
             "Ethernet, WiFi, USB"
         ],
         "pricingProgram": ["Cygnus Cash Discount", "Surcharge"],
-        "img": "/assets/img/products/terminals/qd3.jpg",
+        "img": "/assets/img/products/terminals/qd4.png",
         "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
     },
     {
@@ -127,7 +108,7 @@
         ],
         "notes": "Works with QD2, QD4, P1, P3",
         "pricingProgram": [],
-        "img": "/assets/img/products/terminals/dejavoo-qd3.png",
+        "img": "/assets/img/products/terminals/qd3.png",
         "brandImg": "/assets/img/products/terminals/brands/dejavoo.png"
     },
     {
@@ -221,7 +202,7 @@
         ],
         "specifications": [],
         "pricingProgram": [],
-        "img": "/assets/img/shop/pax/product-01.png",
+        "img": "/assets/img/products/terminals/aprivapay-BBPOS.png",
         "brandImg": "/assets/img/products/terminals/brands/valor.png"
     },
     {

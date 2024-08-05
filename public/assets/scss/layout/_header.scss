@@ -188,10 +188,18 @@
   }
 }
 .main-menu-second {
-  margin: 0 0 0 18%;
-  @media #{$xl} {
-    margin: 0 0 0 12%;
+  margin: 0 0 0 6%;
+
+  @media #{$bxxxl} {
+    margin: 0 0 0 6%;
   }
+  @media #{$bxxl} {
+    margin: 0 0 0 4%;
+  }
+  @media #{$xl} {
+    margin: 0 0 0 4%;
+  }
+  
 }
 .header-cart-list {
   text-align: end;
