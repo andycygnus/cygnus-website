@@ -1,12 +1,12 @@
 const social_links = [
     {
-        link: 'https://www.linkedin.com/company/cygnuspaymentsolutions/',
+        link: 'https://www.linkedin.com/company/cygnuspayments',
         target: '_blank',
         icon: 'fab fa-linkedin',
         color: 'tp-f-linkedin',
     },
     {
-        link: 'https://www.instagram.com/cygnuspay/?igshid=YmMyMTA2M2Y%3D',
+        link: 'https://www.instagram.com/cygnuspayments',
         target: '_blank',
         icon: 'fab fa-instagram',
         color: 'tp-f-instagram',

@@ -68,10 +68,10 @@ const Sidebar = ({ isActive, setIsActive }) => {
                     <a href="mailto:sales@cygnuspay.com">sales@cygnuspay.com</a>
                 </div>
                 <div className="tpsideinfo__socialicon">
-                    <a href="https://www.linkedin.com/company/cygnuspaymentsolutions/">
+                    <a href="https://www.linkedin.com/company/cygnuspayments/">
                         <i className="fa-brands fa-linkedin"></i>
                     </a>
-                    <a href="https://www.linkedin.com/company/cygnuspaymentsolutions/">
+                    <a href="https://www.linkedin.com/company/cygnuspayments/">
                         <i className="fa-brands fa-instagram"></i>
                     </a>
                 </div>
