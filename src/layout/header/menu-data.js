@@ -118,7 +118,7 @@ const menu_data = [
         ],
     },
     {
-        id: 2,
+        id: 8,
         mega_menu: false,
         has_dropdown: false,
         title: 'Cygnus Navigator',
