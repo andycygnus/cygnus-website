@@ -62,7 +62,7 @@ const menu_data = [
         mega_menu: false,
         has_dropdown: false,
         title: 'Partners',
-        link: '/team-1',
+        link: '/partners',
         active: '',
     },
     {

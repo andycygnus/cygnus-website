@@ -36,7 +36,7 @@ const pos_home = [
 const term_home = [
     {
         id: 1,
-        img: '/assets/img/services/terminals/term-thumb-01.png',
+        img: '/assets/img/terminals/pax.png',
         name: 'PAX Technology',
         title: 'Pax',
         links: '/products/terminals/pax',
@@ -44,23 +44,23 @@ const term_home = [
     },
     {
         id: 2,
-        img: '/assets/img/services/terminals/term-thumb-02.png',
+        img: '/assets/img/terminals/dejavoo.png',
         name: 'Dejavoo',
         title: 'Dejavoo',
         links: '/products/terminals/dejavoo',
         social_links: [],
     },
     {
-        id: 4,
-        img: '/assets/img/services/terminals/term-thumb-04.png',
+        id: 3,
+        img: '/assets/img/terminals/nmi.png',
         name: 'NMI',
         title: 'NMI',
         links: '/products/terminals/nmi',
         social_links: [],
     },
     {
-        id: 5,
-        img: '/assets/img/services/terminals/term-thumb-05.png',
+        id: 4,
+        img: '/assets/img/terminals/valor.png',
         name: 'ValorPay',
         title: 'ValorPay',
         links: '/products/terminals/valorpay',

@@ -97,76 +97,77 @@ const Team = () => {
                                         </div>
                                     </div>
                                 </SwiperSlide>
-                            ))} 
-                            </Swiper>
-                            <div className="pos-arrow">
-                                <div className="pos-prv-1 arrow">
-                                    <i className="fa-regular fa-arrow-left"></i>
+                            ))}
+                        </Swiper>
+                        <div className="pos-arrow">
+                            <div className="pos-prv-1 arrow">
+                                <i className="fa-regular fa-arrow-left"></i>
+                            </div>
+                            <div className="pos-nxt-1 arrow">
+                                <i className="fa-regular fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="container" style={{ marginBottom: '80px' }}>
+                    <div className="p-relative">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="tp-section text-center">
+                                    <h3
+                                        className="tp-section__title"
+                                        style={{
+                                            textAlign: 'left',
+                                            paddingLeft: '30px',
+                                            marginBottom: '40px',
+                                        }}
+                                    >
+                                        Terminal Solutions
+                                    </h3>
                                 </div>
-                                <div className="pos-nxt-1 arrow">
-                                    <i className="fa-regular fa-arrow-right"></i>
-                                </div>
                             </div>
-                            </div>
-                            </div>
-                            <div className="container" style={{ marginBottom: '80px' }}>
-                                <div className="p-relative">
-                                    <div className="row">
-                                        <div className="col-lg-12">
-                                            <div className="tp-section text-center">
-                                                <h3
-                                                    className="tp-section__title"
+                        </div>
+                        <Swiper
+                            {...setting('.term-nxt-2', '.term-prv-2')}
+                            modules={[Navigation]}
+                            loop={isLoop}
+                            className="swiper-container tp-team-active wow fadeInUp"
+                            data-wow-delay=".3s"
+                        >
+                            {term_home.map((item) => (
+                                <SwiperSlide key={item.id}>
+                                    <div className="swiper-slide">
+                                        <div className="team-item mb-30">
+                                            <div className="team-item__thumb mb-40">
+                                                <img
+                                                    src={item.img}
+                                                    alt="team-thumb"
                                                     style={{
-                                                        textAlign: 'left',
-                                                        paddingLeft: '30px',
+                                                        width: '100%',
+                                                        height: 'auto',
+                                                        maxWidth: '200px',
+                                                        objectFit: 'contain',
                                                     }}
-                                                >
-                                                    Terminal Solutions
-                                                </h3>
+                                                />
                                             </div>
                                         </div>
                                     </div>
-                                    <Swiper
-                                        {...setting('.term-nxt-2', '.term-prv-2')}
-                                        modules={[Navigation]}
-                                        loop={isLoop}
-                                        className="swiper-container tp-team-active wow fadeInUp"
-                                        data-wow-delay=".3s"
-                                    >
-                                        {term_home.map((item) => (
-                                            <SwiperSlide key={item.id}>
-                                                <div className="swiper-slide">
-                                                    <div className="team-item mb-30">
-                                                        <div className="team-item__thumb mb-40">
-                                                            <img
-                                                                src={item.img}
-                                                                alt="team-thumb"
-                                                                style={{
-                                                                    width: '100%',
-                                                                    height: 'auto',
-                                                                    maxWidth: '200px',
-                                                                    objectFit: 'contain',
-                                                                }}
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </SwiperSlide>
-                                        ))}
-                                    </Swiper>
-                                    <div className="term-arrow">
-                                        <div className="term-prv-2 arrow">
-                                            <i className="fa-regular fa-arrow-left"></i>
-                                        </div>
-                                        <div className="term-nxt-2 arrow">
-                                            <i className="fa-regular fa-arrow-right"></i>
-                                        </div>
-                                    </div>
-                                </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                        <div className="term-arrow">
+                            <div className="term-prv-2 arrow">
+                                <i className="fa-regular fa-arrow-left"></i>
                             </div>
-                            </section>
-                            </>
-                            )
-                            }
+                            <div className="term-nxt-2 arrow">
+                                <i className="fa-regular fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </>
+    )
+}
 
-                            export default Team
+export default Team

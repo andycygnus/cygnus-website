@@ -36,5 +36,29 @@ const team_one_data = [
         name: '',
         title: '',
     },
+    {
+        id: 7,
+        img: '/assets/img/team/clover.png',
+        name: '',
+        title: '',
+    },
+    {
+        id: 8,
+        img: '/assets/img/team/gokul.png',
+        name: '',
+        title: '',
+    },
+    {
+        id: 9,
+        img: '/assets/img/team/union.png',
+        name: '',
+        title: '',
+    },
+    {
+        id: 10,
+        img: '/assets/img/team/universal.png',
+        name: '',
+        title: '',
+    },
 ]
 export default team_one_data
