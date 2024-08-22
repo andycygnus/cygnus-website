@@ -19,6 +19,8 @@ const TeamArea = () => {
         slides.push(team_one_data.slice(i, i + 6))
     }
 
+    if (!isLoop) return null
+
     return (
         <>
             <section className="team-area pt-125 pb-70">
