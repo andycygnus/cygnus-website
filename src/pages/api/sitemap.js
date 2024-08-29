@@ -17,7 +17,6 @@ export default async function handler(req, res) {
             priority: 0.8,
         },
         { url: '/products/mobile-app', changefreq: 'weekly', priority: 0.8 },
-        { url: '/products/mobile-app', changefreq: 'weekly', priority: 0.8 },
         { url: '/partners', changefreq: 'weekly', priority: 0.8 },
         { url: '/contact', changefreq: 'weekly', priority: 0.8 },
     ]
