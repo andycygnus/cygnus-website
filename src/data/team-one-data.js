@@ -56,7 +56,7 @@ const team_one_data = [
     },
     {
         id: 10,
-        img: '/assets/img/team/universal.png',
+        img: '/assets/img/team/userve.png',
         name: '',
         title: '',
     },
